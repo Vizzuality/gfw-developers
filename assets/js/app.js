@@ -84,8 +84,8 @@
     },
 
     setGlobalViews: function() {
-      this.blogView = new root.app.View.BlogView();
-      this.searchView = new root.app.View.SearchView();
+      // this.blogView = new root.app.View.BlogView();
+      // this.searchView = new root.app.View.SearchView();
     }
 
   });
