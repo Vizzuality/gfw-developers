@@ -1,0 +1,21 @@
+h2 {
+	font-size: 30px;
+	line-height: 1.25;
+	font-weight: 300;
+	color: #555;
+  @media (min-width: $br-mobile){
+  	font-size: 35px;
+  }
+  
+  a {
+  	color: $dark;
+  }
+}
+
+h3 {
+	font-size: 19px;
+	text-transform: uppercase;
+  @media (min-width: $br-mobile){
+  	font-size: 21px;
+  }
+}
