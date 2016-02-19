@@ -46,6 +46,8 @@
 }
 
 .l-menu {
+  position: relative;
+  z-index: 1;
   display: block;
   width: 100%;
   background: rgba($white,0.8);

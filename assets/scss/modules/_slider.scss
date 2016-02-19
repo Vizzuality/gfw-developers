@@ -1,5 +1,5 @@
 .m-slider {
-	ul {
+	ul {
 		width: 100%;
 		padding-bottom: 500px;
 		li {
@@ -8,9 +8,78 @@
 			left: 0;
 			width: 100%;
 			height: 100%;
-			background: red;
+			background: url($baseurl + '/assets/images/home-slider/home-slider-1.png');
+			background-size: cover;
+			
+			.l-inner {
+		    position: absolute;
+		    height: 100%;			
+		    left: 50%;
+		    top: 0;
+		    transform: translate(-50%,0);
+		  }
+			
 			aside {
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translate(0,-50%);
+		    h2 {
+		      font-size: 35px;
+		      display: inline-block;
+		      font-weight: 400;
+		      text-transform: uppercase;
+		      @media (min-width: $br-mobile) {
+		        background: rgba($white,0.75);
+		        font-size: 61px;
+		        padding: 10px 5px 5px;
+		      }
+		    }
+		    h3 {
+		      font-size: 15px;
+		      color: #333;
+		      text-transform: uppercase;
+		      font-weight: 300;
+		      @media (min-width: $br-mobile) {
+		        font-size: 31px;
+		        line-height: 0.5;
+		        overflow: hidden;
+		        span {
+		          display: inline-block;
+		          float: left;
+		          clear: both;
+		          background: rgba($white,0.75);
+		          padding: 12px;
+		        }
+		      }
+		    }
+		    .-link {
+		      background: $dark;
+		      color: $white;
+		      position: absolute;
+		      top: 0;
+		      right: 0;
+		      height: 100%;
+		      width: 44px;
+		      font-size: 30px;
+		      display: inline-block;
+		      text-transform: uppercase;
+		      text-decoration: none;
+		      @media (min-width: $br-mobile) {
+		        top: auto;
+		        right: auto;
+		        height: auto;
+		        width: auto;
+		        position: relative;
+		        font-size: 17px;
+		        padding: 8px 30px;
+		        display: inline-block;
+		      }
 
+		      &:hover {
+		        background: $primary-color;
+		      }
+		    }
 			}
 		}
 	}
