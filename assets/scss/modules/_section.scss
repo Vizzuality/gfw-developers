@@ -7,6 +7,12 @@
     }
   }
 
+  &.-own-atlas {
+    background: url($baseurl + '/assets/images/home-slider/home-slider-1.png');
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
   header {
     h2 {
       padding: 0 0 35px;
@@ -20,6 +26,12 @@
       line-height: 32px;
       font-weight: 300;
       max-width: 890px;
+    }
+
+    &.-light {
+      h2,p {
+        color: $white;
+      }
     }
   }
 }

@@ -155,6 +155,10 @@ button {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center; }
+    .btn-box.-center > * {
+      margin-left: 15px; }
+      .btn-box.-center > *:first-child {
+        margin: 0; }
   .btn-box.-right {
     -webkit-justify-content: flex-end;
         -ms-flex-pack: end;
@@ -173,7 +177,10 @@ h2 {
 
 h3 {
   font-size: 19px;
+  line-height: 1.25;
   text-transform: uppercase; }
+  h3.-primary {
+    color: #97bd3d; }
   @media (min-width: 850px) {
     h3 {
       font-size: 21px; } }
@@ -320,6 +327,11 @@ h3 {
     .m-section.-padding {
       padding: 70px 40px; } }
 
+.m-section.-own-atlas {
+  background: url("/assets/images/home-slider/home-slider-1.png");
+  background-size: cover;
+  background-attachment: fixed; }
+
 .m-section header h2 {
   padding: 0 0 35px; }
   .m-section header h2 a {
@@ -330,6 +342,9 @@ h3 {
   line-height: 32px;
   font-weight: 300;
   max-width: 890px; }
+
+.m-section header.-light h2, .m-section header.-light p {
+  color: #FFF; }
 
 .m-grid {
   display: -webkit-flex;
@@ -346,10 +361,46 @@ h3 {
       height: 100px;
       margin: 0 0 30px; }
     .m-grid > li h3 {
-      color: #97bd3d;
       margin: 0 0 18px; }
     .m-grid > li p {
       max-width: 80%; }
+    .m-grid > li.-card {
+      position: relative;
+      width: 30%;
+      background: #FFF;
+      padding: 60px 40px; }
+      .m-grid > li.-card h3 {
+        color: #444444; }
+      .m-grid > li.-card p {
+        max-width: none; }
+      .m-grid > li.-card .number {
+        width: 80px;
+        height: 80px;
+        font-size: 35px;
+        line-height: 80px;
+        font-weight: 500;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        background: #FFF;
+        color: #97bd3d;
+        border: 3px solid #97bd3d;
+        border-radius: 50%;
+        text-align: center; }
+    .m-grid > li.-atlas {
+      position: relative;
+      width: 30%;
+      background: #FFF;
+      padding: 0px 30px 30px;
+      border: 1px solid #E5E5DF; }
+      .m-grid > li.-atlas p {
+        max-width: none; }
+      .m-grid > li.-atlas .img {
+        margin: 0 -30px 30px;
+        padding-bottom: 50%;
+        background: url("/assets/images/thumbnail-post.png"); }
 
 .m-faqs {
   padding: 0 15px 40px; }

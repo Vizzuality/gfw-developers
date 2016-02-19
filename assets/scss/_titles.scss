@@ -14,7 +14,13 @@ h2 {
 
 h3 {
 	font-size: 19px;
+  line-height: 1.25;
 	text-transform: uppercase;
+
+  &.-primary {
+    color: $primary-color;
+  }
+
   @media (min-width: $br-mobile){
   	font-size: 21px;
   }
