@@ -38,9 +38,38 @@
     text-decoration: none !important;
   }
 
-  &.disabled{
+  &.-disabled{
     opacity: 0.25;
     cursor: default;
   }
+
+  // colors
+  &.-primary {
+    color: $white;
+    background: $primary-color;
+
+    &:hover {
+      background: lighten($primary-color,5%);
+    }    
+  }
+
+  // sizes
+  &.-huge {
+    padding: 0 40px;
+    height: 50px;
+    line-height: 50px;    
+  }
 }
 
+.btn-box {
+  display: flex;
+  justify-content: flex-start; 
+
+  &.-center {
+    justify-content: center;
+  }
+
+  &.-right {
+    justify-content: flex-end; 
+  }
+}

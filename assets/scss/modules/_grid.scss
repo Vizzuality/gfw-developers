@@ -1,0 +1,22 @@
+.m-grid {
+	display: flex;
+	justify-content: space-between;
+	padding: 50px 0;
+	> li {
+		width: 25%;
+		svg {
+			width: 100px;
+			height: 100px;
+			margin: 0 0 30px;
+		}
+
+		h3 {
+			color: $primary-color;
+			margin: 0 0 18px;
+		}
+
+		p {
+			max-width: 80%;
+		}
+	}
+}
