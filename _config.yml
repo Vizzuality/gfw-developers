@@ -24,7 +24,7 @@ jekyll-archives:
     # day: '/:year/:month/:day/'
     category: '/apps/:name/'
     tag: '/themes/:name/'
-
+    
 
 # CATEGORIES
 categories_info:

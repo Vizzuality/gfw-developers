@@ -1,0 +1,84 @@
+.m-card {
+	position: relative;
+	width: 100%;
+	background: $white;
+	padding: 0px 30px 30px;
+	border: 1px solid $border1;
+
+	svg {
+		width: 100px;
+		height: 100px;
+		margin: 0 0 30px;
+	}
+
+
+	h3 {
+		margin: 0 0 18px;
+    white-space: normal;
+	}
+
+	// Default
+	&.-default {
+		width: 25%;
+		padding: 0;
+		border: 0;
+		p {
+			max-width: 80%;
+		}
+	}
+
+
+	// Atlas
+	&.-atlas {
+		width: calc(100% - 20px);
+		margin: 0 auto; 
+
+		p {
+			font-size: 14px;
+			max-width: none;
+			white-space: normal;
+			line-height: 1.5;
+		}
+
+		.img {
+			margin: 0 -30px 30px;
+			padding-bottom: 50%;
+			background: url($baseurl + '/assets/images/thumbnail-post.png');
+		}		
+	}
+
+
+	// Number
+	&.-number {
+		width: 30%;
+		background: $white;
+		padding: 60px 40px;
+
+		h3 {
+			color: #444444;
+		}
+
+		p {
+			max-width: none;
+		}
+
+		.number {
+			width: 80px;
+			height: 80px;
+			line-height: 80px;
+			font-size: 35px;
+			font-weight: 500;
+			
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			
+			background: $white;
+			color: $primary-color;
+			border: 3px solid $primary-color;
+			border-radius: 50%;
+			text-align: center;
+		}
+	}
+}

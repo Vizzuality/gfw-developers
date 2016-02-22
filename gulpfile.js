@@ -92,7 +92,7 @@ gulp.task('sass-prod', function () {
 });
 
 gulp.task('js', function(){
-  gulp.src([paths.asset+'/js/views/*.js',paths.asset+'/js/router.js', paths.asset+'/js/app.js'])
+  gulp.src([paths.asset+'/js/helpers/*.js',paths.asset+'/js/views/*.js',paths.asset+'/js/router.js', paths.asset+'/js/app.js'])
     .pipe(concat('app.js'))
     // .pipe(uglify())
     .pipe(gulp.dest('_site/js'))

@@ -10,7 +10,7 @@
       // HOME
       '': 'home',
       // HOME
-      'faqs(/)': 'faqs',
+      'tutorials(/)': 'tutorials',
       // APP
       'apps/:id(/)': 'category',
       //THEME
@@ -30,6 +30,18 @@
       this.options = _.extend({}, this.defaults, opts);
 
       this.params = new this.ParamsModel(); // This object save the URL params
+      this.setListeners();
+    },
+
+    setListeners: function() {
+      Backbone.Events.on('route/update', function(params, routeName) {
+        _.each(params,function(v,k){
+          this.setParams(k,v);
+        }.bind(this));
+        this.updateUrl();
+      }.bind(this));
+
+
     },
 
     /**
@@ -80,7 +92,7 @@
         } catch(err) {
           console.error('Invalid params. ' + err);
           params = null;
-          return this.navigate('map');
+          return this.navigate('');
         }
         this.params.clear({ silent: true }).set({ config: params });
       } else {

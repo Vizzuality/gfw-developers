@@ -12,14 +12,16 @@
 
 // Home
 @import "modules/slider";
+@import "modules/lory-slider";
+@import "modules/card";
 
 @import "modules/section";
 @import "modules/grid";
 
-// Faqs
-@import "modules/faqs";
-@import "modules/select";
-@import "modules/pagination";
+// Tutorials
+@import "modules/static";
+// @import "modules/select";
+// @import "modules/pagination";
 
 // Post
 @import "modules/post";

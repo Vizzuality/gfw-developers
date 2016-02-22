@@ -58,8 +58,6 @@
       // set width of each element
       this.$slider[0].addEventListener('before.lory.init', this.setSlideWidth.bind(this));
       this.$slider[0].addEventListener('on.lory.resize', this.setSlideWidth.bind(this));
-      this.$slider[0].addEventListener('after.lory.init', this.setNavigation.bind(this));
-      this.$slider[0].addEventListener('after.lory.slide', this.setNavigation.bind(this));
 
       this.slider = lory(this.$slider[0], this.options.slider);
     },
@@ -67,9 +65,9 @@
     setOptions: function() {
       this.cache();
       return {
-        slidesToScroll: (!!this.mobile) ? 1 : 2,
-        infinite: (!!this.mobile) ? 1 : 2,
-        slides_per_slide: (!!this.mobile) ? 1 : 2
+        slidesToScroll: (!!this.mobile) ? 1 : 3,
+        infinite: (!!this.mobile) ? 1 : 3,
+        slides_per_slide: (!!this.mobile) ? 1 : 3
       }
     },
 
@@ -82,7 +80,7 @@
       var pages = Math.ceil(this.slideCount/this.options.slider.slides_per_slide);
       var arrayPages =(function(a,b){while(a--)b[a]=a+1;return b})(pages,[]);
 
-      this.$sliderNavigation.html(this.navTemplate({pages: arrayPages}));
+      this.$sliderNavigation.html(this.navTemplate({pages: null}));
       this.$sliderNavigationItems = this.$sliderNavigation.find('li');
     },
 
@@ -104,18 +102,6 @@
         }
       }
     },
-
-    // Events
-    setNavigation: function(e) {
-      e && e.preventDefault();
-      var current = 0;
-      if (this.slider) {
-        current = Math.ceil(this.slider.returnIndex()/2);
-      }
-      // Set current
-      this.$sliderNavigationItems.removeClass('-active');
-      this.$sliderNavigation.find('li[data-index='+current+']').addClass('-active');
-    }
 
   });
 

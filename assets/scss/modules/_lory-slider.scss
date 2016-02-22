@@ -1,0 +1,64 @@
+.m-lory-slider {
+  padding: 50px 0;
+  position: relative;
+  
+  // Slider
+  .slider {
+    .frame {
+      width: 100%;
+
+      position: relative;
+      font-size: 0;
+      line-height: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      padding: 1px 0;
+    }
+
+    .slides {
+      display: inline-flex;
+      align-items: stretch;
+    }
+
+    li {
+      position: relative;
+      display: inline-flex;
+    }
+  }
+
+  // Slider navigation
+  .slider-arrows {
+    ul {
+      li {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+
+        &:hover {
+          svg {
+            fill: $dark;
+          }
+        }
+
+        &.-left {
+          left: 0;
+          transform: translate(-100%,-50%);
+          margin: 0 0 0 -10px;
+        }
+
+        &.-right {
+          right: 0;
+          transform: translate(100%,-50%);
+          margin: 0 -10px 0 0;
+        }
+
+        svg {
+          width: 30px;
+          height: 30px;
+          fill: $primary-color;
+        }
+      }
+    }
+  }
+
+}
