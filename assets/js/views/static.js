@@ -18,7 +18,7 @@
 
     model: new (Backbone.Model.extend({
       defaults: {
-        tab: 'using-the-interface',
+        tab: null,
         tag: null
       }
     })),
@@ -73,9 +73,17 @@
       this.model.on('change:tag', this.toggleContent.bind(this));
 
       this.model.on('change:tab change:tag', this.updateRouter.bind(this));
+
+      $(document).on('scroll',_.bind(this.scrollDocument,this)); 
     },
 
     cache: function() {
+      this.$window = $(window);
+      this.$document = $(document);
+
+      this.$content = this.$el.find('.js-static-content');
+      this.$aside = this.$el.find('.js-static-aside'); 
+
       this.$tabs = this.$el.find('.js-static-tab');
       this.$tags = this.$el.find('.js-static-tag');
     },
@@ -83,9 +91,14 @@
     render: function() {
       this.$el.html(this.template({
         tabs: this.collection.getTabs(),
-        tags: this.collection.getTags(this.model.get('tab')),
-        tab: this.model.get('tab')
+        tags: this.collection.getTags(this.model.get('tab') || this.collection.getTabs()[0]),
+        tab: this.model.get('tab') || this.collection.getTabs()[0]
       }));
+
+      this.afterRender();
+    },
+
+    afterRender: function() {
       this.cache();
       this.toggleContent();
     },
@@ -105,7 +118,7 @@
     },
 
     toggleContent: function() {
-      var tab = this.model.get('tab'),
+      var tab = this.model.get('tab') || this.collection.getTabs()[0],
           tag = this.model.get('tag'),
           tabEl = _.find(this.$tabs, function(e){
             return (tab == $(e).data('tab'))
@@ -119,15 +132,42 @@
 
       this.$tags.removeClass('-selected');
       $(tagEl).addClass('-selected');
+
+      // To prevent a little blink issue with the aside box
+      this.scrollDocument();
     },
 
     updateRouter: function() {
       var params = {
-        tab: this.model.get('tab'),
+        tab: this.model.get('tab') || this.collection.getTabs()[0],
         tag: this.model.get('tag')
       }
       Backbone.Events.trigger('route/update', params);
     },
+
+    // Scroll
+    setOffsets: function() {
+      var top = this.$content.offset().top;
+      this.model.set('offset', top);
+      this.model.set('offsetBottom', top + this.$content.innerHeight() - this.$aside.innerHeight());
+    },
+
+    scrollDocument: function(e){
+      this.setOffsets();
+      var scrollTop = this.$document.scrollTop();
+      if (scrollTop > this.model.get('offset')) {
+        this.$aside.addClass('-fixed');
+        if(scrollTop < this.model.get('offsetBottom')) {
+          this.$aside.removeClass('-bottom').addClass('-fixed');
+        }else{
+          this.$aside.removeClass('-fixed').addClass('-bottom');
+        }
+      }else{
+        this.$aside.removeClass('-fixed -bottom');
+      }
+    },
+
+
 
   });
 

@@ -93,9 +93,9 @@ this["HandlebarsTemplates"]["static"] = Handlebars.template({"1":function(depth0
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1;
 
-  return "<div class=\"l-inner\">\n  <aside class=\"m-static-aside\">\n    <ul>\n"
+  return "<div class=\"l-inner\">\n  <aside class=\"m-static-aside js-static-aside\">\n    <ul>\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.tabs : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "    </ul>\n  </aside>\n\n  <div id=\"staticContent\" class=\"m-static-content\">\n    <header>\n      <h2>"
+    + "    </ul>\n  </aside>\n\n  <div class=\"m-static-content js-static-content\">\n    <header>\n      <h2>"
     + this.escapeExpression((helpers.deslugify || (depth0 && depth0.deslugify) || helpers.helperMissing).call(depth0,(depth0 != null ? depth0.tab : depth0),{"name":"deslugify","hash":{},"data":data}))
     + "</h2>\n    </header>\n    <ul class=\"m-static-subtabs\">\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.tags : depth0),{"name":"each","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")

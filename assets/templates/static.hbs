@@ -1,5 +1,5 @@
 <div class="l-inner">
-  <aside class="m-static-aside">
+  <aside class="m-static-aside js-static-aside">
     <ul>
       {{#each this.tabs}}
         <li data-tab="{{this}}" class="js-static-tab">{{deslugify this}}</li>
@@ -7,7 +7,7 @@
     </ul>
   </aside>
 
-  <div id="staticContent" class="m-static-content">
+  <div class="m-static-content js-static-content">
     <header>
       <h2>{{deslugify this.tab}}</h2>
     </header>
