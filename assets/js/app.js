@@ -26,16 +26,17 @@
 
     initialize: function() {
       this.router = new root.app.Router();
-      this.setGlobalViews();
+      // this.setGlobalViews();
       this.setListeners();
     },
 
     setListeners: function() {
       this.listenTo(this.router, 'route:home', this.homePage);
       this.listenTo(this.router, 'route:tutorials', this.tutorialsPage);
-      this.listenTo(this.router, 'route:category', this.appPage);
-      this.listenTo(this.router, 'route:tag', this.themePage);
-      this.listenTo(this.router, 'route:post', this.postPage);
+      this.listenTo(this.router, 'route:about', this.aboutPage);
+      // this.listenTo(this.router, 'route:category', this.appPage);
+      // this.listenTo(this.router, 'route:tag', this.themePage);
+      // this.listenTo(this.router, 'route:post', this.postPage);
     },
 
     start: function() {
@@ -51,42 +52,52 @@
     },
 
     tutorialsPage: function() {
-      this.tutorialsView = new root.app.View.TutorialsView({
-        options: this.router._unserializeParams()
+      this.staticView = new root.app.View.StaticView({
+        options: _.extend(this.router._unserializeParams(),{
+          page: 'tutorials'
+        })
       });
     },
 
-    appPage: function(id) {
-      this.sliderView = new root.app.View.SliderView();
-      this.asideView = new root.app.View.AsideView({
-        options: {
-          model: {
-            id: id
-          }
-        }
+    aboutPage: function() {
+      this.staticView = new root.app.View.StaticView({
+        options: _.extend(this.router._unserializeParams(),{
+          page: 'about'
+        })
       });
     },
 
-    themePage: function(id) {
-      this.sliderView = new root.app.View.SliderView();
-      this.asideView = new root.app.View.AsideView({
-        options: {
-          model: {
-            id: id
-          }
-        }
-      });
-    },
+    // appPage: function(id) {
+    //   this.sliderView = new root.app.View.SliderView();
+    //   this.asideView = new root.app.View.AsideView({
+    //     options: {
+    //       model: {
+    //         id: id
+    //       }
+    //     }
+    //   });
+    // },
 
-    postPage: function() {
-      this.toggleView = new root.app.View.ToggleView();
-      this.asideView = new root.app.View.AsideView({ options: { model: { id: null }}});
-    },
+    // themePage: function(id) {
+    //   this.sliderView = new root.app.View.SliderView();
+    //   this.asideView = new root.app.View.AsideView({
+    //     options: {
+    //       model: {
+    //         id: id
+    //       }
+    //     }
+    //   });
+    // },
 
-    setGlobalViews: function() {
-      // this.blogView = new root.app.View.BlogView();
-      // this.searchView = new root.app.View.SearchView();
-    }
+    // postPage: function() {
+    //   this.toggleView = new root.app.View.ToggleView();
+    //   this.asideView = new root.app.View.AsideView({ options: { model: { id: null }}});
+    // },
+
+    // setGlobalViews: function() {
+    //   this.blogView = new root.app.View.BlogView();
+    //   this.searchView = new root.app.View.SearchView();
+    // }
 
   });
 

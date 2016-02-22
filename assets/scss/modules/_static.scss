@@ -11,12 +11,12 @@
     top: 0;
     z-index: 3;
 
-    &.fixed{
+    &.-fixed{
       top: 0;
       position: fixed;
     }
 
-    &.bottom{
+    &.-bottom{
       top: auto;
       bottom: 0;
     }
@@ -36,6 +36,7 @@
       padding: 20px 30px 20px 15px;
       position: relative;
       border-top: 1px solid $border1;
+      cursor: pointer;
       @media (min-width: $br-mobile) {
         padding: 0;
         border-left: 1px solid $border1;
@@ -104,6 +105,9 @@
 		&.-selected {
 			.m-static-title {
 				color: $primary-color;
+				svg {
+					transform: translate(-50%,-50%) rotate(180deg);
+				}
 			}
 
 			.m-static-info {
@@ -115,9 +119,41 @@
 
 	.m-static-title {
 		padding: 20px 0;
+		padding-right: 70px;
 		text-transform: uppercase;
 		font-size: 13px;
 		font-weight: 500;
+		cursor: pointer;
+		position: relative;
+
+		.svg {
+			position: absolute;
+			width: 60px;
+			height: 100%;
+			top: 0;
+			right: 0;
+
+			&:after {
+				content: "";
+				position: absolute;
+				width: 1px;
+				height: 50%;
+				top: 50%;
+				left: 0%;
+				background: $border1;
+				transform: translate(0%,-50%);
+			}
+
+			svg {
+				width: 14px;
+				height: 14px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				transition: all 0.125s $easeInOutSine;
+			}
+		}
 	}
 
 	.m-static-info {

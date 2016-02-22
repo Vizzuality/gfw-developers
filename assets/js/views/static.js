@@ -7,9 +7,9 @@
   root.app.Model = root.app.Model || {};
 
   // View for display results
-  root.app.View.TutorialsView = Backbone.View.extend({
+  root.app.View.StaticView = Backbone.View.extend({
 
-    el: '#tutorialsView',
+    el: '#staticView',
 
     events: {
       'click .m-static-title' : 'clickToggleContent',
@@ -18,14 +18,18 @@
 
     model: new (Backbone.Model.extend({
       defaults: {
-        tab: 'using the interface',
+        tab: 'using-the-interface',
         tag: null
       }
     })),
 
     collection: new (Backbone.Collection.extend({
-
-      url: baseurl + '/json/tutorials.json',
+      parse: function(response) {
+        return _.map(response, function(r){
+          r.tags = this.slugify(r.tags);
+          return r;
+        }.bind(this))
+      },
 
       getTabs: function() {
         this.collection = _.pluck(_.sortBy(_.uniq(this.toJSON(),function(c) {
@@ -37,19 +41,30 @@
 
       getTags: function(tag) {
         return _.sortBy(_.where(this.toJSON(), {'tags': tag}), 'order');
-      }
+      },
+
+      slugify: function(text) {
+        return text.toString().toLowerCase().trim()
+        .replace(/\s+/g, '-')           // Replace spaces with -
+        .replace(/&/g, '-and-')         // Replace & with 'and'
+        .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+        .replace(/\-\-+/g, '-');        // Replace multiple - with single -
+      },
 
     })),
 
-    template: HandlebarsTemplates['tutorials'],
+    template: HandlebarsTemplates['static'],
 
     initialize: function(settings) {
       var opts = settings && settings.options ? settings.options : {};
       this.options = _.extend({}, this.defaults, opts);
-      console.log(this.options);
-      this.collection.fetch().done(function() {
+      
+      this.collection.fetch({
+        url: baseurl + '/json/'+this.options.page+'.json'
+      }).done(function() {
         this.setListeners();
-        this.render()
+        this.render();
+        this.model.set(this.options);
       }.bind(this));
     },
 
@@ -111,8 +126,8 @@
         tab: this.model.get('tab'),
         tag: this.model.get('tag')
       }
-      Backbone.Events.trigger('route/update', params, 'tutorials');
-    }
+      Backbone.Events.trigger('route/update', params);
+    },
 
   });
 

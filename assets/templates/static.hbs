@@ -1,0 +1,28 @@
+<div class="l-inner">
+  <aside class="m-static-aside">
+    <ul>
+      {{#each this.tabs}}
+        <li data-tab="{{this}}" class="js-static-tab">{{deslugify this}}</li>
+      {{/each}}
+    </ul>
+  </aside>
+
+  <div id="staticContent" class="m-static-content">
+    <header>
+      <h2>{{deslugify this.tab}}</h2>
+    </header>
+    <ul class="m-static-subtabs">
+      {{#each this.tags}}
+        <li data-tag="{{slugify this.title}}" class="js-static-tag">
+          <h3 data-tag="{{slugify this.title}}" class="m-static-title">
+            {{deslugify this.title}}
+            <div class="svg"><svg><use xlink:href="#icon-arrowdown"></use></svg></div>
+          </h3>
+          <div class="m-static-info">
+            {{{this.content}}}
+          </div>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>

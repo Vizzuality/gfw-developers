@@ -1,9 +1,10 @@
 ---
-title: Test faq Fires
+title: The project
 order: 1
 published: True
-app: fires
-categories: [faqs]
+categories: [about]
+tags: [the project]
+tags_order: 1
 ---
 
 <p>GFW aims to radically improve the availability, quality, and accessibility of forest data for everyone:</p>

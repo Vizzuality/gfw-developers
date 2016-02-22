@@ -9,8 +9,9 @@
     routes: {
       // HOME
       '': 'home',
-      // HOME
+      // STATIC
       'tutorials(/)': 'tutorials',
+      'about(/)': 'about',
       // APP
       'apps/:id(/)': 'category',
       //THEME
@@ -34,14 +35,12 @@
     },
 
     setListeners: function() {
-      Backbone.Events.on('route/update', function(params, routeName) {
+      Backbone.Events.on('route/update', function(params) {
         _.each(params,function(v,k){
           this.setParams(k,v);
         }.bind(this));
         this.updateUrl();
       }.bind(this));
-
-
     },
 
     /**
