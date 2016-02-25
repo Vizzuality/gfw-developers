@@ -32,7 +32,7 @@
 
     setListeners: function() {
       this.listenTo(this.router, 'route:home', this.homePage);
-      this.listenTo(this.router, 'route:tutorials', this.tutorialsPage);
+      this.listenTo(this.router, 'route:map-builder', this.mapBuilderPage);
       this.listenTo(this.router, 'route:about', this.aboutPage);
       // this.listenTo(this.router, 'route:category', this.appPage);
       // this.listenTo(this.router, 'route:tag', this.themePage);
@@ -47,8 +47,21 @@
     },
 
     homePage: function() {
-      this.sliderView = new root.app.View.SliderView();
+      this.featuredForestSliderView = new root.app.View.SliderView({
+        el: '#featuredForestSliderView'
+      });
       this.asideView = new root.app.View.AsideView({ options: { model: { id: null }}});
+    },
+
+    mapBuilderPage: function() {
+      this.featuredForestSliderView = new root.app.View.SliderView({
+        el: '#featuredForestSliderView'
+      });
+      this.tutorialsSliderView = new root.app.View.SliderView({
+        el: '#tutorialsSliderView'
+      });
+      this.videoModalView = new root.app.View.ModalVideoView();
+
     },
 
     tutorialsPage: function() {

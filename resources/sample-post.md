@@ -1,10 +1,10 @@
 ---
-title: The project
-order: 1
+title: Creating your own map 2
+order: 5
 published: True
-categories: [about]
-tags: [the project]
-tags_order: 1
+categories: [tutorials]
+tags: [creating your own map]
+tags_order: 2
 ---
 
 <p>GFW aims to radically improve the availability, quality, and accessibility of forest data for everyone:</p>

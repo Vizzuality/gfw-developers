@@ -3,14 +3,28 @@
   &.-padding {
     padding: 40px 15px;
     @media (min-width: $br-mobile){
-      padding: 70px 40px;
+      padding: 70px 0px;
     }
   }
 
   &.-own-atlas {
-    background: url($baseurl + '/assets/images/home-slider/home-slider-1.png');
+    background: url($baseurl + '/assets/images/bkg-own-atlas.jpg');
     background-size: cover;
     background-attachment: fixed;
+    position: relative;
+    z-index: 0;
+
+    &:after{
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba($dark,0.5);
+    }
   }
 
   header {

@@ -47,6 +47,60 @@
 		}		
 	}
 
+	// Video
+	&.-video {
+		width: calc(100% - 20px);
+		margin: 0 auto; 
+		cursor: pointer;
+
+		p {
+			font-size: 14px;
+			max-width: none;
+			white-space: normal;
+			line-height: 1.5;
+		}
+
+		.img {
+			margin: 0 -30px 30px;
+			padding-bottom: 50%;
+			background: $dark;
+			position: relative;
+
+			&:before, &:after{
+				content: "";
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+			}
+
+			&:before{
+				width: 56px;
+				height: 56px;
+				background: $primary-color;
+				border-radius: 50%;
+				z-index: 1;
+			}
+
+			&:after{
+				z-index: 2;
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 7px 0 7px 10px;
+				border-color: transparent transparent transparent white;				
+			}
+		}
+
+		&:hover {
+			.img {
+				&:before {
+					background: lighten($primary-color,5%);
+				}
+			}
+		}		
+	}
+
 
 	// Number
 	&.-number {

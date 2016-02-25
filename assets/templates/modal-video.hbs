@@ -1,0 +1,14 @@
+{{!-- BACKDROP --}}
+<div class="modal-backdrop"></div>
+{{!-- WINDOW --}}
+<div class="modal-window">
+  <a href="#" class="modal-close">
+    <svg><use xlink:href="#shape-close"></use></svg>
+  </a>
+  <div class="modal-wrapper scroll-dark {{#if footer}}-footer{{/if}}">
+    <div class="modal-content"></div>
+    {{#if footer}}
+      <div class="modal-footer"></div>
+    {{/if}}
+  </div>
+</div>

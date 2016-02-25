@@ -7,8 +7,6 @@
 
   root.app.View.SliderView = Backbone.View.extend({
 
-    el: '#sliderView',
-
     events: {
       'click .js_slide_navigation li' : 'clickNavigation'
     }, 
@@ -18,6 +16,10 @@
     initialize: function(settings) {
       var opts = settings && settings.options ? settings.options : {};
       this.options = _.extend({}, this.defaults, opts);
+
+      if(! !!this.el) {
+        return;
+      }
 
       enquire.register("screen and (min-width: 850px)", {
         match: function(){

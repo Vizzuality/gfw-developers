@@ -11,7 +11,7 @@
       '': 'home',
       // STATIC
       'tutorials(/)': 'tutorials',
-      'about(/)': 'about',
+      'map-builder(/)': 'map-builder',
       // APP
       'apps/:id(/)': 'category',
       //THEME

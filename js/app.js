@@ -207,6 +207,153 @@ Handlebars.registerHelper('deslugify', function (component, options) {
 
   root.app = root.app || {};
   root.app.View = root.app.View || {};
+  root.app.Model = root.app.Model || {};
+
+  root.app.Model.ModalModel = Backbone.Model.extend({
+    defaults: {
+      hidden: true,
+    }
+  });
+
+
+
+  // View for display results
+  root.app.View.ModalView = Backbone.View.extend({
+
+    events: {
+      'click .modal-backdrop' : 'hide',
+      'click .modal-close' : 'hide'
+    },
+
+    initialize: function() {
+      // Model
+      this.model = new root.app.Model.ModalModel();
+
+      // Init
+      this.model.on("change:hidden", this._toggle, this);
+    },
+
+    _initVars: function() {
+      this.$window = $(window);
+      this.$document = $(document);
+      this.$body = $('body');
+      this.$htmlbody = $('html, body');
+
+      this.$content =        this.$el.find('.modal-content');
+      this.$contentWrapper = this.$el.find('.modal-wrapper');
+      this.$backdrop =       this.$el.find('.modal-backdrop');
+      this.$close =          this.$el.find('.modal-close');
+
+      this.mobile = (this.$window.width() > 850) ? false : true;
+    },
+
+    _initBindings: function() {
+      // document keyup
+      this.$document.on('keyup', _.bind(function(e) {
+        if (e.keyCode === 27) {
+          this.hide();
+        }
+      },this));
+      // backdrop
+      this.$backdrop.on('click', _.bind(function() {
+        this.hide();
+      },this));
+    },
+
+    _stopBindings: function() {
+      this.$document.off('keyup');
+      this.$backdrop.off('click');
+    },
+
+    _toggle: function() {
+      (!!this.model.get('hidden')) ? this._stopBindings() : this._initBindings();
+      this.$el.toggleClass('-active', !this.model.get('hidden'));
+      //Prevent scroll beyond modal window.
+      this.$htmlbody.toggleClass('-no-scroll', !this.model.get('hidden'));
+    },
+
+    hide: function(e) {
+      e && e.preventDefault();
+      this.model.set('hidden', true);
+
+      //Give back scroll beyond modal window.
+      this.$htmlbody.removeClass('-no-scroll');
+
+      return this;
+    },
+
+    show: function(e) {
+      e && e.preventDefault() && e.stopPropagation();
+      this.model.set('hidden', false);
+    },
+
+  });
+
+})(this);
+(function(root) {
+
+  'use strict';
+
+  root.app = root.app || {};
+  root.app.View = root.app.View || {};
+
+  // View for display results
+  root.app.View.ModalVideoView = root.app.View.ModalView.extend({
+
+    id: '#modalVideo',
+
+    className: "m-modal",
+
+    template: HandlebarsTemplates['modal-video'],
+
+    initialize: function() {
+      // Inits
+      this.constructor.__super__.initialize.apply(this);
+      // this.presenter = new SourceModalPresenter(this);
+      this.render();
+      this._initVars();
+      this.setListeners();
+      this.$body.append(this.el);
+    },
+
+    setListeners: function() {
+      this.$body.on('click', '.js-card-video', _.bind(this.videoClick, this ));
+    },
+
+    render: function() {
+      this.$el.html(this.template());
+      return this;
+    },
+
+    // Fetch model when click
+    videoClick: function(e) {
+      e && e.preventDefault() && e.stopPropagation();
+      this.show();
+      console.log('hello');
+      // // current
+      // this.$current = $(e.currentTarget);
+      // this.$current.find('svg').attr('class','spinner start');
+
+      // this.sourceModel = new SourceModel({
+      //   slug: this.$current.data('source'),
+      // });
+      // this.sourceModel.fetch({
+      //   update:true,
+      //   parse: true,
+      //   success: this.sourceSuccess.bind(this),
+      //   error: this.sourceError.bind(this),
+      // });
+    },
+
+  });
+
+})(this);
+(function(root) {
+
+  'use strict';
+
+  root.app = root.app || {};
+  root.app.View = root.app.View || {};
   root.app.Collection = root.app.Collection || {};
 
   // Model for getting the data
@@ -333,8 +480,6 @@ Handlebars.registerHelper('deslugify', function (component, options) {
 
   root.app.View.SliderView = Backbone.View.extend({
 
-    el: '#sliderView',
-
     events: {
       'click .js_slide_navigation li' : 'clickNavigation'
     }, 
@@ -344,6 +489,10 @@ Handlebars.registerHelper('deslugify', function (component, options) {
     initialize: function(settings) {
       var opts = settings && settings.options ? settings.options : {};
       this.options = _.extend({}, this.defaults, opts);
+
+      if(! !!this.el) {
+        return;
+      }
 
       enquire.register("screen and (min-width: 850px)", {
         match: function(){
@@ -694,7 +843,7 @@ Handlebars.registerHelper('deslugify', function (component, options) {
       '': 'home',
       // STATIC
       'tutorials(/)': 'tutorials',
-      'about(/)': 'about',
+      'map-builder(/)': 'map-builder',
       // APP
       'apps/:id(/)': 'category',
       //THEME
@@ -850,7 +999,7 @@ Handlebars.registerHelper('deslugify', function (component, options) {
 
     setListeners: function() {
       this.listenTo(this.router, 'route:home', this.homePage);
-      this.listenTo(this.router, 'route:tutorials', this.tutorialsPage);
+      this.listenTo(this.router, 'route:map-builder', this.mapBuilderPage);
       this.listenTo(this.router, 'route:about', this.aboutPage);
       // this.listenTo(this.router, 'route:category', this.appPage);
       // this.listenTo(this.router, 'route:tag', this.themePage);
@@ -865,8 +1014,21 @@ Handlebars.registerHelper('deslugify', function (component, options) {
     },
 
     homePage: function() {
-      this.sliderView = new root.app.View.SliderView();
+      this.featuredForestSliderView = new root.app.View.SliderView({
+        el: '#featuredForestSliderView'
+      });
       this.asideView = new root.app.View.AsideView({ options: { model: { id: null }}});
+    },
+
+    mapBuilderPage: function() {
+      this.featuredForestSliderView = new root.app.View.SliderView({
+        el: '#featuredForestSliderView'
+      });
+      this.tutorialsSliderView = new root.app.View.SliderView({
+        el: '#tutorialsSliderView'
+      });
+      this.videoModalView = new root.app.View.ModalVideoView();
+
     },
 
     tutorialsPage: function() {
