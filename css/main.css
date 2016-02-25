@@ -88,7 +88,7 @@ button {
 
 .l-menu {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   display: block;
   width: 100%;
   background: rgba(255, 255, 255, 0.8);
@@ -301,7 +301,9 @@ h3 {
         .m-modal .modal-window.-video {
           width: 800px; }
           .m-modal .modal-window.-video .modal-wrapper {
-            padding: 0; } }
+            padding: 0; }
+          .m-modal .modal-window.-video .modal-close {
+            display: none; } }
     .m-modal .modal-window .modal-close {
       display: block;
       position: absolute;

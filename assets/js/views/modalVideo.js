@@ -63,11 +63,11 @@
     // Fetch video when user clicks a video
     videoClick: function(e) {
       e && e.preventDefault() && e.stopPropagation();
-      this.show();
-
       // Load current video
       var id = $(e.currentTarget).data('video');
       this.player.loadVideoById(id);
+
+      this.show();
     },
 
     // Overrides hide function
