@@ -35,18 +35,8 @@ this["HandlebarsTemplates"]["blog"] = Handlebars.template({"1":function(depth0,h
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.blogposts : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "</ul>\n<div class=\"m-blog-link\">\n  <a target=\"_blank\" href=\"http://blog.globalforestwatch.org/\">\n    <svg class=\"icon\"><use xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"#icon-f-blog\"></use></svg>\n    Read our blog\n  </a>\n</div>\n";
 },"useData":true});
-this["HandlebarsTemplates"]["modal-video"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
-    return "-footer";
-},"3":function(depth0,helpers,partials,data) {
-    return "      <div class=\"modal-footer\"></div>\n";
-},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    var stack1;
-
-  return "<div class=\"modal-backdrop\"></div>\n<div class=\"modal-window\">\n  <a href=\"#\" class=\"modal-close\">\n    <svg><use xlink:href=\"#shape-close\"></use></svg>\n  </a>\n  <div class=\"modal-wrapper scroll-dark "
-    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.footer : depth0),{"name":"if","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "\">\n    <div class=\"modal-content\"></div>\n"
-    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.footer : depth0),{"name":"if","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "  </div>\n</div>\n";
+this["HandlebarsTemplates"]["modal-video"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    return "<div class=\"modal-backdrop\"></div>\n<div class=\"modal-window -video\">\n  <div class=\"modal-wrapper scroll-dark\">\n    <div class=\"modal-content\">\n      <div class=\"modal-video\">\n        <div id=\"modal-video\"></div>\n      </div>\n    </div>\n  </div>\n</div>\n";
 },"useData":true});
 this["HandlebarsTemplates"]["search"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
     var stack1;

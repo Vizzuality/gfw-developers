@@ -309,10 +309,11 @@ Handlebars.registerHelper('deslugify', function (component, options) {
     initialize: function() {
       // Inits
       this.constructor.__super__.initialize.apply(this);
-      // this.presenter = new SourceModalPresenter(this);
       this.render();
       this._initVars();
+      this._youtubeApi();
       this.setListeners();
+      
       this.$body.append(this.el);
     },
 
@@ -325,29 +326,60 @@ Handlebars.registerHelper('deslugify', function (component, options) {
       return this;
     },
 
-    // Fetch model when click
+    // YOUTUBE api
+    _youtubeApi: function(){
+      var tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      window.onYouTubeIframeAPIReady = function(){
+        this._loadPlayer();
+      }.bind(this)
+    },
+
+    _loadPlayer: function(id) {
+      this.player = new YT.Player('modal-video', {
+        videoId: id,
+        width: 356,
+        height: 200,
+        playerVars: {
+          autoplay: 0,
+          controls: 1,
+          modestbranding: 1,
+          rel: 0,
+          showInfo: 0
+        }
+      });
+    },
+
+    // Fetch video when user clicks a video
     videoClick: function(e) {
       e && e.preventDefault() && e.stopPropagation();
       this.show();
-      console.log('hello');
-      // // current
-      // this.$current = $(e.currentTarget);
-      // this.$current.find('svg').attr('class','spinner start');
 
-      // this.sourceModel = new SourceModel({
-      //   slug: this.$current.data('source'),
-      // });
-      // this.sourceModel.fetch({
-      //   update:true,
-      //   parse: true,
-      //   success: this.sourceSuccess.bind(this),
-      //   error: this.sourceError.bind(this),
-      // });
+      // Load current video
+      var id = $(e.currentTarget).data('video');
+      this.player.loadVideoById(id);
     },
+
+    // Overrides hide function
+    hide: function(e) {
+      e && e.preventDefault();
+      this.model.set('hidden', true);
+
+      this.player.stopVideo();
+
+      //Give back scroll beyond modal window.
+      this.$htmlbody.removeClass('-no-scroll');
+
+      return this;
+    },
+
+
 
   });
 
-})(this);
+})(this); 
 (function(root) {
 
   'use strict';

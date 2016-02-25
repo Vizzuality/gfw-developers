@@ -297,7 +297,11 @@ h3 {
         height: auto;
         min-height: 100px;
         -webkit-transform: translate(-50%, -60%);
-                transform: translate(-50%, -60%); } }
+                transform: translate(-50%, -60%); }
+        .m-modal .modal-window.-video {
+          width: 800px; }
+          .m-modal .modal-window.-video .modal-wrapper {
+            padding: 0; } }
     .m-modal .modal-window .modal-close {
       display: block;
       position: absolute;
@@ -469,6 +473,18 @@ h3 {
       color: #97bd3d; }
       .modal-content p a:not(.btn):hover {
         color: #88aa37; }
+
+.modal-video {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56%;
+  position: relative; }
+  .modal-video embed, .modal-video iframe, .modal-video object {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
 
 .modal-steps {
   padding: 20px 20px 70px; }
