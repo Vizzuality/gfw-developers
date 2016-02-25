@@ -7,6 +7,11 @@
     }
   }
 
+  &.-border {
+    border-top: 1px solid $border1;
+  }
+
+
   &.-own-atlas {
     background: url($baseurl + '/assets/images/bkg-own-atlas.jpg');
     background-size: cover;

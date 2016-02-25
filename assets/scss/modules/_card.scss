@@ -135,4 +135,29 @@
 			text-align: center;
 		}
 	}
+
+	&.-interesting {
+		width: 47.5%;
+		background: $white;
+		padding: 60px 40px 120px;
+
+		h3 {
+			color: $primary-color;
+			font-size: 24px;
+		}
+
+		p {
+			max-width: 250px;
+		}
+
+		svg {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			width: 140px;
+			height: 150px;
+			margin: 35px;
+		}
+
+	}
 }

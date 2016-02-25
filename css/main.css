@@ -714,12 +714,31 @@ h3 {
       border: 3px solid #97bd3d;
       border-radius: 50%;
       text-align: center; }
+  .m-card.-interesting {
+    width: 47.5%;
+    background: #FFF;
+    padding: 60px 40px 120px; }
+    .m-card.-interesting h3 {
+      color: #97bd3d;
+      font-size: 24px; }
+    .m-card.-interesting p {
+      max-width: 250px; }
+    .m-card.-interesting svg {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 140px;
+      height: 150px;
+      margin: 35px; }
 
 .m-section.-padding {
   padding: 40px 15px; }
   @media (min-width: 850px) {
     .m-section.-padding {
       padding: 70px 0px; } }
+
+.m-section.-border {
+  border-top: 1px solid #E5E5DF; }
 
 .m-section.-own-atlas {
   background: url("/assets/images/bkg-own-atlas.jpg");
