@@ -1,9 +1,11 @@
 ---
-title: Who is behind global forest watch?
-order: 2
+title: Atlas 7
+order: 7
 published: True
-app: gfw
-categories: [faqs]
+app: climate
+categories: [gallery]
+thumbnail: "assets/images/gallery/atlas7.jpg"
+organization: "organization name"
 ---
 
 <p>GFW aims to radically improve the availability, quality, and accessibility of forest data for everyone:</p>

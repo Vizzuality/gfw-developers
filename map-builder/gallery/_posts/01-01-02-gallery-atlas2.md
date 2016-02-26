@@ -1,9 +1,11 @@
 ---
-title: What updates are coming down the road for GFW?
-order: 3
+title: Atlas 2
+order: 2
 published: True
-app: gfw
-categories: [faqs]
+app: climate
+categories: [gallery]
+thumbnail: "assets/images/gallery/atlas2.jpg"
+organization: "organization name"
 ---
 
 <p>GFW aims to radically improve the availability, quality, and accessibility of forest data for everyone:</p>

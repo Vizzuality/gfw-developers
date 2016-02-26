@@ -13,7 +13,7 @@ html, body {
   line-height: 1.5;
   color: #555;
   background: #EEE; }
-  html.-no-scroll, body.-no-scroll {
+  html.-no-scroll-allowed, body.-no-scroll-allowed {
     overflow: hidden; }
 
 div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -303,6 +303,8 @@ h3 {
           .m-modal .modal-window.-video .modal-wrapper {
             padding: 0; }
           .m-modal .modal-window.-video .modal-close {
+            display: none; }
+          .m-modal .modal-window.-video:before, .m-modal .modal-window.-video:after {
             display: none; } }
     .m-modal .modal-window .modal-close {
       display: block;
@@ -636,6 +638,8 @@ h3 {
   .m-card h3 {
     margin: 0 0 18px;
     white-space: normal; }
+  .m-card p.-uppercase {
+    text-transform: uppercase; }
   .m-card.-default {
     width: 25%;
     padding: 0;
@@ -643,7 +647,7 @@ h3 {
     .m-card.-default p {
       max-width: 80%; }
   .m-card.-atlas {
-    width: calc(100% - 20px);
+    width: calc(100% - 30px);
     margin: 0 auto; }
     .m-card.-atlas p {
       font-size: 14px;
@@ -654,8 +658,20 @@ h3 {
       margin: 0 -30px 30px;
       padding-bottom: 50%;
       background: url("/assets/images/thumbnail-post.png"); }
+  .m-card.-gallery {
+    width: calc(33.3333% - 30px);
+    margin: 45px 0 0; }
+    .m-card.-gallery p {
+      font-size: 14px;
+      max-width: none;
+      white-space: normal;
+      line-height: 1.5; }
+    .m-card.-gallery .img {
+      margin: 0 -30px 30px;
+      padding-bottom: 50%;
+      background: url("/assets/images/thumbnail-post.png"); }
   .m-card.-video {
-    width: calc(100% - 20px);
+    width: calc(100% - 30px);
     margin: 0 auto;
     cursor: pointer; }
     .m-card.-video p {
@@ -691,9 +707,10 @@ h3 {
     .m-card.-video:hover .img:before {
       background: #a2c64e; }
   .m-card.-number {
-    width: 30%;
+    width: calc(33.3333% - 30px);
     background: #FFF;
-    padding: 60px 40px; }
+    padding: 60px 40px;
+    margin: 30px 0 0; }
     .m-card.-number h3 {
       color: #444444; }
     .m-card.-number p {
@@ -715,14 +732,15 @@ h3 {
       border-radius: 50%;
       text-align: center; }
   .m-card.-interesting {
-    width: 47.5%;
+    width: calc(50% - 30px);
     background: #FFF;
     padding: 60px 40px 120px; }
     .m-card.-interesting h3 {
       color: #97bd3d;
       font-size: 24px; }
     .m-card.-interesting p {
-      max-width: 250px; }
+      max-width: 250px;
+      color: #555; }
     .m-card.-interesting svg {
       position: absolute;
       bottom: 0;
@@ -755,10 +773,12 @@ h3 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(85, 85, 85, 0.5); }
+    background: rgba(0, 0, 0, 0.5); }
 
 .m-section header h2 {
   padding: 0 0 35px; }
+  .m-section header h2 .-font-small {
+    font-size: 19px; }
   .m-section header h2 a {
     color: inherit; }
 
@@ -775,10 +795,16 @@ h3 {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 50px 0; }
+  .m-grid.-margin {
+    padding: 0;
+    margin: -45px 0 0; }
 
 .m-static-aside {
   width: 100%; }

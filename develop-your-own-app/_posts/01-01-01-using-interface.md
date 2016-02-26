@@ -1,9 +1,10 @@
 ---
-title: Test faq Climate
+title: Interface Overview
 order: 1
 published: True
-app: climate
-categories: [faqs]
+categories: [develop]
+tags: [creating your own map]
+tags_order: 2
 ---
 
 <p>GFW aims to radically improve the availability, quality, and accessibility of forest data for everyone:</p>

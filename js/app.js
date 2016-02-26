@@ -207,6 +207,49 @@ Handlebars.registerHelper('deslugify', function (component, options) {
 
   root.app = root.app || {};
   root.app.View = root.app.View || {};
+  root.app.Collection = root.app.Collection || {};
+
+  root.app.Collection.GalleryCollection = Backbone.Collection.extend({
+    url: baseurl + '/json/gallery.json',
+    comparator: function(item) {
+      return item.get("order")
+    }
+  });
+
+
+
+  // View for display results
+  root.app.View.GalleryView = Backbone.View.extend({
+
+    el: '#galleryView',
+
+    template: HandlebarsTemplates['gallery'],
+
+    initialize: function() {
+      // Collection
+      this.collection = new root.app.Collection.GalleryCollection();
+      this.collection.fetch().done(function(){
+        this.render();
+      }.bind(this));
+    },
+
+    render: function() {
+      this.$el.html(this.template({
+        gallery: this.collection.toJSON(),
+        gallery_length: this.collection.toJSON().length
+      }));
+    }
+
+
+  });
+
+})(this);
+(function(root) {
+
+  'use strict';
+
+  root.app = root.app || {};
+  root.app.View = root.app.View || {};
   root.app.Model = root.app.Model || {};
 
   root.app.Model.ModalModel = Backbone.Model.extend({
@@ -269,7 +312,7 @@ Handlebars.registerHelper('deslugify', function (component, options) {
       (!!this.model.get('hidden')) ? this._stopBindings() : this._initBindings();
       this.$el.toggleClass('-active', !this.model.get('hidden'));
       //Prevent scroll beyond modal window.
-      this.$htmlbody.toggleClass('-no-scroll', !this.model.get('hidden'));
+      this.$htmlbody.toggleClass('-no-scroll-allowed', !this.model.get('hidden'));
     },
 
     hide: function(e) {
@@ -277,7 +320,7 @@ Handlebars.registerHelper('deslugify', function (component, options) {
       this.model.set('hidden', true);
 
       //Give back scroll beyond modal window.
-      this.$htmlbody.removeClass('-no-scroll');
+      this.$htmlbody.removeClass('-no-scroll-allowed');
 
       return this;
     },
@@ -370,7 +413,7 @@ Handlebars.registerHelper('deslugify', function (component, options) {
       this.player.stopVideo();
 
       //Give back scroll beyond modal window.
-      this.$htmlbody.removeClass('-no-scroll');
+      this.$htmlbody.removeClass('-no-scroll-allowed');
 
       return this;
     },
@@ -873,18 +916,20 @@ Handlebars.registerHelper('deslugify', function (component, options) {
     routes: {
       // HOME
       '': 'home',
-      // STATIC
-      'tutorials(/)': 'tutorials',
+      // MAP BUILDER      
       'map-builder(/)': 'map-builder',
-      // APP
-      'apps/:id(/)': 'category',
-      //THEME
-      'themes/:id(/)': 'tag',
-      // POST
-      'gfw/:id' : 'post',
-      'climate/:id' : 'post',
-      'fires/:id' : 'post',
-      'commodities/:id' : 'post',
+      'map-builder(/)gallery(/)': 'gallery',
+      // DEVELOP YOUR OWN APP
+      'develop-your-own-app(/)': 'develop',
+      // // APP
+      // 'apps/:id(/)': 'category',
+      // //THEME
+      // 'themes/:id(/)': 'tag',
+      // // POST
+      // 'gfw/:id' : 'post',
+      // 'climate/:id' : 'post',
+      // 'fires/:id' : 'post',
+      // 'commodities/:id' : 'post',
 
     },
 
@@ -1032,7 +1077,9 @@ Handlebars.registerHelper('deslugify', function (component, options) {
     setListeners: function() {
       this.listenTo(this.router, 'route:home', this.homePage);
       this.listenTo(this.router, 'route:map-builder', this.mapBuilderPage);
-      this.listenTo(this.router, 'route:about', this.aboutPage);
+      this.listenTo(this.router, 'route:gallery', this.galleryPage);
+      this.listenTo(this.router, 'route:develop', this.developPage);
+      
       // this.listenTo(this.router, 'route:category', this.appPage);
       // this.listenTo(this.router, 'route:tag', this.themePage);
       // this.listenTo(this.router, 'route:post', this.postPage);
@@ -1060,7 +1107,12 @@ Handlebars.registerHelper('deslugify', function (component, options) {
         el: '#tutorialsSliderView'
       });
       this.videoModalView = new root.app.View.ModalVideoView();
+    },
 
+    galleryPage: function() {
+      this.galleryView = new root.app.View.GalleryView({
+
+      })
     },
 
     tutorialsPage: function() {
@@ -1071,10 +1123,10 @@ Handlebars.registerHelper('deslugify', function (component, options) {
       });
     },
 
-    aboutPage: function() {
+    developPage: function() {
       this.staticView = new root.app.View.StaticView({
         options: _.extend(this.router._unserializeParams(),{
-          page: 'about'
+          page: 'develop'
         })
       });
     },

@@ -1,9 +1,11 @@
 ---
-title: Test faq Climate 2
-order: 2
+title: Atlas 6
+order: 6
 published: True
 app: climate
-categories: [faqs]
+categories: [gallery]
+thumbnail: "assets/images/gallery/atlas6.jpg"
+organization: "organization name"
 ---
 
 <p>GFW aims to radically improve the availability, quality, and accessibility of forest data for everyone:</p>

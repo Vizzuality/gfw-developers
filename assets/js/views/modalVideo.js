@@ -78,7 +78,7 @@
       this.player.stopVideo();
 
       //Give back scroll beyond modal window.
-      this.$htmlbody.removeClass('-no-scroll');
+      this.$htmlbody.removeClass('-no-scroll-allowed');
 
       return this;
     },

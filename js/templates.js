@@ -35,6 +35,25 @@ this["HandlebarsTemplates"]["blog"] = Handlebars.template({"1":function(depth0,h
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.blogposts : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "</ul>\n<div class=\"m-blog-link\">\n  <a target=\"_blank\" href=\"http://blog.globalforestwatch.org/\">\n    <svg class=\"icon\"><use xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"#icon-f-blog\"></use></svg>\n    Read our blog\n  </a>\n</div>\n";
 },"useData":true});
+this["HandlebarsTemplates"]["gallery"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
+    var alias1=this.lambda, alias2=this.escapeExpression;
+
+  return "			<li class=\"m-card -gallery\">\n				<div class=\"img\" style=\"background-image: url("
+    + alias2(alias1((depth0 != null ? depth0.thumbnail : depth0), depth0))
+    + ")\"></div>\n				<h3 class=\"-primary\">"
+    + alias2(alias1((depth0 != null ? depth0.title : depth0), depth0))
+    + "</h3>\n				<p class=\"-uppercase\">"
+    + alias2(alias1((depth0 != null ? depth0.organization : depth0), depth0))
+    + "</p>\n			</li>\n";
+},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return "<div class=\"l-inner\">\n	<header>\n		<h2>All the forest atlas <span class=\"-font-small\">("
+    + this.escapeExpression(this.lambda((depth0 != null ? depth0.gallery_length : depth0), depth0))
+    + ")</span></h2>\n	</header>\n	<ul class=\"m-grid -margin\">\n"
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.gallery : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "	</ul>	\n</div>";
+},"useData":true});
 this["HandlebarsTemplates"]["modal-video"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     return "<div class=\"modal-backdrop\"></div>\n<div class=\"modal-window -video\">\n  <a href=\"#\" class=\"modal-close\"><svg><use xlink:href=\"#shape-close\"></use></svg></a>\n  <div class=\"modal-wrapper scroll-dark\">\n    <div class=\"modal-content\">\n      <div class=\"modal-video\">\n        <div id=\"modal-video\"></div>\n      </div>\n    </div>\n  </div>\n</div>\n";
 },"useData":true});

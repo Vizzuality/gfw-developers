@@ -9,18 +9,20 @@
     routes: {
       // HOME
       '': 'home',
-      // STATIC
-      'tutorials(/)': 'tutorials',
+      // MAP BUILDER      
       'map-builder(/)': 'map-builder',
-      // APP
-      'apps/:id(/)': 'category',
-      //THEME
-      'themes/:id(/)': 'tag',
-      // POST
-      'gfw/:id' : 'post',
-      'climate/:id' : 'post',
-      'fires/:id' : 'post',
-      'commodities/:id' : 'post',
+      'map-builder(/)gallery(/)': 'gallery',
+      // DEVELOP YOUR OWN APP
+      'develop-your-own-app(/)': 'develop',
+      // // APP
+      // 'apps/:id(/)': 'category',
+      // //THEME
+      // 'themes/:id(/)': 'tag',
+      // // POST
+      // 'gfw/:id' : 'post',
+      // 'climate/:id' : 'post',
+      // 'fires/:id' : 'post',
+      // 'commodities/:id' : 'post',
 
     },
 

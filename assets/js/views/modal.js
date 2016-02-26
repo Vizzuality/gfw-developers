@@ -66,7 +66,7 @@
       (!!this.model.get('hidden')) ? this._stopBindings() : this._initBindings();
       this.$el.toggleClass('-active', !this.model.get('hidden'));
       //Prevent scroll beyond modal window.
-      this.$htmlbody.toggleClass('-no-scroll', !this.model.get('hidden'));
+      this.$htmlbody.toggleClass('-no-scroll-allowed', !this.model.get('hidden'));
     },
 
     hide: function(e) {
@@ -74,7 +74,7 @@
       this.model.set('hidden', true);
 
       //Give back scroll beyond modal window.
-      this.$htmlbody.removeClass('-no-scroll');
+      this.$htmlbody.removeClass('-no-scroll-allowed');
 
       return this;
     },

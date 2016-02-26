@@ -17,6 +17,12 @@
     white-space: normal;
 	}
 
+	p {
+		&.-uppercase {
+			text-transform: uppercase;
+		}		
+	}
+
 	// Default
 	&.-default {
 		width: 25%;
@@ -30,7 +36,7 @@
 
 	// Atlas
 	&.-atlas {
-		width: calc(100% - 20px);
+		width: calc(100% - 30px);
 		margin: 0 auto; 
 
 		p {
@@ -47,9 +53,27 @@
 		}		
 	}
 
+	&.-gallery {
+		width: calc(33.3333% - 30px);
+		margin: 45px 0 0;
+
+		p {
+			font-size: 14px;
+			max-width: none;
+			white-space: normal;
+			line-height: 1.5;
+		}
+
+		.img {
+			margin: 0 -30px 30px;
+			padding-bottom: 50%;
+			background: url($baseurl + '/assets/images/thumbnail-post.png');
+		}				
+	}
+
 	// Video
 	&.-video {
-		width: calc(100% - 20px);
+		width: calc(100% - 30px);
 		margin: 0 auto; 
 		cursor: pointer;
 
@@ -104,9 +128,10 @@
 
 	// Number
 	&.-number {
-		width: 30%;
+		width: calc(33.3333% - 30px); 
 		background: $white;
 		padding: 60px 40px;
+		margin: 30px 0 0;
 
 		h3 {
 			color: #444444;
@@ -136,8 +161,9 @@
 		}
 	}
 
+	// Interesting
 	&.-interesting {
-		width: 47.5%;
+		width: calc(50% - 30px);
 		background: $white;
 		padding: 60px 40px 120px;
 
@@ -148,6 +174,7 @@
 
 		p {
 			max-width: 250px;
+			color: $dark;
 		}
 
 		svg {

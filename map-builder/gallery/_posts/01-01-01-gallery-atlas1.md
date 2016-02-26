@@ -1,9 +1,11 @@
 ---
-title: Test GFW 4
-order: 4
+title: Atlas 1
+order: 1
 published: True
-app: gfw
-categories: [faqs]
+app: climate
+categories: [gallery]
+thumbnail: "assets/images/gallery/atlas1.jpg"
+organization: "organization name"
 ---
 
 <p>GFW aims to radically improve the availability, quality, and accessibility of forest data for everyone:</p>

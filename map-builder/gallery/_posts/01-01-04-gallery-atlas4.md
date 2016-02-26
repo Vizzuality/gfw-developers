@@ -1,9 +1,11 @@
 ---
-title: Test faq Fires
-order: 1
+title: Atlas 4
+order: 4
 published: True
-app: fires
-categories: [faqs]
+app: climate
+categories: [gallery]
+thumbnail: "assets/images/gallery/atlas4.jpg"
+organization: "organization name"
 ---
 
 <p>GFW aims to radically improve the availability, quality, and accessibility of forest data for everyone:</p>

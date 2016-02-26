@@ -1,12 +1,14 @@
 ---
-title: Test faq GFW 6
-order: 6
+title: Atlas 5
+order: 5
 published: True
-app: gfw
-categories: [faqs]
+app: climate
+categories: [gallery]
+thumbnail: "assets/images/gallery/atlas5.jpg"
+organization: "organization name"
 ---
 
-<p>GFW aims3 to radically improve the availability, quality, and accessibility of forest data for everyone:</p>
+<p>GFW aims to radically improve the availability, quality, and accessibility of forest data for everyone:</p>
 <ul>
   <li>Governments can use GFW to detect illegal forest clearing and target forest law enforcement efforts.</li>
   <li>Companies can monitor the impacts of commodity supply chains on forests and demonstrate compliance with sustainability commitments and certifications. Learn more at GFW Commodities.</li>

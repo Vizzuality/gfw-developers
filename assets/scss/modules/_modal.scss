@@ -71,6 +71,10 @@ $height: auto;
         .modal-close {
           display: none;
         }
+
+        &:before, &:after {
+          display: none;
+        }
       }
     }
 
