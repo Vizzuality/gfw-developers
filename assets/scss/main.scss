@@ -10,6 +10,7 @@
 @import "modules/header";
 @import "modules/menu";
 @import "modules/modal";
+@import "modules/pagination";
 
 // Home
 @import "modules/slider";
@@ -21,8 +22,7 @@
 
 // Tutorials
 @import "modules/static";
-// @import "modules/select";
-// @import "modules/pagination";
+@import "modules/select";
 
 // Post
 @import "modules/post";

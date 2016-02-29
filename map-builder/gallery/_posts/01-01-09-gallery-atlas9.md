@@ -6,6 +6,7 @@ app: climate
 categories: [gallery]
 thumbnail: "assets/images/gallery/atlas9.jpg"
 organization: "organization name"
+filter: "wri1"
 ---
 
 <p>GFW aims to radically improve the availability, quality, and accessibility of forest data for everyone:</p>

@@ -2,6 +2,19 @@
   padding: 70px 15px 40px;
   position: relative;
   background: #333;
+
+  &.-light {
+    background: $white;
+
+    h2 {
+      color: $dark;
+    }
+
+    h3 {
+      color: $dark;
+    }
+  }
+
   @media (min-width: $br-mobile){
     padding: 70px 0px;
   }

@@ -1,11 +1,12 @@
 ---
-title: Atlas 9
-order: 9
+title: Atlas 10
+order: 10
 published: True
 app: climate
 categories: [gallery]
 thumbnail: "assets/images/gallery/atlas9.jpg"
 organization: "organization name"
+filter: "wri1"
 ---
 
 <p>GFW aims to radically improve the availability, quality, and accessibility of forest data for everyone:</p>

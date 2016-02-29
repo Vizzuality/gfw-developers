@@ -55,7 +55,11 @@
 
 	&.-gallery {
 		width: calc(33.3333% - 30px);
-		margin: 45px 0 0;
+		margin: 45px 0 0 45px;
+
+		&:nth-child(3n+1) {
+			margin: 45px 0 0;
+		}
 
 		p {
 			font-size: 14px;

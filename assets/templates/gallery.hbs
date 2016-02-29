@@ -1,6 +1,17 @@
 <div class="l-inner">
 	<header>
 		<h2>All the forest atlas <span class="-font-small">({{this.gallery_length}})</span></h2>
+
+	  <div class="m-gallery-select m-select">
+	    <select id="gallery-filter">
+	      <option value="all">All organizations</option>
+	      <option value="wri1">Wri 1</option>
+	      <option value="wri2">Wri 2</option>
+	      <option value="wri3">Wri 3</option>
+	    </select>
+	  </div>
+
+
 	</header>
 	<ul class="m-grid -margin">
 		{{#each this.gallery}}	
@@ -11,4 +22,5 @@
 			</li>
 		{{/each}}
 	</ul>	
+	<div id="gallery-paginator"></div>
 </div>

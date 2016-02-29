@@ -10,8 +10,9 @@ layout: null
       "url"           : "{{ site.baseurl }}{{ post.url }}",
       "date"          : "{{ post.date }}",
       "order"         : "{{ post.order }}",
-      "thumbnail"     : "{{site.baseurl}}/{{ post.thumbnail }}",
+      "thumbnail"     : "{{ site.baseurl }}/{{ post.thumbnail }}",
       "organization"  : "{{ post.organization }}",
+      "filter"        : "{{ post.filter }}",
       "content"       : "{{ post.content | strip_newlines }}"
     } {% unless forloop.last %},{% endunless %}
   {% endfor %}
