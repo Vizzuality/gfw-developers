@@ -4,7 +4,7 @@
 
 	  <div class="m-gallery-select m-select">
 	    <select id="gallery-filter">
-	      <option value="all">All organizations</option>
+	      <option value="all">View all the atlases</option>
 	      <option value="wri1">Wri 1</option>
 	      <option value="wri2">Wri 2</option>
 	      <option value="wri3">Wri 3</option>
@@ -21,6 +21,12 @@
 				<p class="-uppercase">{{this.organization}}</p>
 			</li>
 		{{/each}}
+		<li class="m-card -gallery -submit">
+			<a href="#" class="-center">			
+				<svg><use xlink:href="#icon-addmore"></use></svg>
+				<h3 class="-primary">SUBMIT YOUR FOREST ATLAS</h3>
+			</a>
+		</li>
 	</ul>	
 	<div id="gallery-paginator"></div>
 </div>
