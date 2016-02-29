@@ -250,6 +250,43 @@ Handlebars.registerHelper('deslugify', function (component, options) {
 
   root.app = root.app || {};
   root.app.View = root.app.View || {};
+
+  // View for display results
+  root.app.View.MenuView = Backbone.View.extend({
+
+    el: '#menuView',
+
+    initialize: function(settings) {
+      var opts = settings && settings.options ? settings.options : {};
+      this.options = _.extend({}, this.defaults, opts);
+
+      this.cache();
+      this.setSelectedMenu();
+    },
+
+    cache: function() {
+      this.$links = $('#menuView a');
+    },
+
+    setSelectedMenu: function() {
+      if (!!this.options.page) {      
+        _.each(this.$links, function(link){
+          if (~this.options.page.indexOf(link.dataset.page)) {
+            $(link).addClass('-selected');
+          }
+        }.bind(this));
+      }
+    }
+
+  });
+
+})(this);
+(function(root) {
+
+  'use strict';
+
+  root.app = root.app || {};
+  root.app.View = root.app.View || {};
   root.app.Model = root.app.Model || {};
 
   root.app.Model.ModalModel = Backbone.Model.extend({
@@ -609,7 +646,7 @@ Handlebars.registerHelper('deslugify', function (component, options) {
       this.$slider[0].addEventListener('before.lory.init', this.setSlideWidth.bind(this));
       this.$slider[0].addEventListener('on.lory.resize', this.setSlideWidth.bind(this));
 
-      this.slider = lory(this.$slider[0], this.options.slider);
+      this.slider = window.lory.lory(this.$slider[0], this.options.slider);
     },
 
     setOptions: function() {
@@ -1070,7 +1107,6 @@ Handlebars.registerHelper('deslugify', function (component, options) {
 
     initialize: function() {
       this.router = new root.app.Router();
-      // this.setGlobalViews();
       this.setListeners();
     },
 
@@ -1090,6 +1126,8 @@ Handlebars.registerHelper('deslugify', function (component, options) {
         pushState: true,
         root: (!!baseurl) ? baseurl : "/"
       });
+
+      this.setGlobalViews();
     },
 
     homePage: function() {
@@ -1158,10 +1196,15 @@ Handlebars.registerHelper('deslugify', function (component, options) {
     //   this.asideView = new root.app.View.AsideView({ options: { model: { id: null }}});
     // },
 
-    // setGlobalViews: function() {
-    //   this.blogView = new root.app.View.BlogView();
-    //   this.searchView = new root.app.View.SearchView();
-    // }
+    setGlobalViews: function() {
+
+      var fragment = (!!Backbone.history.fragment) ? Backbone.history.fragment.replace(/\//g,'') : null;
+      this.menuView = new root.app.View.MenuView({
+        options: {
+          page: fragment
+        }
+      });
+    }
 
   });
 

@@ -4,7 +4,7 @@ order: 1
 published: True
 categories: [develop]
 tags: [creating your own map]
-tags_order: 2
+tags_order: 1
 ---
 
 <p>GFW aims to radically improve the availability, quality, and accessibility of forest data for everyone:</p>

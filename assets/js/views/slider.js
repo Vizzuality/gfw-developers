@@ -61,7 +61,7 @@
       this.$slider[0].addEventListener('before.lory.init', this.setSlideWidth.bind(this));
       this.$slider[0].addEventListener('on.lory.resize', this.setSlideWidth.bind(this));
 
-      this.slider = lory(this.$slider[0], this.options.slider);
+      this.slider = window.lory.lory(this.$slider[0], this.options.slider);
     },
 
     setOptions: function() {

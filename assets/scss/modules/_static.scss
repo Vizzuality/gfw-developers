@@ -54,6 +54,7 @@
 
       &.-selected {
         background: $white;
+        box-shadow: 2px 0 0 $white;
         &:after{
           content: "";
           position: absolute;

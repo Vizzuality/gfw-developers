@@ -37,7 +37,7 @@
             transition: all 0.2s linear;
           }
 
-          &.current, &:hover{
+          &:hover, &.-selected {
             &:after{
               opacity: 1;
             }

@@ -26,7 +26,6 @@
 
     initialize: function() {
       this.router = new root.app.Router();
-      // this.setGlobalViews();
       this.setListeners();
     },
 
@@ -46,6 +45,8 @@
         pushState: true,
         root: (!!baseurl) ? baseurl : "/"
       });
+
+      this.setGlobalViews();
     },
 
     homePage: function() {
@@ -114,10 +115,15 @@
     //   this.asideView = new root.app.View.AsideView({ options: { model: { id: null }}});
     // },
 
-    // setGlobalViews: function() {
-    //   this.blogView = new root.app.View.BlogView();
-    //   this.searchView = new root.app.View.SearchView();
-    // }
+    setGlobalViews: function() {
+
+      var fragment = (!!Backbone.history.fragment) ? Backbone.history.fragment.replace(/\//g,'') : null;
+      this.menuView = new root.app.View.MenuView({
+        options: {
+          page: fragment
+        }
+      });
+    }
 
   });
 
