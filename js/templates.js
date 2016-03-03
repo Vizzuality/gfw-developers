@@ -50,7 +50,7 @@ this["HandlebarsTemplates"]["gallery"] = Handlebars.template({"1":function(depth
 
   return "<div class=\"l-inner\">\n	<header>\n		<h2>All the forest atlas <span class=\"-font-small\">("
     + this.escapeExpression(this.lambda((depth0 != null ? depth0.gallery_length : depth0), depth0))
-    + ")</span></h2>\n\n	  <div class=\"m-gallery-select m-select\">\n	    <select id=\"gallery-filter\">\n	      <option value=\"all\">View all the atlases</option>\n	      <option value=\"wri1\">Wri 1</option>\n	      <option value=\"wri2\">Wri 2</option>\n	      <option value=\"wri3\">Wri 3</option>\n	    </select>\n	  </div>\n\n\n	</header>\n	<ul class=\"m-grid -margin\">\n"
+    + ")</span></h2>\n\n	  <div class=\"m-gallery-select m-select\">\n	  	<div class=\"arrow-mobile\">\n	  		<svg><use xlink:href=\"#icon-arrowdown\"></use></svg>\n	  	</div>\n	    <select id=\"gallery-filter\">\n	      <option value=\"all\">View all the atlases</option>\n	      <option value=\"wri1\">Wri 1</option>\n	      <option value=\"wri2\">Wri 2</option>\n	      <option value=\"wri3\">Wri 3</option>\n	    </select>\n	  </div>\n\n\n	</header>\n	<ul class=\"m-grid -margin\">\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.gallery : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "		<li class=\"m-card -gallery -submit\">\n			<a href=\"#\" class=\"-center\">			\n				<svg><use xlink:href=\"#icon-addmore\"></use></svg>\n				<h3 class=\"-primary\">SUBMIT YOUR FOREST ATLAS</h3>\n			</a>\n		</li>\n	</ul>	\n	<div id=\"gallery-paginator\"></div>\n</div>";
 },"useData":true});

@@ -1088,7 +1088,8 @@ h3 {
   color: #FFF; }
 
 .m-section header .m-select {
-  width: 100%; }
+  width: 100%;
+  max-width: 400px; }
   @media (min-width: 850px) {
     .m-section header .m-select {
       position: absolute;
@@ -1283,6 +1284,7 @@ h3 {
 
 /* @group Base */
 .m-select {
+  position: relative;
   /* @end */
   /* @group Single Chosen */
   /* @end */
@@ -1291,10 +1293,12 @@ h3 {
   /* @group Disabled Support */
   /* @end */ }
   .m-select select {
+    -webkit-appearance: none;
+    appearance: none;
     width: 100%;
     position: relative;
     overflow: hidden;
-    padding: 12px 5px 10px;
+    padding: 12px 10px 10px;
     border-radius: 0;
     background: #FFF;
     background-clip: padding-box;
@@ -1306,7 +1310,26 @@ h3 {
     font-family: inherit;
     outline: none;
     cursor: pointer;
+    font-size: 13px;
     border: 1px solid #E5E5DF; }
+  .m-select .arrow-mobile {
+    width: 20px;
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    z-index: 2;
+    pointer-events: none;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%); }
+    @media (min-width: 850px) {
+      .m-select .arrow-mobile {
+        display: none; } }
+    .m-select .arrow-mobile svg {
+      width: 20px;
+      height: 15px;
+      fill: #555;
+      stroke: #555; }
   .m-select .chosen-container {
     position: relative;
     display: inline-block;
@@ -1314,7 +1337,7 @@ h3 {
     font-size: 13px;
     zoom: 1;
     display: inline-block;
-    margin: 3px 0;
+    margin: 0;
     /* @end */
     /* @group Results */ }
     .m-select .chosen-container .chosen-single {

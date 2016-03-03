@@ -71,6 +71,7 @@
 
     .m-select {
       width: 100%;
+      max-width: 400px;
       @media (min-width: $br-mobile){
         position: absolute;
         top: 0;
