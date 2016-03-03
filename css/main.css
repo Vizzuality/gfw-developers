@@ -603,33 +603,57 @@ h3 {
 
 .m-slider ul {
   width: 100%;
-  padding-bottom: 500px;
+  padding-bottom: 300px;
   position: relative; }
+  @media (min-width: 850px) {
+    .m-slider ul {
+      padding-bottom: 500px; } }
   .m-slider ul li {
     position: absolute;
-    top: -60px;
+    top: 0px;
     left: 0;
     width: 100%;
-    height: calc(100% + 60px);
+    height: 100%;
     background: url("/assets/images/home-slider/home-slider-1.png");
     background-size: cover; }
+    @media (min-width: 850px) {
+      .m-slider ul li {
+        top: -60px;
+        height: calc(100% + 60px); } }
     .m-slider ul li .l-inner {
       position: absolute;
-      height: 100%;
-      left: 50%;
-      top: 0;
-      -webkit-transform: translate(-50%, 0);
-              transform: translate(-50%, 0); }
+      width: 100%;
+      bottom: 0;
+      left: 0; }
+      @media (min-width: 850px) {
+        .m-slider ul li .l-inner {
+          width: 95%;
+          top: 0;
+          bottom: auto;
+          left: 50%;
+          -webkit-transform: translate(-50%, 0);
+                  transform: translate(-50%, 0);
+          height: 100%; } }
 
 .m-slider aside {
   position: absolute;
-  top: 50%;
+  bottom: 0;
   left: 0;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
-  margin: 30px 0 0; }
+  width: 100%;
+  background: rgba(255, 255, 255, 0.75);
+  padding: 20px 50px 20px 15px; }
+  @media (min-width: 850px) {
+    .m-slider aside {
+      background: none;
+      padding: 0;
+      width: auto;
+      top: 50%;
+      bottom: auto;
+      -webkit-transform: translate(0, -50%);
+              transform: translate(0, -50%);
+      margin: 30px 0 0; } }
   .m-slider aside h2 {
-    font-size: 35px;
+    font-size: 30px;
     display: inline-block;
     font-weight: 400;
     text-transform: uppercase; }
@@ -666,6 +690,23 @@ h3 {
     display: inline-block;
     text-transform: uppercase;
     text-decoration: none; }
+    .m-slider aside .-link strong {
+      display: none;
+      font-weight: 400; }
+      @media (min-width: 850px) {
+        .m-slider aside .-link strong {
+          display: block; } }
+    .m-slider aside .-link em {
+      display: block;
+      font-weight: 400;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); }
+      @media (min-width: 850px) {
+        .m-slider aside .-link em {
+          display: none; } }
     @media (min-width: 850px) {
       .m-slider aside .-link {
         top: auto;
