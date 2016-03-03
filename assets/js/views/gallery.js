@@ -76,9 +76,11 @@
 
       this.initPaginate();
       this.initChosen();
+      this.scrollToTop();
     },
 
     cache: function() {
+      this.$htmlbody = $("html, body");
       this.$paginator = this.$el.find('#gallery-paginator');
       this.$filters = this.$el.find('#gallery-filter');
     },
@@ -110,6 +112,12 @@
       this.$filters.chosen({
         disable_search: true
       });
+    },
+
+    scrollToTop: function() {
+      this.$htmlbody.animate({
+        scrollTop: this.$el.offset().top
+      }, 250)
     },
 
     changeFilter: function(e) {

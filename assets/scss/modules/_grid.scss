@@ -11,6 +11,8 @@
 	&.-margin {
 		justify-content: flex-start;
 		padding: 0;
-		margin: -45px 0 0;
+	  @media (min-width: $br-mobile) {
+			margin: -45px 0 0;
+	  }
 	}
 }

@@ -795,15 +795,21 @@ h3 {
   position: relative;
   width: 100%;
   background: #FFF;
-  padding: 0px 30px 30px;
+  padding: 0px 15px 15px;
   border: 1px solid #E5E5DF; }
+  @media (min-width: 850px) {
+    .m-card {
+      padding: 0px 30px 30px; } }
   .m-card svg {
     width: 100px;
     height: 100px;
     margin: 0 0 30px; }
   .m-card h3 {
-    margin: 0 0 18px;
+    margin: 0 0 10px;
     white-space: normal; }
+    @media (min-width: 850px) {
+      .m-card h3 {
+        margin: 0 0 18px; } }
   .m-card p.-uppercase {
     text-transform: uppercase; }
   .m-card.-default {
@@ -828,26 +834,41 @@ h3 {
     .m-card.-atlas .img {
       margin: 0 -15px 20px;
       padding-bottom: 50%;
-      background: url("/assets/images/thumbnail-post.png"); }
+      background: url("/assets/images/thumbnail-post.png");
+      background-size: cover; }
       @media (min-width: 850px) {
         .m-card.-atlas .img {
           margin: 0 -30px 30px; } }
   .m-card.-gallery {
-    width: calc(33.3333% - 30px);
-    margin: 45px 0 0 45px; }
-    .m-card.-gallery:nth-child(3n+1) {
-      margin: 45px 0 0; }
+    margin: 15px 0 0; }
+    @media (min-width: 600px) and (max-width: 849px) {
+      .m-card.-gallery {
+        width: calc(50% - 20px);
+        margin: 30px 0 0 30px; }
+        .m-card.-gallery:nth-child(2n+1) {
+          margin: 30px 0 0; } }
+    @media (min-width: 850px) {
+      .m-card.-gallery {
+        width: calc(33.3333% - 30px);
+        margin: 45px 0 0 45px; }
+        .m-card.-gallery:nth-child(3n+1) {
+          margin: 45px 0 0; } }
     .m-card.-gallery p {
       font-size: 14px;
       max-width: none;
       white-space: normal;
       line-height: 1.5; }
     .m-card.-gallery .img {
-      margin: 0 -30px 30px;
+      margin: 0 -15px 15px;
       padding-bottom: 50%;
-      background: url("/assets/images/thumbnail-post.png"); }
+      background: url("/assets/images/thumbnail-post.png");
+      background-size: cover; }
+      @media (min-width: 850px) {
+        .m-card.-gallery .img {
+          margin: 0 -30px 30px; } }
   .m-card.-submit {
-    background: #97bd3d; }
+    background: #97bd3d;
+    min-height: 250px; }
     .m-card.-submit .-center {
       position: absolute;
       top: 50%;
@@ -995,9 +1016,9 @@ h3 {
   padding: 0 0 10px; }
   @media (min-width: 850px) {
     .m-section header h2 {
-      padding: 0 0 35px; } }
-  .m-section header h2.-no-padding {
-    padding: 0; }
+      padding: 0 0 35px; }
+      .m-section header h2.-no-padding {
+        padding: 0; } }
   .m-section header h2 .-font-small {
     font-size: 19px; }
   .m-section header h2 a {
@@ -1017,10 +1038,13 @@ h3 {
   color: #FFF; }
 
 .m-section header .m-select {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 250px; }
+  width: 100%; }
+  @media (min-width: 850px) {
+    .m-section header .m-select {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 250px; } }
 
 .m-grid {
   display: -webkit-flex;
@@ -1040,8 +1064,10 @@ h3 {
     -webkit-justify-content: flex-start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    padding: 0;
-    margin: -45px 0 0; }
+    padding: 0; }
+    @media (min-width: 850px) {
+      .m-grid.-margin {
+        margin: -45px 0 0; } }
 
 .m-static-aside {
   width: 100%; }

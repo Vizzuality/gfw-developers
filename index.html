@@ -21,24 +21,7 @@ subtitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius
 </section>
 
 <section class="m-section -padding">
-	<div class="l-inner">
-		<div class="m-grid">
-	  	<div class="m-card -interesting">	
-	  		<a href="{{site.baseurl}}/map-builder">
-					<svg><use xlink:href="#icon-mapbuilder"></use></svg>	  			
-					<h3 class="-primary">Map builder</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed labore et dolore magna aliqua. </p>
-	  		</a>			  		
-	  	</div>
-	  	<div class="m-card -interesting">
-	  		<a href="{{site.baseurl}}/develop-your-own-app">  			
-					<svg><use xlink:href="#icon-developyourownapp"></use></svg>
-					<h3 class="-primary">Develop your own app</h3>
-					<p>Ut enim ad minim venia nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
-	  		</a>
-	  	</div>			
-		</div>
-	</div>
+	{% include interesting.html %}
 </section>
 
 <section class="m-section -padding -border">
