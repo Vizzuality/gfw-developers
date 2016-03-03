@@ -67,6 +67,8 @@
     },
 
     render: function() {
+      this.scrollToTop();
+
       this.$el.html(this.template({
         gallery: this.collection.getPaginatedCollection(this.model.get('currentPage'),this.model.get('itemsOnPage'),this.model.get('filter')),
         gallery_length: this.collection.getCount(this.model.get('filter'))
@@ -76,11 +78,9 @@
 
       this.initPaginate();
       this.initChosen();
-      this.scrollToTop();
     },
 
     cache: function() {
-      this.$htmlbody = $("html, body");
       this.$paginator = this.$el.find('#gallery-paginator');
       this.$filters = this.$el.find('#gallery-filter');
     },
@@ -115,7 +115,7 @@
     },
 
     scrollToTop: function() {
-      this.$htmlbody.animate({
+      $("html, body").animate({
         scrollTop: this.$el.offset().top
       }, 250)
     },

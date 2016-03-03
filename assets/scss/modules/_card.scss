@@ -10,9 +10,14 @@
 
 
 	svg {
-		width: 100px;
-		height: 100px;
-		margin: 0 0 30px;
+		width: 80px;
+		height: 80px;
+		margin: 0 0 20px;
+	  @media (min-width: $br-mobile) {
+			width: 100px;
+			height: 100px;
+			margin: 0 0 30px;
+	  }
 	}
 
 
@@ -32,9 +37,19 @@
 
 	// Default
 	&.-default {
-		width: 25%;
 		padding: 0;
 		border: 0;
+		margin: 30px 0 0;
+		
+		&:first-child {
+			margin: 0;
+		}
+
+	  @media (min-width: $br-mobile) {
+			width: 25%;
+			margin: 0;
+	  }
+
 		p {
 			max-width: 80%;
 		}

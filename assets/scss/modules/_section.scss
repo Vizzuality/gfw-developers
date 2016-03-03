@@ -15,9 +15,12 @@
   &.-own-atlas {
     background: url($baseurl + '/assets/images/bkg-own-atlas.jpg');
     background-size: cover;
-    background-attachment: fixed;
     position: relative;
     z-index: 0;
+    @media (min-width: $br-mobile){
+      background-attachment: fixed;
+    }
+
 
     &:after{
       content: "";
