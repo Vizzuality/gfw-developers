@@ -13,7 +13,9 @@
 
     events: {
       'click .m-static-title' : 'clickToggleContent',
-      'click .js-static-tab' : 'clickToggleAside'
+      'click .js-static-tab' : 'clickToggleAside',
+      'click .js-static-page' : 'clickGoToTop',
+      'click .js-static-content-close' : 'clickCloseCount'
     },
 
     model: new (Backbone.Model.extend({
@@ -58,6 +60,18 @@
     initialize: function(settings) {
       var opts = settings && settings.options ? settings.options : {};
       this.options = _.extend({}, this.defaults, opts);
+
+      enquire.register("screen and (min-width: 850px)", {
+        match: function(){
+          this.mobile = false;
+        }.bind(this)
+      });
+      enquire.register("screen and (max-width: 850px)", {
+        match: function(){
+          this.mobile = true;
+        }.bind(this)
+      });
+
       
       this.collection.fetch({
         url: baseurl + '/json/'+this.options.page+'.json'
@@ -74,7 +88,9 @@
 
       this.model.on('change:tab change:tag', this.updateRouter.bind(this));
 
-      $(document).on('scroll',_.bind(this.scrollDocument,this)); 
+      if (!this.mobile) {
+        $(document).on('scroll',_.bind(this.scrollDocument,this)); 
+      }
     },
 
     cache: function() {
@@ -92,7 +108,8 @@
       this.$el.html(this.template({
         tabs: this.collection.getTabs(),
         tags: this.collection.getTags(this.model.get('tab') || this.collection.getTabs()[0]),
-        tab: this.model.get('tab') || this.collection.getTabs()[0]
+        tab: this.model.get('tab') || this.collection.getTabs()[0],
+        pageName: this.options.pageName
       }));
 
       this.afterRender();
@@ -110,11 +127,24 @@
       this.model.set('tab', new_tab);
     },
 
+    clickGoToTop: function(e) {
+      e && e.preventDefault();
+      $('html,body').animate({
+        scrollTop: 0
+      }, 250);
+    },
+
     // Content
     clickToggleContent: function(e) {
       var tag = this.model.get('tag');
       var new_tag = $(e.currentTarget).data('tag');
       this.model.set('tag', (new_tag != tag) ? new_tag : null)
+    },
+
+    clickCloseCount: function(e) {
+      e && e.preventDefault();
+      this.model.set('tag', null);
+      this.model.set('tab', null);            
     },
 
     toggleContent: function() {
@@ -135,11 +165,15 @@
 
       // To prevent a little blink issue with the aside box
       this.scrollDocument();
+
+      if (!!this.model.get('tab')) {
+        this.$content.addClass('-active');
+      }
     },
 
     updateRouter: function() {
       var params = {
-        tab: this.model.get('tab') || this.collection.getTabs()[0],
+        tab: this.model.get('tab') || (!this.mobile) ? this.collection.getTabs()[0] : null,
         tag: this.model.get('tag')
       }
       Backbone.Events.trigger('route/update', params);

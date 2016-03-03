@@ -1,6 +1,11 @@
 <div class="l-inner">
   <aside class="m-static-aside js-static-aside">
     <ul>
+
+      <li class="-page js-static-page">
+        {{!-- We still need the icon --}}
+        {{this.pageName}}
+      </li>
       {{#each this.tabs}}
         <li data-tab="{{this}}" class="js-static-tab">{{deslugify this}}</li>
       {{/each}}
@@ -8,6 +13,7 @@
   </aside>
 
   <div class="m-static-content js-static-content">
+    <a href="#" class="js-static-content-close">cerrar</a>
     <header>
       <h2>{{deslugify this.tab}}</h2>
     </header>

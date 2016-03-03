@@ -33,11 +33,7 @@
       this.listenTo(this.router, 'route:home', this.homePage);
       this.listenTo(this.router, 'route:map-builder', this.mapBuilderPage);
       this.listenTo(this.router, 'route:gallery', this.galleryPage);
-      this.listenTo(this.router, 'route:develop', this.developPage);
-      
-      // this.listenTo(this.router, 'route:category', this.appPage);
-      // this.listenTo(this.router, 'route:tag', this.themePage);
-      // this.listenTo(this.router, 'route:post', this.postPage);
+      this.listenTo(this.router, 'route:develop', this.developPage);      
     },
 
     start: function() {
@@ -92,7 +88,8 @@
     developPage: function() {
       this.staticView = new root.app.View.StaticView({
         options: _.extend(this.router._unserializeParams(),{
-          page: 'develop'
+          page: 'develop',
+          pageName: 'Develop your own app'
         })
       });
     },
