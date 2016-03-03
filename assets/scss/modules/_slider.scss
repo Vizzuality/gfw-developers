@@ -23,16 +23,17 @@
 			
 			.l-inner {
 		    position: absolute;
-        width: 100%;    
         bottom: 0;
         left: 0;
         @media (min-width: $br-mobile) {
-          width: 95%;
           top: 0;
           bottom: auto;
           left: 50%;
           transform: translate(-50%,0);
 		      height: 100%;	
+        }
+        @media (max-width: $br-mobile - 1) {
+          width: 100%;
         }
 		  }			
 		}

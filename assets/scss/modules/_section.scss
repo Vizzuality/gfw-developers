@@ -37,12 +37,9 @@
 
   header {
     h2 {
-      padding: 0 0 10px;
+      padding: 0 0 20px;
       @media (min-width: $br-mobile){
         padding: 0 0 35px;
-        &.-no-padding {
-          padding: 0;
-        }
       }
       
 
