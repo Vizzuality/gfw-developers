@@ -1034,7 +1034,7 @@ Handlebars.registerHelper('deslugify', function (component, options) {
       '': 'home',
       // MAP BUILDER      
       'map-builder(/)': 'map-builder',
-      'map-builder(/)gallery(/)': 'gallery',
+      'gallery(/)': 'gallery',
       // DEVELOP YOUR OWN APP
       'develop-your-own-app(/)': 'develop',
       // // APP

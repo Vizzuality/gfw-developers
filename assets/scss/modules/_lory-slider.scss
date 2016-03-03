@@ -1,6 +1,9 @@
 .m-lory-slider {
-  padding: 50px 0;
+  padding: 25px 0 0;
   position: relative;
+  @media (min-width: $br-mobile) {
+    padding: 50px 0;
+  }
   
   // Slider
   .slider {
@@ -28,6 +31,13 @@
 
   // Slider navigation
   .slider-arrows {
+    position: relative;
+    height: 70px;
+    @media (min-width: $br-mobile) {
+      position: static;
+      height: auto;
+    }
+
     ul {
       li {
         cursor: pointer;
@@ -41,15 +51,21 @@
         }
 
         &.-left {
-          left: 0;
+          left: 50%;
           transform: translate(-100%,-50%);
           margin: 0 0 0 -10px;
+          @media (min-width: $br-mobile) {
+            left: 0;
+          }          
         }
 
         &.-right {
-          right: 0;
+          right: 50%;
           transform: translate(100%,-50%);
           margin: 0 -10px 0 0;
+          @media (min-width: $br-mobile) {
+            right: 0;
+          }          
         }
 
         svg {

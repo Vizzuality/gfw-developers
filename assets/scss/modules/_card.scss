@@ -36,8 +36,13 @@
 
 	// Atlas
 	&.-atlas {
-		width: calc(100% - 30px);
-		margin: 0 auto; 
+		width: 100%;
+		padding: 0px 15px 15px;
+	  @media (min-width: $br-mobile) {
+			width: calc(100% - 30px);
+			margin: 0 auto; 
+			padding: 0px 30px 30px;
+	  }
 
 		p {
 			font-size: 14px;
@@ -47,12 +52,16 @@
 		}
 
 		.img {
-			margin: 0 -30px 30px;
+			margin: 0 -15px 20px;
 			padding-bottom: 50%;
 			background: url($baseurl + '/assets/images/thumbnail-post.png');
+		  @media (min-width: $br-mobile) {
+				margin: 0 -30px 30px;
+		  }
 		}		
 	}
 
+	// Gallery
 	&.-gallery {
 		width: calc(33.3333% - 30px);
 		margin: 45px 0 0 45px;
@@ -75,6 +84,7 @@
 		}				
 	}
 
+	// Submit
 	&.-submit {
 		background: $primary-color;
 		
@@ -102,9 +112,14 @@
 
 	// Video
 	&.-video {
-		width: calc(100% - 30px);
-		margin: 0 auto; 
+		width: 100%;
+		padding: 0px 15px 15px;
 		cursor: pointer;
+	  @media (min-width: $br-mobile) {
+			width: calc(100% - 30px);
+			margin: 0 auto; 
+			padding: 0px 30px 30px;
+	  }
 
 		p {
 			font-size: 14px;
@@ -114,10 +129,13 @@
 		}
 
 		.img {
-			margin: 0 -30px 30px;
+			margin: 0 -15px 20px;
 			padding-bottom: 50%;
 			background: $dark;
 			position: relative;
+		  @media (min-width: $br-mobile) {
+				margin: 0 -30px 30px;
+		  }
 
 			&:before, &:after{
 				content: "";
@@ -192,13 +210,27 @@
 
 	// Interesting
 	&.-interesting {
-		width: calc(50% - 30px);
 		background: $white;
-		padding: 60px 40px 120px;
+		padding: 20px;
+		margin: 15px 0 0;
+
+		&:first-child {
+			margin: 0;
+		}
+
+	  @media (min-width: $br-mobile) {
+			width: calc(50% - 30px);
+			padding: 60px 40px 120px;
+			margin: 0;
+	  }
 
 		h3 {
 			color: $primary-color;
-			font-size: 24px;
+			margin: 0 0 10px;
+		  @media (min-width: $br-mobile) {
+		  	margin: 0 0 18px;
+		  	font-size: 24px;
+		  }
 		}
 
 		p {
@@ -207,13 +239,16 @@
 		}
 
 		svg {
-			position: absolute;
-			bottom: 0;
-			right: 0;
-			width: 140px;
-			height: 150px;
-			margin: 35px;
+			width: 100px;
+			height: 100px;
+		  @media (min-width: $br-mobile) {
+				position: absolute;
+				bottom: 0;
+				right: 0;		  	
+				width: 140px;
+				height: 150px;
+				margin: 35px;
+		  }
 		}
-
 	}
 }
