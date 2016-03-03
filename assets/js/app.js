@@ -58,6 +58,15 @@
 
     mapBuilderPage: function() {
       this.featuredForestSliderView = new root.app.View.SliderView({
+        el: '#stepsSliderView',
+        options: {
+          defaultSlider: {
+            infinite: false,
+            navigation: false
+          }            
+        }
+      });
+      this.featuredForestSliderView = new root.app.View.SliderView({
         el: '#featuredForestSliderView'
       });
       this.tutorialsSliderView = new root.app.View.SliderView({

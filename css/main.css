@@ -742,6 +742,13 @@ h3 {
   @media (min-width: 850px) {
     .m-lory-slider {
       padding: 50px 0; } }
+  @media (min-width: 850px) {
+    .m-lory-slider#stepsSliderView {
+      padding: 100px 0 50px; }
+      .m-lory-slider#stepsSliderView .frame {
+        overflow: visible; }
+      .m-lory-slider#stepsSliderView .slider-arrows {
+        display: none; } }
   .m-lory-slider .slider .frame {
     width: 100%;
     position: relative;
@@ -945,30 +952,45 @@ h3 {
     .m-card.-video:hover .img:before {
       background: #a2c64e; }
   .m-card.-number {
-    width: calc(33.3333% - 30px);
-    background: #FFF;
-    padding: 60px 40px;
-    margin: 30px 0 0; }
+    width: 100%;
+    padding: 30px 15px 30px;
+    cursor: pointer; }
+    @media (min-width: 850px) {
+      .m-card.-number {
+        width: calc(100% - 30px);
+        margin: 0 auto;
+        padding: 60px 40px; } }
     .m-card.-number h3 {
       color: #444444; }
     .m-card.-number p {
-      max-width: none; }
+      font-size: 14px;
+      max-width: none;
+      white-space: normal;
+      line-height: 1.5; }
     .m-card.-number .number {
-      width: 80px;
-      height: 80px;
-      line-height: 80px;
-      font-size: 35px;
+      width: 40px;
+      height: 40px;
+      line-height: 38px;
+      font-size: 20px;
       font-weight: 500;
-      position: absolute;
-      top: 0;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-              transform: translate(-50%, -50%);
+      margin: 0 auto 20px;
       background: #FFF;
       color: #97bd3d;
       border: 3px solid #97bd3d;
       border-radius: 50%;
       text-align: center; }
+      @media (min-width: 850px) {
+        .m-card.-number .number {
+          width: 80px;
+          height: 80px;
+          line-height: 80px;
+          font-size: 35px;
+          margin: 0;
+          position: absolute;
+          top: 0;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%); } }
   .m-card.-interesting {
     background: #FFF;
     padding: 20px;

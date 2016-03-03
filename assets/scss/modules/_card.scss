@@ -216,36 +216,52 @@
 
 	// Number
 	&.-number {
-		width: calc(33.3333% - 30px); 
-		background: $white;
-		padding: 60px 40px;
-		margin: 30px 0 0;
+		width: 100%;
+		padding: 30px 15px 30px;
+		cursor: pointer;
+	  @media (min-width: $br-mobile) {
+			width: calc(100% - 30px);
+			margin: 0 auto; 
+			padding: 60px 40px;
+	  }
 
 		h3 {
 			color: #444444;
 		}
 
 		p {
+			font-size: 14px;
 			max-width: none;
+			white-space: normal;
+			line-height: 1.5;
 		}
 
 		.number {
-			width: 80px;
-			height: 80px;
-			line-height: 80px;
-			font-size: 35px;
+			width: 40px;
+			height: 40px;
+			line-height: 38px;
+			font-size: 20px;
 			font-weight: 500;
-			
-			position: absolute;
-			top: 0;
-			left: 50%;
-			transform: translate(-50%,-50%);
-			
+			margin: 0 auto 20px;
+						
 			background: $white;
 			color: $primary-color;
 			border: 3px solid $primary-color;
 			border-radius: 50%;
 			text-align: center;
+
+		  @media (min-width: $br-mobile) {
+				width: 80px;
+				height: 80px;
+				line-height: 80px;
+				font-size: 35px;
+				margin: 0;
+	
+				position: absolute;
+				top: 0;
+				left: 50%;
+				transform: translate(-50%,-50%);
+		  }
 		}
 	}
 

@@ -11,19 +11,10 @@
       '': 'home',
       // MAP BUILDER      
       'map-builder(/)': 'map-builder',
+      // GALLERY
       'gallery(/)': 'gallery',
       // DEVELOP YOUR OWN APP
       'develop-your-own-app(/)': 'develop',
-      // // APP
-      // 'apps/:id(/)': 'category',
-      // //THEME
-      // 'themes/:id(/)': 'tag',
-      // // POST
-      // 'gfw/:id' : 'post',
-      // 'climate/:id' : 'post',
-      // 'fires/:id' : 'post',
-      // 'commodities/:id' : 'post',
-
     },
 
     ParamsModel: Backbone.Model.extend({}),

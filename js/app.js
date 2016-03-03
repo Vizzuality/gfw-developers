@@ -708,7 +708,7 @@ Handlebars.registerHelper('deslugify', function (component, options) {
     },
 
     initSlider: function() {
-      this.options.slider = this.setOptions();
+      this.options.slider = (! !!this.options.defaultSlider) ? this.setOptions() : _.extend(this.setOptions(), this.options.defaultSlider);
       this.initNavigation();
       this.initLory();
     },
@@ -1042,19 +1042,10 @@ Handlebars.registerHelper('deslugify', function (component, options) {
       '': 'home',
       // MAP BUILDER      
       'map-builder(/)': 'map-builder',
+      // GALLERY
       'gallery(/)': 'gallery',
       // DEVELOP YOUR OWN APP
       'develop-your-own-app(/)': 'develop',
-      // // APP
-      // 'apps/:id(/)': 'category',
-      // //THEME
-      // 'themes/:id(/)': 'tag',
-      // // POST
-      // 'gfw/:id' : 'post',
-      // 'climate/:id' : 'post',
-      // 'fires/:id' : 'post',
-      // 'commodities/:id' : 'post',
-
     },
 
     ParamsModel: Backbone.Model.extend({}),
@@ -1225,6 +1216,15 @@ Handlebars.registerHelper('deslugify', function (component, options) {
     },
 
     mapBuilderPage: function() {
+      this.featuredForestSliderView = new root.app.View.SliderView({
+        el: '#stepsSliderView',
+        options: {
+          defaultSlider: {
+            infinite: false,
+            navigation: false
+          }            
+        }
+      });
       this.featuredForestSliderView = new root.app.View.SliderView({
         el: '#featuredForestSliderView'
       });

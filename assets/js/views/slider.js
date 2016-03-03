@@ -36,7 +36,7 @@
     },
 
     initSlider: function() {
-      this.options.slider = this.setOptions();
+      this.options.slider = (! !!this.options.defaultSlider) ? this.setOptions() : _.extend(this.setOptions(), this.options.defaultSlider);
       this.initNavigation();
       this.initLory();
     },
