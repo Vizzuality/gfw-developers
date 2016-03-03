@@ -24,6 +24,7 @@
 	h3 {
 		margin: 0 0 10px;
     white-space: normal;
+
 	  @media (min-width: $br-mobile) {
 			margin: 0 0 18px;
 	  }
@@ -44,6 +45,14 @@
 		&:first-child {
 			margin: 0;
 		}
+
+	  @media (min-width: $br-mobile-portrait) and (max-width: $br-mobile - 1){
+			width: 50%;
+			margin: 0;
+			&:nth-child(n+3) {
+				margin: 45px 0 0;
+			}
+	  }
 
 	  @media (min-width: $br-mobile) {
 			width: 25%;
