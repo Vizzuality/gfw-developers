@@ -67,6 +67,8 @@
     },
 
     render: function() {
+      this.scrollToTop();
+
       this.$el.html(this.template({
         gallery: this.collection.getPaginatedCollection(this.model.get('currentPage'),this.model.get('itemsOnPage'),this.model.get('filter')),
         gallery_length: this.collection.getCount(this.model.get('filter'))
@@ -110,6 +112,12 @@
       this.$filters.chosen({
         disable_search: true
       });
+    },
+
+    scrollToTop: function() {
+      $("html, body").animate({
+        scrollTop: this.$el.offset().top
+      }, 250)
     },
 
     changeFilter: function(e) {

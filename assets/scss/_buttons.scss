@@ -57,18 +57,30 @@
   &.-huge {
     padding: 0 40px;
     height: 50px;
-    line-height: 50px;    
+    line-height: 50px;        
+  }
+
+  &.-m-fullwidth {
+    width: 100%;
+    @media (min-width: $br-mobile) {
+      width: auto;
+    }    
   }
 }
 
 .btn-box {
   display: flex;
   justify-content: flex-start; 
+  flex-wrap: wrap;
 
   &.-center {
     justify-content: center;
     > * {
-      margin-left: 15px;
+      margin: 15px 0 0 0;
+      @media (min-width: $br-mobile) {
+        margin: 0 0 0 15px;
+      }    
+
       &:first-child {
         margin: 0;
       }

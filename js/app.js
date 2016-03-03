@@ -270,6 +270,8 @@ Handlebars.registerHelper('deslugify', function (component, options) {
     },
 
     render: function() {
+      this.scrollToTop();
+
       this.$el.html(this.template({
         gallery: this.collection.getPaginatedCollection(this.model.get('currentPage'),this.model.get('itemsOnPage'),this.model.get('filter')),
         gallery_length: this.collection.getCount(this.model.get('filter'))
@@ -313,6 +315,12 @@ Handlebars.registerHelper('deslugify', function (component, options) {
       this.$filters.chosen({
         disable_search: true
       });
+    },
+
+    scrollToTop: function() {
+      $("html, body").animate({
+        scrollTop: this.$el.offset().top
+      }, 250)
     },
 
     changeFilter: function(e) {
@@ -1034,7 +1042,7 @@ Handlebars.registerHelper('deslugify', function (component, options) {
       '': 'home',
       // MAP BUILDER      
       'map-builder(/)': 'map-builder',
-      'map-builder(/)gallery(/)': 'gallery',
+      'gallery(/)': 'gallery',
       // DEVELOP YOUR OWN APP
       'develop-your-own-app(/)': 'develop',
       // // APP

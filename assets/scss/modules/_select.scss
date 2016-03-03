@@ -1,13 +1,10 @@
 /* @group Base */
 .m-select {
   select {
-    @extend %clean-button-or-input;
     width: 100%;
-
-    height: 46px;
     position: relative;
     overflow: hidden;
-    padding: 16px;
+    padding: 12px 5px 10px;
     border-radius: 0;
     background: #FFF;
     background-clip: padding-box;
@@ -16,7 +13,7 @@
     white-space: nowrap;
     line-height: 1;
     font-weight: 400;
-    text-transform: uppercase;
+    font-family: inherit;
     outline: none;
     cursor: pointer;
     border: 1px solid $border1;
