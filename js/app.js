@@ -1145,8 +1145,7 @@ Handlebars.registerHelper('deslugify', function (component, options) {
      */
     updateUrl: function() {
       var serializedParams = (!!this._serializeParams()) ? '?' + this._serializeParams() : '';
-      console.log(location.pathname);
-      var url = location.pathname.slice(1) + serializedParams;
+      var url = location.pathname.replace(baseurl,'') + serializedParams;
       this.navigate(url, { trigger: false });
     },
 
