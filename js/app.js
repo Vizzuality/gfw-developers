@@ -1137,7 +1137,8 @@ Handlebars.registerHelper('deslugify', function (component, options) {
      * Change url with params
      */
     updateUrl: function() {
-      var url = location.pathname.slice(1) + '?' + this._serializeParams();
+      var serializedParams = (!!this._serializeParams()) ? '?' + this._serializeParams() : '';
+      var url = location.pathname.slice(1) + serializedParams;
       this.navigate(url, { trigger: false });
     },
 
@@ -1183,12 +1184,22 @@ Handlebars.registerHelper('deslugify', function (component, options) {
       return params;
     },
 
+
     /**
      * Transform object params to URL string
      * @return {String}
      */
     _serializeParams: function() {
-      return this.params ? $.param(this.params.attributes) : null;
+      if (!!this.params) {
+        var str = [];
+        var obj = this.params.attributes;
+        for(var p in obj) {          
+          if (obj.hasOwnProperty(p) && !!obj[p]) {
+            str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+          }
+        }
+        return str.join("&");
+      }
     }
 
   });
