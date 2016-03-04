@@ -97,31 +97,49 @@ this["HandlebarsTemplates"]["static"] = Handlebars.template({"1":function(depth0
 
   return "        <li data-tab=\""
     + alias1(this.lambda(depth0, depth0))
-    + "\" class=\"js-static-tab\">"
+    + "\" class=\"js-static-tab\">\n          "
     + alias1((helpers.deslugify || (depth0 && depth0.deslugify) || helpers.helperMissing).call(depth0,depth0,{"name":"deslugify","hash":{},"data":data}))
-    + "</li>\n";
+    + "\n          <svg><use xlink:href=\"#icon-arrowright\"></use></svg>\n        </li>\n";
 },"3":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.tags : depth0),{"name":"each","hash":{},"fn":this.program(4, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "");
+},"4":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return "        <div class=\"m-static-info\">\n          "
+    + ((stack1 = this.lambda((depth0 != null ? depth0.content : depth0), depth0)) != null ? stack1 : "")
+    + "\n        </div>\n";
+},"6":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return "      <ul class=\"m-static-subtabs\">\n"
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.tags : depth0),{"name":"each","hash":{},"fn":this.program(7, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "      </ul>\n";
+},"7":function(depth0,helpers,partials,data) {
     var stack1, alias1=helpers.helperMissing, alias2=this.escapeExpression;
 
-  return "        <li data-tag=\""
+  return "          <li data-tag=\""
     + alias2((helpers.slugify || (depth0 && depth0.slugify) || alias1).call(depth0,(depth0 != null ? depth0.title : depth0),{"name":"slugify","hash":{},"data":data}))
-    + "\" class=\"js-static-tag\">\n          <h3 data-tag=\""
+    + "\" class=\"js-static-tag\">\n            <h3 data-tag=\""
     + alias2((helpers.slugify || (depth0 && depth0.slugify) || alias1).call(depth0,(depth0 != null ? depth0.title : depth0),{"name":"slugify","hash":{},"data":data}))
-    + "\" class=\"m-static-title\">\n            "
+    + "\" class=\"m-static-title\">\n              "
     + alias2((helpers.deslugify || (depth0 && depth0.deslugify) || alias1).call(depth0,(depth0 != null ? depth0.title : depth0),{"name":"deslugify","hash":{},"data":data}))
-    + "\n            <div class=\"svg\"><svg><use xlink:href=\"#icon-arrowdown\"></use></svg></div>\n          </h3>\n          <div class=\"m-static-info\">\n            "
+    + "\n              <div class=\"svg\"><svg><use xlink:href=\"#icon-arrowdown\"></use></svg></div>\n            </h3>\n            <div class=\"m-static-info\">\n              "
     + ((stack1 = this.lambda((depth0 != null ? depth0.content : depth0), depth0)) != null ? stack1 : "")
-    + "\n          </div>\n        </li>\n";
+    + "\n            </div>\n          </li>\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    var stack1, alias1=this.escapeExpression;
+    var stack1, alias1=this.lambda, alias2=this.escapeExpression;
 
-  return "<div class=\"l-inner\">\n  <aside class=\"m-static-aside js-static-aside\">\n    <ul>\n\n      <li class=\"-page js-static-page\">\n        "
-    + alias1(this.lambda((depth0 != null ? depth0.pageName : depth0), depth0))
+  return "<div class=\"l-inner\">\n  <aside class=\"m-static-aside js-static-aside\">\n    <ul>\n\n      <li class=\"-page js-static-page\">\n        <svg><use xlink:href=\"#icon-fast-forward-up\"></use></svg>\n        "
+    + alias2(alias1((depth0 != null ? depth0.pageName : depth0), depth0))
     + "\n      </li>\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.tabs : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "    </ul>\n  </aside>\n\n  <div class=\"m-static-content js-static-content\">\n    <a href=\"#\" class=\"js-static-content-close\">cerrar</a>\n    <header>\n      <h2>"
-    + alias1((helpers.deslugify || (depth0 && depth0.deslugify) || helpers.helperMissing).call(depth0,(depth0 != null ? depth0.tab : depth0),{"name":"deslugify","hash":{},"data":data}))
-    + "</h2>\n    </header>\n    <ul class=\"m-static-subtabs\">\n"
-    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.tags : depth0),{"name":"each","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "    </ul>\n  </div>\n</div>\n";
+    + "    </ul>\n  </aside>\n\n  <div class=\"m-static-content js-static-content\">\n    <div class=\"m-static-content-close js-static-content-close\">\n      <svg><use xlink:href=\"#icon-fast-forward-left\"></use></svg>\n      <span>"
+    + alias2(alias1((depth0 != null ? depth0.pageName : depth0), depth0))
+    + "</span>\n    </div>\n    <header>\n      <h2>"
+    + alias2((helpers.deslugify || (depth0 && depth0.deslugify) || helpers.helperMissing).call(depth0,(depth0 != null ? depth0.tab : depth0),{"name":"deslugify","hash":{},"data":data}))
+    + "</h2>\n    </header>\n"
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.uniq : depth0),{"name":"if","hash":{},"fn":this.program(3, data, 0),"inverse":this.program(6, data, 0),"data":data})) != null ? stack1 : "")
+    + "  </div>\n</div>\n";
 },"useData":true});

@@ -1,0 +1,107 @@
+[class^="icon-"], [class*=" icon-"] {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	fill: currentColor;
+}
+
+/* =======================================================================================
+Example showing how to change the color/size of the icons:
+.icon-name {
+	font-size: 32px; // works because "width" & "height" were set using em units
+	color: red; // works for single-colored icons, because "fill" was set to "currentColor"
+}
+======================================================================================== */
+
+.icon-mapbuilder {
+	width: 0.8671875em;
+}
+#icon-mapbuilder .path1 {
+	fill: #e9efed;
+}
+#icon-mapbuilder .path2, #icon-mapbuilder .path3, #icon-mapbuilder .path4, #icon-mapbuilder .path5 {
+	fill: #97be32;
+}
+#icon-mapbuilder .path6, #icon-mapbuilder .path7, #icon-mapbuilder .path8 {
+	fill: #555;
+}
+#icon-mapbuilder .path9, #icon-mapbuilder .path11, #icon-mapbuilder .path13, #icon-mapbuilder .path15 {
+	fill: #fff;
+}
+#icon-mapbuilder .path10, #icon-mapbuilder .path12, #icon-mapbuilder .path14, #icon-mapbuilder .path16 {
+	fill: #545454;
+}
+
+.icon-developyourownapp {
+	width: 0.951171875em;
+}
+#icon-developyourownapp .path1 {
+	fill: #afd400;
+}
+#icon-developyourownapp .path2, #icon-developyourownapp .path3 {
+	fill: #e9f0ee;
+}
+#icon-developyourownapp .path4, #icon-developyourownapp .path5, #icon-developyourownapp .path6, #icon-developyourownapp .path7, #icon-developyourownapp .path8, #icon-developyourownapp .path9, #icon-developyourownapp .path10, #icon-developyourownapp .path11, #icon-developyourownapp .path12, #icon-developyourownapp .path13, #icon-developyourownapp .path14 {
+	fill: #545454;
+}
+
+#icon-broadreach .path1 {
+	fill: #fff;
+}
+#icon-broadreach .path2, #icon-broadreach .path4, #icon-broadreach .path6, #icon-broadreach .path8, #icon-broadreach .path10, #icon-broadreach .path12, #icon-broadreach .path14, #icon-broadreach .path16 {
+	fill: #afd400;
+}
+#icon-broadreach .path3, #icon-broadreach .path5, #icon-broadreach .path7, #icon-broadreach .path9, #icon-broadreach .path11, #icon-broadreach .path13, #icon-broadreach .path15, #icon-broadreach .path17, #icon-broadreach .path19 {
+	fill: #545454;
+}
+#icon-broadreach .path18 {
+	fill: #e9f0ee;
+}
+
+.icon-compellingdata {
+	width: 0.9599609375em;
+}
+#icon-compellingdata .path1, #icon-compellingdata .path2, #icon-compellingdata .path3 {
+	fill: #fff;
+}
+#icon-compellingdata .path4, #icon-compellingdata .path5, #icon-compellingdata .path6 {
+	fill: #85b900;
+}
+#icon-compellingdata .path7, #icon-compellingdata .path8, #icon-compellingdata .path9 {
+	fill: #e9f0ee;
+}
+#icon-compellingdata .path10 {
+	fill: #545454;
+}
+
+.icon-powerfulanalysis {
+	width: 0.98046875em;
+}
+#icon-powerfulanalysis .path1 {
+	fill: #fff;
+}
+#icon-powerfulanalysis .path2, #icon-powerfulanalysis .path7 {
+	fill: #545454;
+}
+#icon-powerfulanalysis .path3, #icon-powerfulanalysis .path4, #icon-powerfulanalysis .path5, #icon-powerfulanalysis .path6 {
+	fill: #afd400;
+}
+
+.icon-provenplatform {
+	width: 0.990234375em;
+}
+#icon-provenplatform .path1, #icon-provenplatform .path7 {
+	fill: #fff;
+}
+#icon-provenplatform .path2 {
+	fill: #8f8f8f;
+}
+#icon-provenplatform .path3, #icon-provenplatform .path5, #icon-provenplatform .path8 {
+	fill: #545454;
+}
+#icon-provenplatform .path4 {
+	fill: #afd400;
+}
+#icon-provenplatform .path6 {
+	fill: #85b900;
+}

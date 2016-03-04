@@ -260,7 +260,7 @@ Handlebars.registerHelper('deslugify', function (component, options) {
       // Fetch collection
       this.collection = new root.app.Collection.GalleryCollection();
       this.collection.fetch().done(function(){
-        this.render();
+        this.render(false);
       }.bind(this));
     },
 
@@ -269,8 +269,10 @@ Handlebars.registerHelper('deslugify', function (component, options) {
       this.model.on('change:filter', this.render.bind(this));
     },
 
-    render: function() {
-      this.scrollToTop();
+    render: function(dont_scroll) {
+      if (!!dont_scroll) {
+        this.scrollToTop();
+      }
 
       this.$el.html(this.template({
         gallery: this.collection.getPaginatedCollection(this.model.get('currentPage'),this.model.get('itemsOnPage'),this.model.get('filter')),
@@ -892,7 +894,8 @@ Handlebars.registerHelper('deslugify', function (component, options) {
         tabs: this.collection.getTabs(),
         tags: this.collection.getTags(this.model.get('tab') || this.collection.getTabs()[0]),
         tab: this.model.get('tab') || this.collection.getTabs()[0],
-        pageName: this.options.pageName
+        pageName: this.options.pageName,
+        uniq: (this.collection.getTags(this.model.get('tab')).length == 1) ? true : false
       }));
 
       this.afterRender();
@@ -931,7 +934,7 @@ Handlebars.registerHelper('deslugify', function (component, options) {
     },
 
     toggleContent: function() {
-      var tab = this.model.get('tab') || this.collection.getTabs()[0],
+      var tab = (!this.mobile) ? this.model.get('tab') || this.collection.getTabs()[0] : this.model.get('tab') || null,
           tag = this.model.get('tag'),
           tabEl = _.find(this.$tabs, function(e){
             return (tab == $(e).data('tab'))
@@ -949,14 +952,18 @@ Handlebars.registerHelper('deslugify', function (component, options) {
       // To prevent a little blink issue with the aside box
       this.scrollDocument();
 
+      // Mobile behaviour
       if (!!this.model.get('tab')) {
         this.$content.addClass('-active');
+        (this.mobile) ? $('html,body').addClass('-no-scroll-allowed') : null;
+      } else {
+        (this.mobile) ? $('html,body').removeClass('-no-scroll-allowed') : null;
       }
     },
 
     updateRouter: function() {
       var params = {
-        tab: this.model.get('tab') || (!this.mobile) ? this.collection.getTabs()[0] : null,
+        tab: (!this.mobile) ? this.model.get('tab') || this.collection.getTabs()[0] : this.model.get('tab') || null,
         tag: this.model.get('tag')
       }
       Backbone.Events.trigger('route/update', params);

@@ -3,32 +3,47 @@
     <ul>
 
       <li class="-page js-static-page">
+        <svg><use xlink:href="#icon-fast-forward-up"></use></svg>
         {{!-- We still need the icon --}}
         {{this.pageName}}
       </li>
       {{#each this.tabs}}
-        <li data-tab="{{this}}" class="js-static-tab">{{deslugify this}}</li>
+        <li data-tab="{{this}}" class="js-static-tab">
+          {{deslugify this}}
+          <svg><use xlink:href="#icon-arrowright"></use></svg>
+        </li>
       {{/each}}
     </ul>
   </aside>
 
   <div class="m-static-content js-static-content">
-    <a href="#" class="js-static-content-close">cerrar</a>
+    <div class="m-static-content-close js-static-content-close">
+      <svg><use xlink:href="#icon-fast-forward-left"></use></svg>
+      <span>{{this.pageName}}</span>
+    </div>
     <header>
       <h2>{{deslugify this.tab}}</h2>
     </header>
-    <ul class="m-static-subtabs">
+    {{#if uniq}}
       {{#each this.tags}}
-        <li data-tag="{{slugify this.title}}" class="js-static-tag">
-          <h3 data-tag="{{slugify this.title}}" class="m-static-title">
-            {{deslugify this.title}}
-            <div class="svg"><svg><use xlink:href="#icon-arrowdown"></use></svg></div>
-          </h3>
-          <div class="m-static-info">
-            {{{this.content}}}
-          </div>
-        </li>
-      {{/each}}
-    </ul>
+        <div class="m-static-info">
+          {{{this.content}}}
+        </div>
+      {{/each}}    
+    {{else}}
+      <ul class="m-static-subtabs">
+        {{#each this.tags}}
+          <li data-tag="{{slugify this.title}}" class="js-static-tag">
+            <h3 data-tag="{{slugify this.title}}" class="m-static-title">
+              {{deslugify this.title}}
+              <div class="svg"><svg><use xlink:href="#icon-arrowdown"></use></svg></div>
+            </h3>
+            <div class="m-static-info">
+              {{{this.content}}}
+            </div>
+          </li>
+        {{/each}}
+      </ul>
+    {{/if}}
   </div>
 </div>

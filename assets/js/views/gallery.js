@@ -57,7 +57,7 @@
       // Fetch collection
       this.collection = new root.app.Collection.GalleryCollection();
       this.collection.fetch().done(function(){
-        this.render();
+        this.render(false);
       }.bind(this));
     },
 
@@ -66,8 +66,10 @@
       this.model.on('change:filter', this.render.bind(this));
     },
 
-    render: function() {
-      this.scrollToTop();
+    render: function(dont_scroll) {
+      if (!!dont_scroll) {
+        this.scrollToTop();
+      }
 
       this.$el.html(this.template({
         gallery: this.collection.getPaginatedCollection(this.model.get('currentPage'),this.model.get('itemsOnPage'),this.model.get('filter')),

@@ -109,7 +109,8 @@
         tabs: this.collection.getTabs(),
         tags: this.collection.getTags(this.model.get('tab') || this.collection.getTabs()[0]),
         tab: this.model.get('tab') || this.collection.getTabs()[0],
-        pageName: this.options.pageName
+        pageName: this.options.pageName,
+        uniq: (this.collection.getTags(this.model.get('tab')).length == 1) ? true : false
       }));
 
       this.afterRender();
@@ -148,7 +149,7 @@
     },
 
     toggleContent: function() {
-      var tab = this.model.get('tab') || this.collection.getTabs()[0],
+      var tab = (!this.mobile) ? this.model.get('tab') || this.collection.getTabs()[0] : this.model.get('tab') || null,
           tag = this.model.get('tag'),
           tabEl = _.find(this.$tabs, function(e){
             return (tab == $(e).data('tab'))
@@ -166,14 +167,18 @@
       // To prevent a little blink issue with the aside box
       this.scrollDocument();
 
+      // Mobile behaviour
       if (!!this.model.get('tab')) {
         this.$content.addClass('-active');
+        (this.mobile) ? $('html,body').addClass('-no-scroll-allowed') : null;
+      } else {
+        (this.mobile) ? $('html,body').removeClass('-no-scroll-allowed') : null;
       }
     },
 
     updateRouter: function() {
       var params = {
-        tab: this.model.get('tab') || (!this.mobile) ? this.collection.getTabs()[0] : null,
+        tab: (!this.mobile) ? this.model.get('tab') || this.collection.getTabs()[0] : this.model.get('tab') || null,
         tag: this.model.get('tag')
       }
       Backbone.Events.trigger('route/update', params);
