@@ -110,7 +110,7 @@
         tags: this.collection.getTags(this.model.get('tab') || this.collection.getTabs()[0]),
         tab: this.model.get('tab') || this.collection.getTabs()[0],
         pageName: this.options.pageName,
-        uniq: (this.collection.getTags(this.model.get('tab')).length == 1) ? true : false
+        uniq: (this.collection.getTags(this.model.get('tab') || this.collection.getTabs()[0]).length == 1) ? true : false
       }));
 
       this.afterRender();
