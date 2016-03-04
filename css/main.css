@@ -1052,6 +1052,8 @@ h3 {
   @media (min-width: 850px) {
     .m-section.-own-atlas {
       background-attachment: fixed; } }
+  .m-section.-own-atlas .l-inner {
+    z-index: 1; }
   .m-section.-own-atlas:after {
     content: "";
     display: block;
