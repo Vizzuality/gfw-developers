@@ -135,7 +135,7 @@ gulp.task('bower_install', function() {
 gulp.task('watch', function () {
   gulp.watch(['_config.yml'], ['jekyll-rebuild']);
   gulp.watch([paths.asset+'/scss/*.scss', paths.asset+'/scss/modules/*.scss'], ['sass']);
-  gulp.watch(['*.html', '_layouts/*.html', '_includes/*.html', '**/*.html'], ['jekyll-rebuild']);
+  gulp.watch(['*.html', '_layouts/*.html', '_includes/*.html', '**/*.html', '**/*.md', '**/*.json'], ['jekyll-rebuild']);
   gulp.watch([paths.asset+'/js/**/*.js', paths.asset+'/templates/*.hbs'], ['js']);
   gulp.watch([paths.asset+'/templates/*.hbs'], ['templates']);
 });

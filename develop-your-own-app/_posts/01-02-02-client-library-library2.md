@@ -1,6 +1,6 @@
 ---
 title: Library 2
-order: 3
+order: 2
 published: True
 categories: [develop]
 tags: [client library]
