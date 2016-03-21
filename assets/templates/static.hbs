@@ -22,7 +22,7 @@
       <span>{{this.pageName}}</span>
     </div>
     <header>
-      <h2>{{deslugify this.tab}}</h2>
+      <h2 class="-{{deslugify this.tab}}">{{deslugify this.tab}}</h2>
     </header>
     {{#if uniq}}
       {{#each this.tags}}

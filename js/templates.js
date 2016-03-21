@@ -129,7 +129,7 @@ this["HandlebarsTemplates"]["static"] = Handlebars.template({"1":function(depth0
     + ((stack1 = this.lambda((depth0 != null ? depth0.content : depth0), depth0)) != null ? stack1 : "")
     + "\n            </div>\n          </li>\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    var stack1, alias1=this.lambda, alias2=this.escapeExpression;
+    var stack1, alias1=this.lambda, alias2=this.escapeExpression, alias3=helpers.helperMissing;
 
   return "<div class=\"l-inner\">\n  <aside class=\"m-static-aside js-static-aside\">\n    <ul>\n\n      <li class=\"-page js-static-page\">\n        <svg><use xlink:href=\"#icon-fast-forward-up\"></use></svg>\n        "
     + alias2(alias1((depth0 != null ? depth0.pageName : depth0), depth0))
@@ -137,8 +137,10 @@ this["HandlebarsTemplates"]["static"] = Handlebars.template({"1":function(depth0
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.tabs : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "    </ul>\n  </aside>\n\n  <div class=\"m-static-content js-static-content\">\n    <div class=\"m-static-content-close js-static-content-close\">\n      <svg><use xlink:href=\"#icon-fast-forward-left\"></use></svg>\n      <span>"
     + alias2(alias1((depth0 != null ? depth0.pageName : depth0), depth0))
-    + "</span>\n    </div>\n    <header>\n      <h2>"
-    + alias2((helpers.deslugify || (depth0 && depth0.deslugify) || helpers.helperMissing).call(depth0,(depth0 != null ? depth0.tab : depth0),{"name":"deslugify","hash":{},"data":data}))
+    + "</span>\n    </div>\n    <header>\n      <h2 class=\"-"
+    + alias2((helpers.deslugify || (depth0 && depth0.deslugify) || alias3).call(depth0,(depth0 != null ? depth0.tab : depth0),{"name":"deslugify","hash":{},"data":data}))
+    + "\">"
+    + alias2((helpers.deslugify || (depth0 && depth0.deslugify) || alias3).call(depth0,(depth0 != null ? depth0.tab : depth0),{"name":"deslugify","hash":{},"data":data}))
     + "</h2>\n    </header>\n"
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.uniq : depth0),{"name":"if","hash":{},"fn":this.program(3, data, 0),"inverse":this.program(6, data, 0),"data":data})) != null ? stack1 : "")
     + "  </div>\n</div>\n";
