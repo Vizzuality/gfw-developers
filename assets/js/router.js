@@ -14,7 +14,7 @@
       // GALLERY
       'gallery(/)': 'gallery',
       // DEVELOP YOUR OWN APP
-      'develop-your-own-app(/)': 'develop',
+      'developer-tools(/)': 'develop',
     },
 
     ParamsModel: Backbone.Model.extend({}),
