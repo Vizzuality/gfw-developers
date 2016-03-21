@@ -89,7 +89,7 @@
       this.staticView = new root.app.View.StaticView({
         options: _.extend(this.router._unserializeParams(),{
           page: 'develop',
-          pageName: 'Develop your own app'
+          pageName: 'Developer tools'
         })
       });
     },

@@ -10,6 +10,10 @@ h2 {
   a {
   	color: $dark;
   }
+
+  &.-api {
+    text-transform: uppercase;
+  }
 }
 
 h3 {

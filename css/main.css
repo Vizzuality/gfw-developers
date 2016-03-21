@@ -190,6 +190,8 @@ h2 {
       font-size: 35px; } }
   h2 a {
     color: #555; }
+  h2.-api {
+    text-transform: uppercase; }
 
 h3 {
   font-size: 19px;
@@ -211,6 +213,8 @@ h3 {
       color: #555; }
     .m-header-static.-light h3 {
       color: #555; }
+    .m-header-static.-light a {
+      color: #555; }
   @media (min-width: 850px) {
     .m-header-static {
       padding: 70px 0px; } }
@@ -221,6 +225,7 @@ h3 {
       .m-header-static h2 {
         font-size: 47px; } }
   .m-header-static h3 {
+    display: inline-block;
     color: #FFF;
     text-transform: none;
     font-weight: 300;
@@ -230,6 +235,17 @@ h3 {
     font-size: 15px; }
     @media (min-width: 850px) {
       .m-header-static h3 {
+        font-size: 19px;
+        line-height: 32px; } }
+  .m-header-static a {
+    display: inline-block;
+    color: #FFF;
+    text-transform: none;
+    font-weight: 300;
+    line-height: 24px;
+    font-size: 15px; }
+    @media (min-width: 850px) {
+      .m-header-static a {
         font-size: 19px;
         line-height: 32px; } }
 

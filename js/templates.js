@@ -48,11 +48,11 @@ this["HandlebarsTemplates"]["gallery"] = Handlebars.template({"1":function(depth
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1;
 
-  return "<div class=\"l-inner\">\n	<header>\n		<h2>All the forest atlas <span class=\"-font-small\">("
+  return "<div class=\"l-inner\">\n	<header>\n		<h2>All the maps<span class=\"-font-small\">("
     + this.escapeExpression(this.lambda((depth0 != null ? depth0.gallery_length : depth0), depth0))
-    + ")</span></h2>\n\n	  <div class=\"m-gallery-select m-select\">\n	  	<div class=\"arrow-mobile\">\n	  		<svg><use xlink:href=\"#icon-arrowdown\"></use></svg>\n	  	</div>\n	    <select id=\"gallery-filter\">\n	      <option value=\"all\">View all the atlases</option>\n	      <option value=\"wri1\">Wri 1</option>\n	      <option value=\"wri2\">Wri 2</option>\n	      <option value=\"wri3\">Wri 3</option>\n	    </select>\n	  </div>\n\n\n	</header>\n	<ul class=\"m-grid -margin\">\n"
+    + ")</span></h2>\n\n	  <div class=\"m-gallery-select m-select\">\n	  	<div class=\"arrow-mobile\">\n	  		<svg><use xlink:href=\"#icon-arrowdown\"></use></svg>\n	  	</div>\n	    <select id=\"gallery-filter\">\n	      <option value=\"all\">View all maps</option>\n	      <option value=\"wri1\">Wri 1</option>\n	      <option value=\"wri2\">Wri 2</option>\n	      <option value=\"wri3\">Wri 3</option>\n	    </select>\n	  </div>\n\n\n	</header>\n	<ul class=\"m-grid -margin\">\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.gallery : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "		<li class=\"m-card -gallery -submit\">\n			<a href=\"#\" class=\"-center\">			\n				<svg><use xlink:href=\"#icon-addmore\"></use></svg>\n				<h3 class=\"-primary\">SUBMIT YOUR FOREST ATLAS</h3>\n			</a>\n		</li>\n	</ul>	\n	<div id=\"gallery-paginator\"></div>\n</div>";
+    + "		<li class=\"m-card -gallery -submit\">\n			<a href=\"#\" class=\"-center\">			\n				<svg><use xlink:href=\"#icon-addmore\"></use></svg>\n				<h3 class=\"-primary\">SUBMIT YOUR MAP</h3>\n			</a>\n		</li>\n	</ul>	\n	<div id=\"gallery-paginator\"></div>\n</div>\n";
 },"useData":true});
 this["HandlebarsTemplates"]["modal-video"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     return "<div class=\"modal-backdrop\"></div>\n<div class=\"modal-window -video\">\n  <a href=\"#\" class=\"modal-close\"><svg><use xlink:href=\"#shape-close\"></use></svg></a>\n  <div class=\"modal-wrapper scroll-dark\">\n    <div class=\"modal-content\">\n      <div class=\"modal-video\">\n        <div id=\"modal-video\"></div>\n      </div>\n    </div>\n  </div>\n</div>\n";
@@ -129,7 +129,7 @@ this["HandlebarsTemplates"]["static"] = Handlebars.template({"1":function(depth0
     + ((stack1 = this.lambda((depth0 != null ? depth0.content : depth0), depth0)) != null ? stack1 : "")
     + "\n            </div>\n          </li>\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    var stack1, alias1=this.lambda, alias2=this.escapeExpression;
+    var stack1, alias1=this.lambda, alias2=this.escapeExpression, alias3=helpers.helperMissing;
 
   return "<div class=\"l-inner\">\n  <aside class=\"m-static-aside js-static-aside\">\n    <ul>\n\n      <li class=\"-page js-static-page\">\n        <svg><use xlink:href=\"#icon-fast-forward-up\"></use></svg>\n        "
     + alias2(alias1((depth0 != null ? depth0.pageName : depth0), depth0))
@@ -137,8 +137,10 @@ this["HandlebarsTemplates"]["static"] = Handlebars.template({"1":function(depth0
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.tabs : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "    </ul>\n  </aside>\n\n  <div class=\"m-static-content js-static-content\">\n    <div class=\"m-static-content-close js-static-content-close\">\n      <svg><use xlink:href=\"#icon-fast-forward-left\"></use></svg>\n      <span>"
     + alias2(alias1((depth0 != null ? depth0.pageName : depth0), depth0))
-    + "</span>\n    </div>\n    <header>\n      <h2>"
-    + alias2((helpers.deslugify || (depth0 && depth0.deslugify) || helpers.helperMissing).call(depth0,(depth0 != null ? depth0.tab : depth0),{"name":"deslugify","hash":{},"data":data}))
+    + "</span>\n    </div>\n    <header>\n      <h2 class=\"-"
+    + alias2((helpers.deslugify || (depth0 && depth0.deslugify) || alias3).call(depth0,(depth0 != null ? depth0.tab : depth0),{"name":"deslugify","hash":{},"data":data}))
+    + "\">"
+    + alias2((helpers.deslugify || (depth0 && depth0.deslugify) || alias3).call(depth0,(depth0 != null ? depth0.tab : depth0),{"name":"deslugify","hash":{},"data":data}))
     + "</h2>\n    </header>\n"
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.uniq : depth0),{"name":"if","hash":{},"fn":this.program(3, data, 0),"inverse":this.program(6, data, 0),"data":data})) != null ? stack1 : "")
     + "  </div>\n</div>\n";

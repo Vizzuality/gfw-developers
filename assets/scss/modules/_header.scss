@@ -13,6 +13,10 @@
     h3 {
       color: $dark;
     }
+
+    a {
+      color: $dark;
+    }
   }
 
   @media (min-width: $br-mobile){
@@ -29,6 +33,7 @@
   }
 
   h3 {
+    display: inline-block;
     color: $white;
     text-transform: none;
     font-weight: 300;
@@ -36,9 +41,24 @@
     line-height: 24px;
     padding: 10px 0 0;
     font-size: 15px;
+
     @media (min-width: $br-mobile){
       font-size: 19px;
       line-height: 32px;
-    }    
+    } 
   }
+
+  a {
+    display: inline-block;
+    color: $white;
+    text-transform: none;
+    font-weight: 300;
+    line-height: 24px;
+    font-size: 15px;
+    
+    @media (min-width: $br-mobile){
+      font-size: 19px;
+      line-height: 32px;
+    } 
+  }   
 }

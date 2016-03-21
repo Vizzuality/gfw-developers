@@ -3,3 +3,5 @@ _site
 .publish
 node_modules
 bower_components
+.ruby-version
+js/vendor.js
