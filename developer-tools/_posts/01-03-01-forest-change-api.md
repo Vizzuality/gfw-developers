@@ -4,7 +4,7 @@ order: 1
 published: True
 categories: [develop]
 tags: [api]
-tags_order: 3
+tags_order: 1
 ---
 
 <p><a href="http://api.globalforestwatch.org/forest-change">http://api.globalforestwatch.org/forest-change</a></p>

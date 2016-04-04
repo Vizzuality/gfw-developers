@@ -4,7 +4,7 @@ order: 8
 published: True
 categories: [develop]
 tags: [api]
-tags_order: 3
+tags_order: 1
 ---
 
 <p>What developers need to know before they build a GFW app</p>
