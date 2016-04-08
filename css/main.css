@@ -214,7 +214,7 @@ h3 {
     .m-header-static.-light h3 {
       color: #555; }
     .m-header-static.-light a {
-      color: #555; }
+      color: #97bd3d; }
   @media (min-width: 850px) {
     .m-header-static {
       padding: 70px 0px; } }
@@ -243,7 +243,8 @@ h3 {
     text-transform: none;
     font-weight: 300;
     line-height: 24px;
-    font-size: 15px; }
+    font-size: 15px;
+    color: #97bd3d; }
     @media (min-width: 850px) {
       .m-header-static a {
         font-size: 19px;

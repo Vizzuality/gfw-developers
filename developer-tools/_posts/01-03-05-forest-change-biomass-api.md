@@ -1,5 +1,5 @@
 ---
-title: Forest Change by Landcover API
+title: Forest Change by Biomass API
 order: 4
 published: True
 categories: [develop]

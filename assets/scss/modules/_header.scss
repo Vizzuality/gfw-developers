@@ -15,7 +15,7 @@
     }
 
     a {
-      color: $dark;
+      color: $primary-color;
     }
   }
 
@@ -55,6 +55,7 @@
     font-weight: 300;
     line-height: 24px;
     font-size: 15px;
+    color: $primary-color;
     
     @media (min-width: $br-mobile){
       font-size: 19px;
