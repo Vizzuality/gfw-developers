@@ -180,6 +180,33 @@ button {
         -ms-flex-pack: end;
             justify-content: flex-end; }
 
+.btn-submit {
+  position: relative;
+  background: #97bd3d;
+  min-height: 200px;
+  margin: 60px 0 0; }
+  .btn-submit .-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .btn-submit svg {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 0 20px 0 0;
+    fill: #FFF; }
+  .btn-submit h3 {
+    color: #FFF;
+    text-align: center; }
+
 h2 {
   font-size: 25px;
   line-height: 1.25;
@@ -547,7 +574,7 @@ h3 {
           margin: 0; }
 
 .simple-pagination {
-  padding: 40px 0 0;
+  padding: 60px 0 0;
   margin: 0 auto;
   position: relative;
   left: 50%;
@@ -637,6 +664,34 @@ h3 {
   box-shadow: none;
   font-weight: 500;
   cursor: default; }
+
+.m-filters {
+  background: #F7F7F7;
+  padding: 40px;
+  margin: 0 0 40px; }
+  .m-filters > ul {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+    .m-filters > ul li {
+      padding: 10px 20px;
+      color: #555;
+      margin: 5px 20px 5px 0;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer; }
+      .m-filters > ul li:hover {
+        background: #e5e5e5; }
+      .m-filters > ul li.-active {
+        background: #D8D8D8; }
+      .m-filters > ul li:last-child {
+        margin-right: 0; }
 
 .m-slider ul {
   width: 100%;

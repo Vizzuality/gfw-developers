@@ -5,8 +5,8 @@ published: True
 app: climate
 categories: [gallery]
 thumbnail: "assets/images/gallery/atlas5.jpg"
-organization: "organization name"
-filter: "wri2"
+organization: "Organization name"
+filter: "Maps,Palm oil"
 ---
 
 <p>GFW aims to radically improve the availability, quality, and accessibility of forest data for everyone:</p>

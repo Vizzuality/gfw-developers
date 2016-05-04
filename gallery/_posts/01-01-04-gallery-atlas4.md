@@ -5,8 +5,8 @@ published: True
 app: climate
 categories: [gallery]
 thumbnail: "assets/images/gallery/atlas4.jpg"
-organization: "organization name"
-filter: "wri1"
+organization: "Organization name"
+filter: "Satellite imagery,Maps"
 ---
 
 <p>GFW aims to radically improve the availability, quality, and accessibility of forest data for everyone:</p>

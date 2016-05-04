@@ -5,8 +5,8 @@ published: True
 app: climate
 categories: [gallery]
 thumbnail: "assets/images/gallery/atlas6.jpg"
-organization: "organization name"
-filter: "wri3"
+organization: "Organization name"
+filter: "Forest Atlas,Maps,Fires"
 ---
 
 <p>GFW aims to radically improve the availability, quality, and accessibility of forest data for everyone:</p>

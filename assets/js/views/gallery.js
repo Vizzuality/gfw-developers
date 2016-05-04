@@ -23,9 +23,16 @@
       return filteredCollection.length;
     },
 
+    getFilters: function() {
+      var filters = _.pluck(this.toJSON(),'filter');
+      return _.sortBy(_.uniq(_.flatten(_.map(filters, function(el){
+        return el.split(',');
+      }))));
+    },
+
     filter: function(filter) {
       return _.compact(_.map(this.toJSON(), function(v){
-        return (v.filter == filter) ? v : null
+        return (v.filter.indexOf(filter) != -1) ? v : null
       }))
     }
 
@@ -42,13 +49,13 @@
     model: new (Backbone.Model.extend({
       defaults: {
         currentPage: 0,
-        itemsOnPage: 5,
+        itemsOnPage: 6,
         filter: 'all'
       }
     })),
 
     events: {
-      'change #gallery-filter' : 'changeFilter'
+      'click #galleryFilters li' : 'changeFilter'
     },
 
     initialize: function() {
@@ -73,18 +80,18 @@
 
       this.$el.html(this.template({
         gallery: this.collection.getPaginatedCollection(this.model.get('currentPage'),this.model.get('itemsOnPage'),this.model.get('filter')),
-        gallery_length: this.collection.getCount(this.model.get('filter'))
+        filters: this.collection.getFilters()
       }));
 
       this.cache();
 
       this.initPaginate();
-      this.initChosen();
+      this.initFilter();
     },
 
     cache: function() {
       this.$paginator = this.$el.find('#gallery-paginator');
-      this.$filters = this.$el.find('#gallery-filter');
+      this.$filters = this.$el.find('#galleryFilters');
     },
 
     // Inits after render
@@ -107,13 +114,9 @@
       });
     },
 
-    initChosen: function() {
-      this.$filters.val(this.model.get('filter'));
-
-      // chosen
-      this.$filters.chosen({
-        disable_search: true
-      });
+    initFilter: function() {
+      var filter = this.model.get('filter');
+      this.$filters.find('li[data-value="'+filter+'"]').addClass('-active');
     },
 
     scrollToTop: function() {
@@ -123,8 +126,8 @@
     },
 
     changeFilter: function(e) {
-      this.model.set('currentPage', 0, { silent:true })
-      this.model.set('filter', $(e.currentTarget).val());
+      this.model.set('currentPage', 0, { silent:true });
+      this.model.set('filter', $(e.currentTarget).data('value'));
     }
 
   });
