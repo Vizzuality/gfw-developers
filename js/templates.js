@@ -53,6 +53,8 @@ this["HandlebarsTemplates"]["gallery"] = Handlebars.template({"1":function(depth
     + "</h3>\n				<p>"
     + alias2(alias1((depth0 != null ? depth0.organization : depth0), depth0))
     + "</p>\n			</li>\n";
+},"5":function(depth0,helpers,partials,data) {
+    return "		<div id=\"gallery-paginator\"></div>\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1;
 
@@ -60,7 +62,9 @@ this["HandlebarsTemplates"]["gallery"] = Handlebars.template({"1":function(depth
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.filters : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "		</ul>\n	</div>\n\n	<ul class=\"m-grid -margin\">\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.gallery : depth0),{"name":"each","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "	</ul>	\n	<div id=\"gallery-paginator\"></div>\n	<div class=\"btn-submit\">\n		<a href=\"#\" class=\"-center\">			\n			<svg><use xlink:href=\"#icon-addmore\"></use></svg>\n			<h3>SUBMIT YOUR MAP</h3>\n		</a>\n	</div>\n</div>\n";
+    + "	</ul>\n"
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.pagination : depth0),{"name":"if","hash":{},"fn":this.program(5, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "	<div class=\"btn-submit\">\n		<a href=\"#\" class=\"-center\">			\n			<svg><use xlink:href=\"#icon-addmore\"></use></svg>\n			<h3>SUBMIT YOUR MAP</h3>\n		</a>\n	</div>\n</div>\n";
 },"useData":true});
 this["HandlebarsTemplates"]["modal-video"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     return "<div class=\"modal-backdrop\"></div>\n<div class=\"modal-window -video\">\n  <a href=\"#\" class=\"modal-close\"><svg><use xlink:href=\"#shape-close\"></use></svg></a>\n  <div class=\"modal-wrapper scroll-dark\">\n    <div class=\"modal-content\">\n      <div class=\"modal-video\">\n        <div id=\"modal-video\"></div>\n      </div>\n    </div>\n  </div>\n</div>\n";

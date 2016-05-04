@@ -77,10 +77,10 @@
       if (!!dont_scroll) {
         this.scrollToTop();
       }
-
       this.$el.html(this.template({
         gallery: this.collection.getPaginatedCollection(this.model.get('currentPage'),this.model.get('itemsOnPage'),this.model.get('filter')),
-        filters: this.collection.getFilters()
+        filters: this.collection.getFilters(),
+        pagination: (this.collection.getCount(this.model.get('filter')) > this.model.get('itemsOnPage'))
       }));
 
       this.cache();

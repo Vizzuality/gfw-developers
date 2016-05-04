@@ -16,8 +16,10 @@
 				<p>{{this.organization}}</p>
 			</li>
 		{{/each}}
-	</ul>	
-	<div id="gallery-paginator"></div>
+	</ul>
+	{{#if pagination}}	
+		<div id="gallery-paginator"></div>
+	{{/if}}
 	<div class="btn-submit">
 		<a href="#" class="-center">			
 			<svg><use xlink:href="#icon-addmore"></use></svg>
