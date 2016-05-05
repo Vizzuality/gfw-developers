@@ -54,7 +54,7 @@ this["HandlebarsTemplates"]["gallery"] = Handlebars.template({"1":function(depth
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.site : depth0)) != null ? stack1.baseurl : stack1), depth0))
     + "/assets/images/gallery/"
     + alias2(alias1((depth0 != null ? depth0.slug : depth0), depth0))
-    + ".png)\"></div>\n					</div>\n					<h3 class=\"-primary\">"
+    + ".png)\"> </div>\n					</div>\n					<h3 class=\"-primary\">"
     + alias2(alias1((depth0 != null ? depth0.title : depth0), depth0))
     + "</h3>\n					<p>"
     + alias2(alias1((depth0 != null ? depth0.source : depth0), depth0))
