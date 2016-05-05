@@ -36,12 +36,12 @@ this["HandlebarsTemplates"]["blog"] = Handlebars.template({"1":function(depth0,h
     + "</ul>\n<div class=\"m-blog-link\">\n  <a target=\"_blank\" href=\"http://blog.globalforestwatch.org/\">\n    <svg class=\"icon\"><use xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"#icon-f-blog\"></use></svg>\n    Read our blog\n  </a>\n</div>\n";
 },"useData":true});
 this["HandlebarsTemplates"]["gallery"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
-    var alias1=this.lambda, alias2=this.escapeExpression;
+    var helper, alias1=this.escapeExpression;
 
   return "	      <li data-value=\""
-    + alias2(alias1(depth0, depth0))
+    + alias1(((helper = (helper = helpers.key || (data && data.key)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"key","hash":{},"data":data}) : helper)))
     + "\">"
-    + alias2(alias1(depth0, depth0))
+    + alias1(this.lambda(depth0, depth0))
     + "</li>	      \n";
 },"3":function(depth0,helpers,partials,data) {
     var alias1=this.lambda, alias2=this.escapeExpression;
@@ -50,9 +50,9 @@ this["HandlebarsTemplates"]["gallery"] = Handlebars.template({"1":function(depth
     + alias2(alias1((depth0 != null ? depth0.href : depth0), depth0))
     + "\" target=\""
     + alias2(alias1((depth0 != null ? depth0.href_target : depth0), depth0))
-    + "\">\n					<div class=\"img\" style=\"background-image: url(/assets/images/gallery/"
+    + "\">\n					<div class=\"img\">\n						<div style=\"background-image: url(/assets/images/gallery/"
     + alias2(alias1((depth0 != null ? depth0.slug : depth0), depth0))
-    + ".png)\"></div>\n					<h3 class=\"-primary\">"
+    + ".png)\"></div>\n					</div>\n					<h3 class=\"-primary\">"
     + alias2(alias1((depth0 != null ? depth0.title : depth0), depth0))
     + "</h3>\n					<p>"
     + alias2(alias1((depth0 != null ? depth0.source : depth0), depth0))

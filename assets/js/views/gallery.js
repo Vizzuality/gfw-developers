@@ -34,6 +34,25 @@
       "protecting-forest"
     ],
 
+    filters: {
+      "africa" : "Africa",
+      "asia" : "Asia",
+      "boreal-forests" : "Boreal forests",
+      "commodities" : "Commodities",
+      "crowdsourcing" : "Crowdsourcing",
+      "data" : "Data",
+      "fires" : "Fires",
+      "global-forest-watch" : "Global Forest Watch",
+      "latin-america" : "Latin America",
+      "logging" : "Logging",
+      "map-builder" : "Map builder",
+      "maps" : "Maps",
+      "mining" : "Mining",
+      "mobile" : "Mobile",
+      "palm-oil" : "Palm oil",
+      "satellite-imagery" : "Satellite imagery",
+    },
+
     url: baseurl + '/json/gallery.json',
     
     comparator: function(item) {
@@ -51,14 +70,17 @@
     },
 
     getFilters: function() {
-      var filters = _.pluck(this.toJSON(),'filters');
-      // Get all the filters, trim white spaces, get the uniq values and sort them alphabetically
-      return _.sortBy(_.uniq(_.flatten(_.map(filters, function(el){
-        var arr = el.split(',');
-        return _.compact(_.map(arr,function(v) {
-          return $.trim(v);
-        }))
-      }))));
+      return this.filters;
+      // var filters = _.pluck(this.toJSON(),'filters');
+      // // Get all the filters, trim white spaces, get the uniq values and sort them alphabetically
+      // var filter_slugs = _.sortBy(_.uniq(_.flatten(_.map(filters, function(el){
+      //   var arr = el.split(',');
+      //   return _.compact(_.map(arr,function(v) {
+      //     return $.trim(v);
+      //   }))
+      // }))));
+      
+      // return filter_slugs;
     },
 
     filter: function(filter) {

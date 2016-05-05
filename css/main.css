@@ -962,19 +962,33 @@ h3 {
         margin: 45px 0 0 45px; }
         .m-card.-gallery:nth-child(3n+1) {
           margin: 45px 0 0; } }
+    .m-card.-gallery a {
+      color: #555; }
     .m-card.-gallery p {
       font-size: 14px;
       max-width: none;
       white-space: normal;
       line-height: 1.5; }
     .m-card.-gallery .img {
+      position: relative;
+      overflow: hidden;
       margin: 0 -15px 15px;
-      padding-bottom: 50%;
-      background: url("/assets/images/thumbnail-post.png");
-      background-size: cover; }
+      padding-bottom: 50%; }
       @media (min-width: 850px) {
         .m-card.-gallery .img {
           margin: 0 -30px 30px; } }
+      .m-card.-gallery .img > div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        -webkit-transform: scale(1);
+                transform: scale(1);
+        transition: all 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
+    .m-card.-gallery:hover h3 {
+      text-decoration: underline; }
   .m-card.-submit {
     background: #97bd3d;
     min-height: 250px; }
