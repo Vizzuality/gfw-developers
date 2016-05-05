@@ -1,6 +1,7 @@
 ---
 title: 'Cameroon Forest Atlas'
 slug: 'cameroon-forest-atlas'
+thumbnail: '/assets/images/gallery/'
 published: true
 categories: [gallery]
 content: 'View an interactive map with land-use data for Cameroon.'

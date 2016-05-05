@@ -1,6 +1,7 @@
 ---
 title: 'Open Data Portal'
 slug: 'open-data-portal'
+thumbnail: '/assets/images/gallery/'
 published: true
 categories: [gallery]
 content: 'Browse, learn more about, and download the data displayed on Global Forest Watch.'

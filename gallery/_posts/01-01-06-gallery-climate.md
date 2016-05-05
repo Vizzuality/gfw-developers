@@ -1,6 +1,7 @@
 ---
 title: 'Climate'
 slug: 'climate'
+thumbnail: '/assets/images/gallery/'
 published: true
 categories: [gallery]
 content: 'Track carbon emissions and removals in forest landscapes.'

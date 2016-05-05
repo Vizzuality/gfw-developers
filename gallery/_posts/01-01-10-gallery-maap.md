@@ -1,6 +1,7 @@
 ---
 title: 'Monitoring of the Andean Amazon Project (MAAP)'
 slug: 'maap'
+thumbnail: '/assets/images/gallery/'
 published: true
 categories: [gallery]
 content: 'View information, maps and analysis from a new deforestation monitoring system for the Andean Amazon.'

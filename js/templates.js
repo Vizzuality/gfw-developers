@@ -44,15 +44,14 @@ this["HandlebarsTemplates"]["gallery"] = Handlebars.template({"1":function(depth
     + alias1(this.lambda(depth0, depth0))
     + "</li>	      \n";
 },"3":function(depth0,helpers,partials,data) {
-    var stack1, alias1=this.lambda, alias2=this.escapeExpression;
+    var alias1=this.lambda, alias2=this.escapeExpression;
 
   return "			<li class=\"m-card -gallery\">\n				<a href=\""
     + alias2(alias1((depth0 != null ? depth0.href : depth0), depth0))
     + "\" target=\""
     + alias2(alias1((depth0 != null ? depth0.href_target : depth0), depth0))
     + "\">\n					<div class=\"img\">\n						<div style=\"background-image: url("
-    + alias2(alias1(((stack1 = (depth0 != null ? depth0.site : depth0)) != null ? stack1.baseurl : stack1), depth0))
-    + "/assets/images/gallery/"
+    + alias2(alias1((depth0 != null ? depth0.thumbnail : depth0), depth0))
     + alias2(alias1((depth0 != null ? depth0.slug : depth0), depth0))
     + ".png)\"> </div>\n					</div>\n					<h3 class=\"-primary\">"
     + alias2(alias1((depth0 != null ? depth0.title : depth0), depth0))

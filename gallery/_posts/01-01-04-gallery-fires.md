@@ -1,6 +1,7 @@
 ---
 title: 'Fires'
 slug: 'fires'
+thumbnail: '/assets/images/gallery/'
 published: true
 categories: [gallery]
 content: 'Track forest fires and haze in the ASEAN region.'

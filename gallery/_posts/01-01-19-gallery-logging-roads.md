@@ -1,6 +1,7 @@
 ---
 title: 'Logging Roads'
 slug: 'logging-roads'
+thumbnail: '/assets/images/gallery/'
 published: true
 categories: [gallery]
 content: 'View and help document the spread of logging roads across the Congo Basin region of Central Africa'

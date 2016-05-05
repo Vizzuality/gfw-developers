@@ -1,6 +1,7 @@
 ---
 title: 'Protecting forests & peatlands in Indonesia'
 slug: 'protecting-forest'
+thumbnail: '/assets/images/gallery/'
 published: true
 categories: [gallery]
 content: 'Explore the relationship between company concessions, peatlands, fire hotspots, and deforestation alerts in Indonesia.'

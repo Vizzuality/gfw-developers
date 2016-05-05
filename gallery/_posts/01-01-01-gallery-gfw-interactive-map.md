@@ -1,6 +1,7 @@
 ---
 title: 'GFW Interactive Map'
 slug: 'gfw-interactive-map'
+thumbnail: '/assets/images/gallery/'
 published: true
 categories: [gallery]
 content: 'View and analyze data on the GFW Interactive Map.'

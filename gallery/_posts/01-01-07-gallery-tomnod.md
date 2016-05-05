@@ -1,6 +1,7 @@
 ---
 title: 'Global Forest Watch: Sumatra campaign on Tomnod'
 slug: 'tomnod'
+thumbnail: '/assets/images/gallery/'
 published: true
 categories: [gallery]
 content: 'Help Global Forest Watch Fires track illegal fires and preserve the health of people and forests in Southeast Asia.'

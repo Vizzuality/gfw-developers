@@ -1,6 +1,7 @@
 ---
 title: 'Countries'
 slug: 'countries'
+thumbnail: '/assets/images/gallery/'
 published: true
 categories: [gallery]
 content: 'View country-specific data, analyze forest change within a country or subnational jurisdiction, or view country rankings based on forest statistics.'

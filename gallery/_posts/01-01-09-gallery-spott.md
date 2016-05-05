@@ -1,6 +1,7 @@
 ---
 title: 'Sustainable Palm Oil Transparency Toolkit (SPOTT)'
 slug: 'spott'
+thumbnail: '/assets/images/gallery/'
 published: true
 categories: [gallery]
 content: 'Assess oil palm growers on the information that they make publicly available about the sustainability of their operations.'

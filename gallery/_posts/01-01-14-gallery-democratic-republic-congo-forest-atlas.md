@@ -1,6 +1,7 @@
 ---
 title: 'Democratic Republic of Congo Forest Atlas'
 slug: 'democratic-republic-congo-forest-atlas'
+thumbnail: '/assets/images/gallery/'
 published: true
 categories: [gallery]
 content: 'View an interactive map with land-use data for the Democratic Republic of the Congo.'

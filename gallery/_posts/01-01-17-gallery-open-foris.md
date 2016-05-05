@@ -1,6 +1,7 @@
 ---
 title: 'Open Foris'
 slug: 'open-foris'
+thumbnail: '/assets/images/gallery/'
 published: true
 categories: [gallery]
 content: 'A set of free and open-source software tools that facilitates flexible and efficient data collection, analysis, and reporting.'

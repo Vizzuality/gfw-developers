@@ -1,6 +1,7 @@
 ---
 title: 'Open Landscape Partnership Platform'
 slug: 'open-landscape-platform'
+thumbnail: '/assets/images/gallery/'
 published: true
 categories: [gallery]
 content: 'View and analyze ultra-high-resolution satellite imagery (up to 50 centimeters) for select forest landscapes.'

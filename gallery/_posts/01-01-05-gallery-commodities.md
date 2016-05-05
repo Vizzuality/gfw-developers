@@ -1,6 +1,7 @@
 ---
 title: 'Commodities'
 slug: 'commodities'
+thumbnail: '/assets/images/gallery/'
 published: true
 categories: [gallery]
 content: 'Identify deforestation risk in commodity supply chains.'

@@ -1,6 +1,7 @@
 ---
 title: 'Central African Republic Forest Atlas'
 slug: 'central-african-republic-forest-atlas'
+thumbnail: '/assets/images/gallery/'
 published: true
 categories: [gallery]
 content: 'View an interactive map with land-use data for the Central African Republic.'

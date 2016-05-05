@@ -1,6 +1,7 @@
 ---
 title: 'Equatorial Guinea Forest Atlas'
 slug: 'equatorial-guinea-forest-atlas'
+thumbnail: '/assets/images/gallery/'
 published: true
 categories: [gallery]
 content: 'View an interactive map with land-use data for Equatorial Guinea.'
