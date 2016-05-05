@@ -90,7 +90,12 @@
 		  @media (min-width: $br-mobile) {
 				margin: 0 -30px 30px;
 		  }
-		}		
+		}	
+		&:hover {
+			h3 {
+				text-decoration: underline;
+			}
+		}			
 	}
 
 	// Gallery

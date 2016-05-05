@@ -11,9 +11,11 @@
           {% for post in sorted_posts %}
             {% if post.categories contains 'gallery' %}
 						  <li class="js_slide">
-						  	<div class="m-card -atlas">				  		
-									<div class="img" style="background-image: url({{post.thumbnail}}{{post.slug}}.png)"></div>
-									<h3 class="-primary">{{ post.title }}</h3>
+						  	<div class="m-card -atlas">
+						  		<a href="{{ post.href }}" target="{{post.href_target}}">					  			
+										<div class="img" style="background-image: url({{post.thumbnail}}{{post.slug}}.png)"></div>
+										<h3 class="-primary">{{ post.title }}</h3>
+						  		</a>
 						  	</div>
 						  </li>
             {% endif %}
