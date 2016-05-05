@@ -12,9 +12,8 @@
             {% if post.categories contains 'gallery' %}
 						  <li class="js_slide">
 						  	<div class="m-card -atlas">				  		
-									<div class="img"></div>
+									<div class="img" style="background-image: url({{post.thumbnail}}{{post.slug}}.png)"></div>
 									<h3 class="-primary">{{ post.title }}</h3>
-									<p>{{ post.description }}</p>					  	
 						  	</div>
 						  </li>
             {% endif %}
