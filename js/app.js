@@ -210,10 +210,37 @@ Handlebars.registerHelper('deslugify', function (component, options) {
   root.app.Collection = root.app.Collection || {};
 
   root.app.Collection.GalleryCollection = Backbone.Collection.extend({
+
+    // If you insert one more gallery post
+    // you need to set the order here
+    order: [
+      "gfw-interactive-map",
+      "countries",
+      "open-data-portal",
+      "fires",
+      "commodities",
+      "climate",
+      "tomnod",
+      "open-landscape-platform",
+      "spott",
+      "maap",
+      "cameroon-forest-atlas",
+      "central-african-republic-forest-atlas",
+      "republic-congo-forest-atlas",
+      "democratic-republic-congo-forest-atlas",
+      "equatorial-guinea-forest-atlas",
+      "gabon-forest-atlas",
+      "open-foris",
+      "forest-watcher-mobile",
+      "logging-roads",
+      "water",
+      "protecting-forest"
+    ],
+
     url: baseurl + '/json/gallery.json',
     
     comparator: function(item) {
-      return parseInt(item.get("order"))
+      return this.order.indexOf(item.get("slug"));
     },
 
     getPaginatedCollection: function(currentPage,itemsOnPage,filter) {
@@ -227,15 +254,19 @@ Handlebars.registerHelper('deslugify', function (component, options) {
     },
 
     getFilters: function() {
-      var filters = _.pluck(this.toJSON(),'filter');
+      var filters = _.pluck(this.toJSON(),'filters');
+      // Get all the filters, trim white spaces, get the uniq values and sort them alphabetically
       return _.sortBy(_.uniq(_.flatten(_.map(filters, function(el){
-        return el.split(',');
+        var arr = el.split(',');
+        return _.compact(_.map(arr,function(v) {
+          return $.trim(v);
+        }))
       }))));
     },
 
     filter: function(filter) {
       return _.compact(_.map(this.toJSON(), function(v){
-        return (v.filter.indexOf(filter) != -1) ? v : null
+        return (v.filters.indexOf(filter) != -1) ? v : null
       }))
     }
 
@@ -252,7 +283,7 @@ Handlebars.registerHelper('deslugify', function (component, options) {
     model: new (Backbone.Model.extend({
       defaults: {
         currentPage: 0,
-        itemsOnPage: 6,
+        itemsOnPage: 9,
         filter: 'all'
       }
     })),

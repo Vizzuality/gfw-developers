@@ -7,7 +7,7 @@ tags: [api]
 tags_order: 1
 ---
 
-<p><a href="http://api.globalforestwatch.org/forest-change">http://api.globalforestwatch.org/forest-change</a></p>
+<p><a target="_blank" href="http://api.globalforestwatch.org/forest-change">http://api.globalforestwatch.org/forest-change</a></p>
 <p>Users can make calls to the GFW API and receive statistics on:</p>
 <ul>
 	<li>University of Maryland (UMD)/Google tree cover loss & gain</li>
@@ -20,4 +20,4 @@ tags_order: 1
 <p>They can post their own geometry, or use predefined geometries such as administrative boundaries, concessions or protected areas.</p>
 <p>They can also specify the time period for they are interested in.</p>
 <p>Full documentation of the calls are here</p>
-<p><a href="https://github.com/wri/gfw-api">https://github.com/wri/gfw-api</a></p>
+<p><a target="_blank" href="https://github.com/wri/gfw-api">https://github.com/wri/gfw-api</a></p>

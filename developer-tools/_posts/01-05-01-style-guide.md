@@ -8,4 +8,4 @@ tags_order: 3
 ---
 
 <p>What developers need to know before they build a GFW app</p>
-<p><a href="http://vizzuality.github.io/gfw-style-guides/">http://vizzuality.github.io/gfw-style-guides/</a></p>
+<p><a target="_blank" href="http://vizzuality.github.io/gfw-style-guides/">http://vizzuality.github.io/gfw-style-guides/</a></p>

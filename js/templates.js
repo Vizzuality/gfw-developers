@@ -46,13 +46,17 @@ this["HandlebarsTemplates"]["gallery"] = Handlebars.template({"1":function(depth
 },"3":function(depth0,helpers,partials,data) {
     var alias1=this.lambda, alias2=this.escapeExpression;
 
-  return "			<li class=\"m-card -gallery\">\n				<div class=\"img\" style=\"background-image: url("
-    + alias2(alias1((depth0 != null ? depth0.thumbnail : depth0), depth0))
-    + ")\"></div>\n				<h3 class=\"-primary\">"
+  return "			<li class=\"m-card -gallery\">\n				<a href=\""
+    + alias2(alias1((depth0 != null ? depth0.href : depth0), depth0))
+    + "\" target=\""
+    + alias2(alias1((depth0 != null ? depth0.href_target : depth0), depth0))
+    + "\">\n					<div class=\"img\" style=\"background-image: url(/assets/images/gallery/"
+    + alias2(alias1((depth0 != null ? depth0.slug : depth0), depth0))
+    + ".png)\"></div>\n					<h3 class=\"-primary\">"
     + alias2(alias1((depth0 != null ? depth0.title : depth0), depth0))
-    + "</h3>\n				<p>"
-    + alias2(alias1((depth0 != null ? depth0.organization : depth0), depth0))
-    + "</p>\n			</li>\n";
+    + "</h3>\n					<p>"
+    + alias2(alias1((depth0 != null ? depth0.source : depth0), depth0))
+    + "</p>\n				</a>\n			</li>\n";
 },"5":function(depth0,helpers,partials,data) {
     return "		<div id=\"gallery-paginator\"></div>\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
@@ -64,7 +68,7 @@ this["HandlebarsTemplates"]["gallery"] = Handlebars.template({"1":function(depth
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.gallery : depth0),{"name":"each","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "	</ul>\n"
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.pagination : depth0),{"name":"if","hash":{},"fn":this.program(5, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "	<div class=\"btn-submit\">\n		<a href=\"#\" class=\"-center\">			\n			<svg><use xlink:href=\"#icon-addmore\"></use></svg>\n			<h3>SUBMIT YOUR MAP</h3>\n		</a>\n	</div>\n</div>\n";
+    + "	<a href=\"mailto:gfw@wri.org\" target=\"_blank\" class=\"btn-submit\">\n		<div class=\"-center\">			\n			<svg><use xlink:href=\"#icon-addmore\"></use></svg>\n			<h3>Submit your map or app</h3>\n		</div>\n	</a>\n</div>\n";
 },"useData":true});
 this["HandlebarsTemplates"]["modal-video"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     return "<div class=\"modal-backdrop\"></div>\n<div class=\"modal-window -video\">\n  <a href=\"#\" class=\"modal-close\"><svg><use xlink:href=\"#shape-close\"></use></svg></a>\n  <div class=\"modal-wrapper scroll-dark\">\n    <div class=\"modal-content\">\n      <div class=\"modal-video\">\n        <div id=\"modal-video\"></div>\n      </div>\n    </div>\n  </div>\n</div>\n";

@@ -11,19 +11,21 @@
 	<ul class="m-grid -margin">
 		{{#each this.gallery}}	
 			<li class="m-card -gallery">
-				<div class="img" style="background-image: url({{this.thumbnail}})"></div>
-				<h3 class="-primary">{{this.title}}</h3>
-				<p>{{this.organization}}</p>
+				<a href="{{this.href}}" target="{{this.href_target}}">
+					<div class="img" style="background-image: url(/assets/images/gallery/{{this.slug}}.png)"></div>
+					<h3 class="-primary">{{this.title}}</h3>
+					<p>{{this.source}}</p>
+				</a>
 			</li>
 		{{/each}}
 	</ul>
 	{{#if pagination}}	
 		<div id="gallery-paginator"></div>
 	{{/if}}
-	<div class="btn-submit">
-		<a href="#" class="-center">			
+	<a href="mailto:gfw@wri.org" target="_blank" class="btn-submit">
+		<div class="-center">			
 			<svg><use xlink:href="#icon-addmore"></use></svg>
-			<h3>SUBMIT YOUR MAP</h3>
-		</a>
-	</div>
+			<h3>Submit your map or app</h3>
+		</div>
+	</a>
 </div>

@@ -184,7 +184,8 @@ button {
   position: relative;
   background: #97bd3d;
   min-height: 200px;
-  margin: 60px 0 0; }
+  margin: 60px 0 0;
+  display: block; }
   .btn-submit .-center {
     position: absolute;
     top: 50%;
@@ -206,6 +207,8 @@ button {
   .btn-submit h3 {
     color: #FFF;
     text-align: center; }
+  .btn-submit:hover {
+    background: #88aa37; }
 
 h2 {
   font-size: 25px;

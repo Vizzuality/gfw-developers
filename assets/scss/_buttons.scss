@@ -97,6 +97,7 @@
   background: $primary-color;
   min-height: 200px;
   margin: 60px 0 0;
+  display: block;
 
   .-center {
     position: absolute;
@@ -118,5 +119,9 @@
   h3 {
     color: $white;
     text-align: center;
+  }
+
+  &:hover {
+    background: darken($primary-color, 5%);
   }
 }
