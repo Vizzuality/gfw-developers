@@ -9,7 +9,7 @@
 				<ul class="slides js_slides">
 			    {% assign sorted_posts = site.posts | sort: 'order' %}
           {% for post in sorted_posts %}
-            {% if post.categories contains 'gallery' %}
+            {% if post.categories contains 'gallery' and post.map_builder %}
 						  <li class="js_slide">
 						  	<div class="m-card -atlas">
 						  		<a href="{{ post.href }}" target="{{post.href_target}}">					  			

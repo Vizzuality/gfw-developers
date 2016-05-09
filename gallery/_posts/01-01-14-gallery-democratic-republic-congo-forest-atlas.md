@@ -11,4 +11,5 @@ href_text: 'Launch App'
 href_class: 'btn green medium mobile-friendly'
 source: 'World Resources Institute and Ministry of Environment, Nature Conservation, and Tourism of the Democratic Republic of the Congo'
 filters: 'africa, data, global-forest-watch, maps, mining, map-builder'
+map_builder: true
 ---

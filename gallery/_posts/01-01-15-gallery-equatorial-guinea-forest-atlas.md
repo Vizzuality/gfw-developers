@@ -11,4 +11,5 @@ href_text: 'Launch App'
 href_class: 'btn green medium mobile-friendly'
 source: 'World Resources Institute and Ministry of Agriculture and Forestry of Equatorial Guinea'
 filters: 'africa, data, global-forest-watch, maps, map-builder'
+map_builder: true
 ---
