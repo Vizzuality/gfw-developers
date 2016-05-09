@@ -4,7 +4,7 @@ slug: 'central-african-republic-forest-atlas'
 thumbnail: '/assets/images/gallery/'
 published: true
 categories: [gallery]
-content: 'View an interactive map with land-use data for the Central African Republic.'
+description: 'View an interactive map with land-use data for the Central African Republic.'
 href: 'http://caf.forest-atlas.org'
 href_target: '_blank'
 href_text: 'Launch App'

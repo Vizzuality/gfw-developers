@@ -149,9 +149,34 @@
 		  	transform: scale(1);
 		  	transition: $transition1;
 		  }
+
+		  .coming-soon {
+				text-transform: uppercase;
+				height: auto;
+				width: auto;
+				padding: 2px 45px;
+				font-size: 12px;
+				position: absolute;
+				left: auto;
+				right: 0;
+				top: 0;
+				z-index: 1;
+				transform: rotate(45deg) translate(50%,200%);
+				transform-origin: 100% 0%;
+				background: $dark;
+				color: $white;
+		  }
+
 		}
 
-		&:hover {
+		small {
+			display: block;
+			margin: 10px 0 0;
+			font-size: 11px;
+			color: #999;
+		}
+
+		&:hover:not(.-coming-soon) {
 			h3 {
 				text-decoration: underline;
 			}

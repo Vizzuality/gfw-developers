@@ -220,6 +220,7 @@ Handlebars.registerHelper('deslugify', function (component, options) {
       "fires",
       "commodities",
       "climate",
+      "water",
       "tomnod",
       "open-landscape-platform",
       "spott",
@@ -233,7 +234,6 @@ Handlebars.registerHelper('deslugify', function (component, options) {
       "open-foris",
       "forest-watcher-mobile",
       "logging-roads",
-      "water",
       "protecting-forest"
     ],
 

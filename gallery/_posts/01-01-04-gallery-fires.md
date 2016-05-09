@@ -1,10 +1,10 @@
 ---
-title: 'Fires'
+title: 'GFW Fires'
 slug: 'fires'
 thumbnail: '/assets/images/gallery/'
 published: true
 categories: [gallery]
-content: 'Track forest fires and haze in the ASEAN region.'
+description: 'Track forest fires and haze in the ASEAN region.'
 href: 'http://fires.globalforestwatch.org/'
 href_text: 'Launch App'
 href_class: 'btn green medium mobile-friendly'

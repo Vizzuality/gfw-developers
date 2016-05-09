@@ -17,6 +17,7 @@
       "fires",
       "commodities",
       "climate",
+      "water",
       "tomnod",
       "open-landscape-platform",
       "spott",
@@ -30,7 +31,6 @@
       "open-foris",
       "forest-watcher-mobile",
       "logging-roads",
-      "water",
       "protecting-forest"
     ],
 

@@ -4,7 +4,7 @@ slug: 'open-foris'
 thumbnail: '/assets/images/gallery/'
 published: true
 categories: [gallery]
-content: 'A set of free and open-source software tools that facilitates flexible and efficient data collection, analysis, and reporting.'
+description: 'A set of free and open-source software tools that facilitates flexible and efficient data collection, analysis, and reporting.'
 href: 'http://www.openforis.org/'
 href_target: '_blank'
 href_text: 'Launch App'

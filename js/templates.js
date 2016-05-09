@@ -44,31 +44,52 @@ this["HandlebarsTemplates"]["gallery"] = Handlebars.template({"1":function(depth
     + alias1(this.lambda(depth0, depth0))
     + "</li>	      \n";
 },"3":function(depth0,helpers,partials,data) {
-    var alias1=this.lambda, alias2=this.escapeExpression;
+    var stack1;
 
-  return "			<li class=\"m-card -gallery\">\n				<a href=\""
-    + alias2(alias1((depth0 != null ? depth0.href : depth0), depth0))
-    + "\" target=\""
-    + alias2(alias1((depth0 != null ? depth0.href_target : depth0), depth0))
-    + "\">\n					<div class=\"img\">\n						<div style=\"background-image: url("
+  return ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.coming_soon : depth0),{"name":"if","hash":{},"fn":this.program(4, data, 0),"inverse":this.program(6, data, 0),"data":data})) != null ? stack1 : "");
+},"4":function(depth0,helpers,partials,data) {
+    var stack1, alias1=this.lambda, alias2=this.escapeExpression;
+
+  return "				<li class=\"m-card -gallery -coming-soon\">	\n					<div class=\"img\">\n						<div class=\"coming-soon\">Coming soon</div>\n						<div style=\"background-image: url("
     + alias2(alias1((depth0 != null ? depth0.thumbnail : depth0), depth0))
     + alias2(alias1((depth0 != null ? depth0.slug : depth0), depth0))
     + ".png)\"> </div>\n					</div>\n					<h3 class=\"-primary\">"
-    + alias2(alias1((depth0 != null ? depth0.title : depth0), depth0))
+    + ((stack1 = alias1((depth0 != null ? depth0.title : depth0), depth0)) != null ? stack1 : "")
     + "</h3>\n					<p>"
+    + ((stack1 = alias1((depth0 != null ? depth0.description : depth0), depth0)) != null ? stack1 : "")
+    + "</p>\n					<small><strong>Source:</strong> "
     + alias2(alias1((depth0 != null ? depth0.source : depth0), depth0))
-    + "</p>\n				</a>\n			</li>\n";
-},"5":function(depth0,helpers,partials,data) {
+    + "</small>\n					<small><strong>Tags:</strong> "
+    + alias2(alias1((depth0 != null ? depth0.filters : depth0), depth0))
+    + "</small>\n				</li>\n";
+},"6":function(depth0,helpers,partials,data) {
+    var stack1, alias1=this.lambda, alias2=this.escapeExpression;
+
+  return "				<li class=\"m-card -gallery \">\n					<a href=\""
+    + alias2(alias1((depth0 != null ? depth0.href : depth0), depth0))
+    + "\" target=\"_blank\">\n						<div class=\"img\">\n							<div style=\"background-image: url("
+    + alias2(alias1((depth0 != null ? depth0.thumbnail : depth0), depth0))
+    + alias2(alias1((depth0 != null ? depth0.slug : depth0), depth0))
+    + ".png)\"> </div>\n						</div>\n						<h3 class=\"-primary\">"
+    + ((stack1 = alias1((depth0 != null ? depth0.title : depth0), depth0)) != null ? stack1 : "")
+    + "</h3>\n						<p>"
+    + ((stack1 = alias1((depth0 != null ? depth0.description : depth0), depth0)) != null ? stack1 : "")
+    + "</p>\n						<small><strong>Source:</strong> "
+    + alias2(alias1((depth0 != null ? depth0.source : depth0), depth0))
+    + "</small>\n						<small><strong>Tags:</strong> "
+    + alias2(alias1((depth0 != null ? depth0.filters : depth0), depth0))
+    + "</small>\n					</a>\n				</li>\n";
+},"8":function(depth0,helpers,partials,data) {
     return "		<div id=\"gallery-paginator\"></div>\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1;
 
   return "<div class=\"l-inner\">\n	<div class=\"m-filters\">\n		<ul id=\"galleryFilters\">\n      <li data-value=\"all\">All</li>\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.filters : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "		</ul>\n	</div>\n\n	<ul class=\"m-grid -margin\">\n"
+    + "		</ul>\n	</div>\n	<ul class=\"m-grid -margin\">\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.gallery : depth0),{"name":"each","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "	</ul>\n"
-    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.pagination : depth0),{"name":"if","hash":{},"fn":this.program(5, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.pagination : depth0),{"name":"if","hash":{},"fn":this.program(8, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "	<a href=\"mailto:gfw@wri.org\" target=\"_blank\" class=\"btn-submit\">\n		<div class=\"-center\">			\n			<svg><use xlink:href=\"#icon-addmore\"></use></svg>\n			<h3>Submit your map or app</h3>\n		</div>\n	</a>\n</div>\n";
 },"useData":true});
 this["HandlebarsTemplates"]["modal-video"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {

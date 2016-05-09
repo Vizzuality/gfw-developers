@@ -7,18 +7,32 @@
       {{/each}}
 		</ul>
 	</div>
-
 	<ul class="m-grid -margin">
 		{{#each this.gallery}}	
-			<li class="m-card -gallery">
-				<a href="{{this.href}}" target="{{this.href_target}}">
+			{{#if this.coming_soon}}
+				<li class="m-card -gallery -coming-soon">	
 					<div class="img">
+						<div class="coming-soon">Coming soon</div>
 						<div style="background-image: url({{this.thumbnail}}{{this.slug}}.png)"> </div>
 					</div>
-					<h3 class="-primary">{{this.title}}</h3>
-					<p>{{this.source}}</p>
-				</a>
-			</li>
+					<h3 class="-primary">{{{this.title}}}</h3>
+					<p>{{{this.description}}}</p>
+					<small><strong>Source:</strong> {{this.source}}</small>
+					<small><strong>Tags:</strong> {{this.filters}}</small>
+				</li>
+			{{else}}
+				<li class="m-card -gallery ">
+					<a href="{{this.href}}" target="_blank">
+						<div class="img">
+							<div style="background-image: url({{this.thumbnail}}{{this.slug}}.png)"> </div>
+						</div>
+						<h3 class="-primary">{{{this.title}}}</h3>
+						<p>{{{this.description}}}</p>
+						<small><strong>Source:</strong> {{this.source}}</small>
+						<small><strong>Tags:</strong> {{this.filters}}</small>
+					</a>
+				</li>
+			{{/if}}
 		{{/each}}
 	</ul>
 	{{#if pagination}}	

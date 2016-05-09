@@ -989,7 +989,29 @@ h3 {
         -webkit-transform: scale(1);
                 transform: scale(1);
         transition: all 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
-    .m-card.-gallery:hover h3 {
+      .m-card.-gallery .img .coming-soon {
+        text-transform: uppercase;
+        height: auto;
+        width: auto;
+        padding: 2px 45px;
+        font-size: 12px;
+        position: absolute;
+        left: auto;
+        right: 0;
+        top: 0;
+        z-index: 1;
+        -webkit-transform: rotate(45deg) translate(50%, 200%);
+                transform: rotate(45deg) translate(50%, 200%);
+        -webkit-transform-origin: 100% 0%;
+                transform-origin: 100% 0%;
+        background: #555;
+        color: #FFF; }
+    .m-card.-gallery small {
+      display: block;
+      margin: 10px 0 0;
+      font-size: 11px;
+      color: #999; }
+    .m-card.-gallery:hover:not(.-coming-soon) h3 {
       text-decoration: underline; }
   .m-card.-submit {
     background: #97bd3d;

@@ -4,7 +4,7 @@ slug: 'equatorial-guinea-forest-atlas'
 thumbnail: '/assets/images/gallery/'
 published: true
 categories: [gallery]
-content: 'View an interactive map with land-use data for Equatorial Guinea.'
+description: 'View an interactive map with land-use data for Equatorial Guinea.'
 href: 'http://gnq.forest-atlas.org'
 href_target: '_blank'
 href_text: 'Launch App'

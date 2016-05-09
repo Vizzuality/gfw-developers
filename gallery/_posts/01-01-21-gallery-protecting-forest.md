@@ -4,7 +4,7 @@ slug: 'protecting-forest'
 thumbnail: '/assets/images/gallery/'
 published: true
 categories: [gallery]
-content: 'Explore the relationship between company concessions, peatlands, fire hotspots, and deforestation alerts in Indonesia.'
+description: 'Explore the relationship between company concessions, peatlands, fire hotspots, and deforestation alerts in Indonesia.'
 href: 'http://www.greenpeace.org/seasia/id/Global/seasia/Indonesia/Code/Forest-Map/en/'
 href_target: '_blank'
 href_text: 'Launch App'

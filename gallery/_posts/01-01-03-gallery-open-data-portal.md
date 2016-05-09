@@ -1,10 +1,10 @@
 ---
-title: 'Open Data Portal'
+title: 'GFW Open Data Portal'
 slug: 'open-data-portal'
 thumbnail: '/assets/images/gallery/'
 published: true
 categories: [gallery]
-content: 'Browse, learn more about, and download the data displayed on Global Forest Watch.'
+description: 'Browse, learn more about, and download the data displayed on Global Forest Watch.'
 href: 'http://data.globalforestwatch.org'
 href_text: 'Browse data'
 href_class: 'btn green medium mobile-friendly'

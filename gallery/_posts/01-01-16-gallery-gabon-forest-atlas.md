@@ -4,7 +4,7 @@ slug: 'gabon-forest-atlas'
 thumbnail: '/assets/images/gallery/'
 published: true
 categories: [gallery]
-content: 'View an interactive map with land-use data for Gabon.'
+description: 'View an interactive map with land-use data for Gabon.'
 href: 'http://gab.forest-atlas.org'
 href_target: '_blank'
 href_text: 'Launch App'

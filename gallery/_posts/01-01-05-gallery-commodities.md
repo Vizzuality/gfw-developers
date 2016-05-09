@@ -1,10 +1,10 @@
 ---
-title: 'Commodities'
+title: 'GFW Commodities'
 slug: 'commodities'
 thumbnail: '/assets/images/gallery/'
 published: true
 categories: [gallery]
-content: 'Identify deforestation risk in commodity supply chains.'
+description: 'Identify deforestation risk in commodity supply chains.'
 href: 'http://commodities.globalforestwatch.org/'
 href_text: 'Launch App'
 href_class: 'btn green medium mobile-friendly'

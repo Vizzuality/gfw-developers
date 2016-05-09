@@ -4,7 +4,7 @@ slug: 'democratic-republic-congo-forest-atlas'
 thumbnail: '/assets/images/gallery/'
 published: true
 categories: [gallery]
-content: 'View an interactive map with land-use data for the Democratic Republic of the Congo.'
+description: 'View an interactive map with land-use data for the Democratic Republic of the Congo.'
 href: 'http://cod.forest-atlas.org'
 href_target: '_blank'
 href_text: 'Launch App'

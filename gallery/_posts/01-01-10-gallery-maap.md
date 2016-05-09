@@ -4,7 +4,7 @@ slug: 'maap'
 thumbnail: '/assets/images/gallery/'
 published: true
 categories: [gallery]
-content: 'View information, maps and analysis from a new deforestation monitoring system for the Andean Amazon.'
+description: 'View information, maps and analysis from a new deforestation monitoring system for the Andean Amazon.'
 href: 'http://maaproject.org/en/'
 href_target: '_blank'
 href_text: 'Launch App'
