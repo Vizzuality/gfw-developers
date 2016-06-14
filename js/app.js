@@ -767,8 +767,10 @@ Handlebars.registerHelper('deslugify', function (component, options) {
 
     initSlider: function() {
       this.options.slider = (! !!this.options.defaultSlider) ? this.setOptions() : _.extend(this.setOptions(), this.options.defaultSlider);
-      this.initNavigation();
-      this.initLory();
+      if (this.options.slider.slidesLength > this.options.slider.slides_per_slide) {
+        this.initNavigation();
+        this.initLory();
+      }
     },
 
     cache: function() {
@@ -791,12 +793,14 @@ Handlebars.registerHelper('deslugify', function (component, options) {
       this.$slider[0].addEventListener('before.lory.init', this.setSlideWidth.bind(this));
       this.$slider[0].addEventListener('on.lory.resize', this.setSlideWidth.bind(this));
 
-      this.slider = window.lory.lory(this.$slider[0], this.options.slider);
+
+      this.slider = window.lory(this.$slider[0], this.options.slider);
     },
 
     setOptions: function() {
       this.cache();
       return {
+        slidesLength: this.slideCount,
         slidesToScroll: (!!this.mobile) ? 1 : 3,
         infinite: (!!this.mobile) ? 1 : 3,
         slides_per_slide: (!!this.mobile) ? 1 : 3
