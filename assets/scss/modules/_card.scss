@@ -237,6 +237,8 @@
 			padding-bottom: 50%;
 			background: $dark;
 			position: relative;
+			background-position: center;
+			background-size: cover;			
 		  @media (min-width: $br-mobile) {
 				margin: 0 -30px 30px;
 		  }
@@ -281,7 +283,7 @@
 	&.-number {
 		width: 100%;
 		padding: 30px 15px 30px;
-		cursor: pointer;
+		
 	  @media (min-width: $br-mobile) {
 			width: calc(100% - 30px);
 			margin: 0 auto; 

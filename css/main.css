@@ -1049,7 +1049,9 @@ h3 {
       margin: 0 -15px 20px;
       padding-bottom: 50%;
       background: #555;
-      position: relative; }
+      position: relative;
+      background-position: center;
+      background-size: cover; }
       @media (min-width: 850px) {
         .m-card.-video .img {
           margin: 0 -30px 30px; } }
@@ -1077,8 +1079,7 @@ h3 {
       background: #a2c64e; }
   .m-card.-number {
     width: 100%;
-    padding: 30px 15px 30px;
-    cursor: pointer; }
+    padding: 30px 15px 30px; }
     @media (min-width: 850px) {
       .m-card.-number {
         width: calc(100% - 30px);
