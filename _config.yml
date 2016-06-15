@@ -1,7 +1,7 @@
 name: GFW Forest Atlas
 permalink: none
 
-baseurl: "/gfw-atlas" # the subpath of your site, e.g. /blog/
+baseurl: "/developers-corner" # the subpath of your site, e.g. /blog/
 url: "http://vizzuality.github.io/" # the base hostname & protocol for your site
 
 
