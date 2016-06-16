@@ -74,9 +74,9 @@ button {
   width: 60px;
   height: 60px;
   margin: 0 0 0 15px;
-  background-image: url("/gfw-atlas/assets/images/logo.png");
+  background-image: url("/assets/images/logo.png");
   background-size: contain;
-  font-size: 16px; }
+  font-size: 14px; }
   @media (min-width: 850px) {
     .l-logo {
       width: 90px;
@@ -89,6 +89,35 @@ button {
     width: 100%;
     height: 100%;
     color: #555; }
+  .l-logo .ribbon {
+    color: #FFF;
+    text-indent: 0px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    -webkit-transform: translate(5px, 8px);
+            transform: translate(5px, 8px); }
+    .l-logo .ribbon > span {
+      display: block;
+      position: relative;
+      z-index: 2;
+      background: #b6b6ba;
+      padding: 3px 5px 2px;
+      line-height: 1;
+      font-weight: 500;
+      font-size: 10px;
+      text-transform: uppercase; }
+    .l-logo .ribbon:after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      right: 0;
+      bottom: 100%;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 5px 0 0 5px;
+      border-color: transparent transparent transparent #9c9ca1; }
 
 .l-menu {
   position: relative;
@@ -302,7 +331,7 @@ h3 {
       z-index: 2;
       text-align: center;
       padding: 20px 25px;
-      font-size: 16px;
+      font-size: 14px;
       line-height: 1; }
       @media (min-width: 1050px) {
         .l-menu nav > ul > li > a {
@@ -651,13 +680,13 @@ h3 {
     left: 50%; }
 
 .simple-pagination.light-theme .prev:before {
-  background: url("/gfw-atlas/assets/images/arrow-left.svg") center no-repeat;
+  background: url("/assets/images/arrow-left.svg") center no-repeat;
   -webkit-transform: translate(-55%, -50%);
           transform: translate(-55%, -50%);
   background-size: contain; }
 
 .simple-pagination.light-theme .next:before {
-  background: url("/gfw-atlas/assets/images/arrow-right.svg") center no-repeat;
+  background: url("/assets/images/arrow-right.svg") center no-repeat;
   -webkit-transform: translate(-45%, -50%);
           transform: translate(-45%, -50%);
   background-size: contain; }
@@ -709,7 +738,7 @@ h3 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url("/gfw-atlas/assets/images/home-slider/home-slider-1.png");
+    background: url("/assets/images/home-slider/home-slider-1.png");
     background-size: cover; }
     @media (min-width: 850px) {
       .m-slider ul li {
@@ -943,7 +972,7 @@ h3 {
     .m-card.-atlas .img {
       margin: 0 -15px 20px;
       padding-bottom: 50%;
-      background: url("/gfw-atlas/assets/images/thumbnail-post.png");
+      background: url("/assets/images/thumbnail-post.png");
       background-size: cover; }
       @media (min-width: 850px) {
         .m-card.-atlas .img {
@@ -1159,7 +1188,7 @@ h3 {
   border-top: 1px solid #E5E5DF; }
 
 .m-section.-own-atlas {
-  background: url("/gfw-atlas/assets/images/bkg-own-atlas.jpg");
+  background: url("/assets/images/bkg-own-atlas.jpg");
   background-size: cover;
   position: relative;
   z-index: 0; }
@@ -1616,7 +1645,7 @@ h3 {
       .m-select .chosen-container.with-selection .chosen-single abbr {
         display: block; }
       .m-select .chosen-container.with-selection .chosen-single div b {
-        background: url("/gfw-atlas/assets/images/arrow-down.svg") center no-repeat;
+        background: url("/assets/images/arrow-down.svg") center no-repeat;
         background-size: contain; }
   .m-select .chosen-container-single {
     outline: none; }
@@ -1657,7 +1686,7 @@ h3 {
         width: 14px;
         margin: 0 auto;
         height: 100%;
-        background: url("/gfw-atlas/assets/images/arrow-down.svg") center no-repeat;
+        background: url("/assets/images/arrow-down.svg") center no-repeat;
         background-size: contain; }
     .m-select .chosen-container-single .chosen-search {
       position: relative;
