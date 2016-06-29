@@ -7,6 +7,13 @@
     }
   }
 
+  &.-padding-bottom {
+    padding: 0 15px 40px;
+    @media (min-width: $br-mobile){
+      padding: 0 0 70px;
+    }
+  }
+
   &.-border {
     border-top: 1px solid $border1;
   }
@@ -44,7 +51,6 @@
       @media (min-width: $br-mobile){
         padding: 0 0 35px;
       }
-      
 
       .-font-small {
         font-size: 19px;
@@ -52,6 +58,14 @@
 
       a {
         color: inherit;
+      }
+
+      &.-main-title {
+        font-weight: 400;
+        font-size: 30px;
+        @media (min-width: $br-mobile){
+          font-size: 47px;        
+        }
       }
     }
 
