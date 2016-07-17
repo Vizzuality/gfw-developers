@@ -9,7 +9,7 @@
 
     events: {
       'click .js_slide_navigation li' : 'clickNavigation'
-    }, 
+    },
 
     navTemplate: HandlebarsTemplates['slider'],
 
@@ -101,9 +101,11 @@
         switch (direction) {
           case 'left':
             this.slider.prev();
+            ga('send', 'event', 'Map Builder', this.el.id, 'Click Left');
           break;
           case 'right':
             this.slider.next();
+            ga('send', 'event', 'Map Builder', this.el.id, 'Click Right');
           break;
         }
       }

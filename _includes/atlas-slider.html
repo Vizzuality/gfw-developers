@@ -1,5 +1,5 @@
 <div class="l-inner">
-	<header>		
+	<header>
 		<h2>Featured Maps</h2>
 		<p>A hand-picked selection of GFW maps and applications built by our user community. Imagine your map or app here!</p>
 	</header>
@@ -12,7 +12,7 @@
             {% if post.categories contains 'gallery' and post.map_builder %}
 						  <li class="js_slide">
 						  	<div class="m-card -atlas">
-						  		<a href="{{ post.href }}" target="{{post.href_target}}">					  			
+						  		<a href="{{ post.href }}" target="{{post.href_target}}">
 										<div class="img" style="background-image: url({{site.baseurl}}{{post.thumbnail}}{{post.slug}}.png)"></div>
 										<h3 class="-primary">{{ post.title }}</h3>
 						  		</a>
@@ -26,7 +26,7 @@
 		<div class="slider-arrows js_slide_navigation"></div>
 	</div>
 	<div class="btn-box -center">
-		<a href="mailto:gfw@wri.org" target="_blank" class="btn -primary -huge -m-fullwidth">Submit your map</a>
+		<a href="mailto:gfw@wri.org" onClick="ga('send', 'event', 'Map Builder', 'Submit your Map');" target="_blank" class="btn -primary -huge -m-fullwidth">Submit your map</a>
 		<a href="{{site.baseurl}}/gallery/" class="btn -huge -m-fullwidth">View all</a>
 	</div>
 </div>

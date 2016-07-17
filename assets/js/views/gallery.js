@@ -54,7 +54,7 @@
     },
 
     url: baseurl + '/json/gallery.json',
-    
+
     comparator: function(item) {
       return this.order.indexOf(item.get("slug"));
     },
@@ -79,7 +79,7 @@
       //     return $.trim(v);
       //   }))
       // }))));
-      
+
       // return filter_slugs;
     },
 
@@ -113,7 +113,7 @@
 
     initialize: function() {
       this.setListeners();
-      
+
       // Fetch collection
       this.collection = new root.app.Collection.GalleryCollection();
       this.collection.fetch().done(function(){
@@ -181,6 +181,7 @@
     changeFilter: function(e) {
       this.model.set('currentPage', 0, { silent:true });
       this.model.set('filter', $(e.currentTarget).data('value'));
+      ga('send', 'event', 'Gallery', 'Tag Click', $(e.currentTarget).data('value'));
     }
 
   });

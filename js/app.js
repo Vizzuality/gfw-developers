@@ -257,7 +257,7 @@ Handlebars.registerHelper('deslugify', function (component, options) {
     },
 
     url: baseurl + '/json/gallery.json',
-    
+
     comparator: function(item) {
       return this.order.indexOf(item.get("slug"));
     },
@@ -282,7 +282,7 @@ Handlebars.registerHelper('deslugify', function (component, options) {
       //     return $.trim(v);
       //   }))
       // }))));
-      
+
       // return filter_slugs;
     },
 
@@ -316,7 +316,7 @@ Handlebars.registerHelper('deslugify', function (component, options) {
 
     initialize: function() {
       this.setListeners();
-      
+
       // Fetch collection
       this.collection = new root.app.Collection.GalleryCollection();
       this.collection.fetch().done(function(){
@@ -384,11 +384,13 @@ Handlebars.registerHelper('deslugify', function (component, options) {
     changeFilter: function(e) {
       this.model.set('currentPage', 0, { silent:true });
       this.model.set('filter', $(e.currentTarget).data('value'));
+      ga('send', 'event', 'Gallery', 'Tag Click', $(e.currentTarget).data('value'));
     }
 
   });
 
 })(this);
+
 (function(root) {
 
   'use strict';
@@ -739,7 +741,7 @@ Handlebars.registerHelper('deslugify', function (component, options) {
 
     events: {
       'click .js_slide_navigation li' : 'clickNavigation'
-    }, 
+    },
 
     navTemplate: HandlebarsTemplates['slider'],
 
@@ -831,9 +833,11 @@ Handlebars.registerHelper('deslugify', function (component, options) {
         switch (direction) {
           case 'left':
             this.slider.prev();
+            ga('send', 'event', 'Map Builder', this.el.id, 'Click Left');
           break;
           case 'right':
             this.slider.next();
+            ga('send', 'event', 'Map Builder', this.el.id, 'Click Right');
           break;
         }
       }
