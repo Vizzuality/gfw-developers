@@ -90,7 +90,7 @@ this["HandlebarsTemplates"]["gallery"] = Handlebars.template({"1":function(depth
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.gallery : depth0),{"name":"each","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "	</ul>\n"
     + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.pagination : depth0),{"name":"if","hash":{},"fn":this.program(8, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "	<a href=\"mailto:gfw@wri.org\" target=\"_blank\" class=\"btn-submit\">\n		<div class=\"-center\">			\n			<svg><use xlink:href=\"#icon-addmore\"></use></svg>\n			<h3>Submit your map or app</h3>\n		</div>\n	</a>\n</div>\n";
+    + "	<a href=\"mailto:gfw@wri.org\" target=\"_blank\" class=\"btn-submit data-suggestion-link\">\n		<div class=\"-center\">			\n			<svg><use xlink:href=\"#icon-addmore\"></use></svg>\n			<h3>Submit your map or app</h3>\n		</div>\n	</a>\n</div>\n";
 },"useData":true});
 this["HandlebarsTemplates"]["modal-video"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     return "<div class=\"modal-backdrop\"></div>\n<div class=\"modal-window -video\">\n  <a href=\"#\" class=\"modal-close\"><svg><use xlink:href=\"#shape-close\"></use></svg></a>\n  <div class=\"modal-wrapper scroll-dark\">\n    <div class=\"modal-content\">\n      <div class=\"modal-video\">\n        <div id=\"modal-video\"></div>\n      </div>\n    </div>\n  </div>\n</div>\n";
