@@ -4,10 +4,11 @@ slug: 'forest-watcher-mobile'
 thumbnail: '/assets/images/gallery/'
 published: true
 categories: [gallery]
-description: 'This easy-to-use app enables anyone with limited Internet connectivity to find GFW alerts in their forests and upload observations like photos and other data from the field. The Jane Goodall Institute, in partnership with Global Forest Watch, Google, and TouchLab, is currently piloting this app in Uganda to improve local forest monitoring. The beta version is now live!.'
-href: 'mailto:gfw@wri.org'
+description: 'Access the dynamic forest monitoring and alert systems of Global Forest Watch (GFW) on your mobile device, even offline. Navigate to alerts, collect field data, and work with teams to manage areas.'
+href: 'http://fw.globalforestwatch.org/'
 href_target: '_blank'      
 href_text: 'Contact us to become a beta tester'
 href_class: 'btn green medium mobile-friendly'
-source: 'Jane Goodall Institute, Google, TouchLab, and World Resources Institute'
+source: 'Jane Goodall Institute, Google, Vizzuality, and World Resources Institute'
+filters: 'mobile, global-forest-watch, data'
 ---

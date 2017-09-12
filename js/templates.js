@@ -50,7 +50,7 @@ this["HandlebarsTemplates"]["gallery"] = Handlebars.template({"1":function(depth
 },"4":function(depth0,helpers,partials,data) {
     var stack1, alias1=this.lambda, alias2=this.escapeExpression;
 
-  return "				<li class=\"m-card -gallery -coming-soon\">	\n					<div class=\"img\">\n						<div class=\"coming-soon\">Coming soon</div>\n						<div style=\"background-image: url("
+  return "				<li class=\"m-card -gallery -coming-soon -simply-testing\">	\n					<div class=\"img\">\n						<div class=\"coming-soon\">Coming soon</div>\n						<div style=\"background-image: url("
     + alias2(alias1((depth0 != null ? depth0.thumbnail : depth0), depth0))
     + alias2(alias1((depth0 != null ? depth0.slug : depth0), depth0))
     + ".png)\"> </div>\n					</div>\n					<h3 class=\"-primary\">"
