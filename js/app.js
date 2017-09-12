@@ -214,6 +214,7 @@ Handlebars.registerHelper('deslugify', function (component, options) {
     // If you insert one more gallery post
     // you need to set the order here
     order: [
+      "forest-watcher-mobile",
       "gfw-interactive-map",
       "countries",
       "open-data-portal",
@@ -232,7 +233,6 @@ Handlebars.registerHelper('deslugify', function (component, options) {
       "equatorial-guinea-forest-atlas",
       "gabon-forest-atlas",
       "open-foris",
-      "forest-watcher-mobile",
       "logging-roads",
       "protecting-forest"
     ],
