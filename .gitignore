@@ -5,3 +5,4 @@ node_modules
 bower_components
 .ruby-version
 js/vendor.js
+.DS_Store
