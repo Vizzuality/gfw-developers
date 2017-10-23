@@ -119,6 +119,9 @@ gulp.task('bower_install', function() {
         overrides: {
             'lory' : {
                 main: paths.asset+'/js/lib/lory.min.js'
+            },
+            'chosen' : {
+                main: paths.asset+'/node_modules/chosen-js/chosen.jquery.min.js'
             }
         }
     }), { base: '/bower_components' })
