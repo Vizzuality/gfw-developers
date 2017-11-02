@@ -710,13 +710,15 @@ h3 {
         margin-right: 0; }
 
 .m-cover {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
   position: relative;
   width: 100%;
-  height: 200px; }
-  @media (min-width: 850px) {
-    .m-cover {
-      height: 325px; } }
-  .m-cover > .cover-background {
+  min-height: 200px;
+  margin-top: 59px; }
+  .m-cover .cover-background {
     position: absolute;
     top: 0;
     left: 0;
@@ -724,7 +726,66 @@ h3 {
     bottom: 0;
     background: url("/assets/images/home-slider/home-slider-1.png");
     background-size: cover;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    z-index: 1; }
+  .m-cover .m-cover__text {
+    position: relative;
+    padding: 40px 15px 15px 15px;
+    color: #FFF;
+    z-index: 2; }
+  .m-cover .m-cover__title {
+    font-size: 30px;
+    line-height: 1.33; }
+  .m-cover .m-cover__paragraph {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 3px; }
+    .m-cover .m-cover__paragraph a {
+      color: #97bd3d; }
+  @media (min-width: 850px) {
+    .m-cover {
+      min-height: 300px;
+      margin-top: 0; }
+      .m-cover .m-cover__text {
+        padding: 26px 0 15px 0; }
+      .m-cover .m-cover__title {
+        font-size: 59px;
+        line-height: 1.02; }
+      .m-cover .m-cover__paragraph {
+        font-size: 18px;
+        line-height: 1.67;
+        width: 74%; } }
+
+.m-navigation {
+  height: 56px;
+  background-color: #f7f7f7; }
+  .m-navigation * {
+    height: 100%;
+    width: 100%; }
+  .m-navigation ul {
+    display: -ms-flexbox;
+    display: flex; }
+    .m-navigation ul li {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+          align-items: center;
+      height: 100%;
+      width: 100%;
+      max-width: 183px;
+      border-right: 1px solid #d6d6d9; }
+      .m-navigation ul li:first-child {
+        border-left: 1px solid #d6d6d9; }
+      .m-navigation ul li a {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+            align-items: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+        color: #555; }
+        .m-navigation ul li a.-selected, .m-navigation ul li a:hover {
+          background-color: #FFF; }
 
 .m-lory-slider {
   padding: 25px 0 0;
