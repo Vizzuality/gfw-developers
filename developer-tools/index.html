@@ -6,16 +6,34 @@ linkUrl: "/gallery"
 linkLiteral: "Browse all Global Forest Watch apps here."
 ---
 
-<header class="m-header-static">
-	<div class="l-inner">	
-	  <h2>{{page.title}}</h2>
-	  <h3>
+<section class="m-cover">
+  <div class="m-cover__text l-inner">
+    <div class="m-cover__title">{{page.title}}</div>
+    <div class="m-cover__paragraph">
       {{page.subtitle}}
       {% if page.linkUrl %}
+      <br/>
       <a href="{{site.baseurl}}{{page.linkUrl}}/">{{page.linkLiteral}}</a>
       {% endif %}
-    </h3>
-	</div>
-</header>
+    </div>
+  </div>
+  <div class="cover-background"></div>
+</section>
+
+<div class="m-navigation">
+  <div class="l-inner">
+    <ul>
+      <li>
+        <a href="/map-builder">Map builder</a>
+      </li>
+      <li>
+        <a href="/developer-tools" class="-selected">Developer tools</a>
+      </li>
+      <li>
+        <a href="/gallery">Gallery</a>
+      </li>
+    </ul>
+  </div>
+</div>
 
 <section id="staticView" class="m-static"></section>

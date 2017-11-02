@@ -1,0 +1,38 @@
+.m-navigation {
+  height: 56px;
+  background-color: #f7f7f7;
+
+  * {
+    height: 100%;
+    width: 100%;
+  }
+
+  ul {
+    display: flex;
+
+    li {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      max-width: 183px;
+      border-right: 1px solid #d6d6d9;
+
+      &:first-child {
+        border-left: 1px solid #d6d6d9;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $dark;
+
+        &.-selected,
+        &:hover {
+          background-color: $white;
+        }
+      }
+    }
+  }
+}

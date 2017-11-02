@@ -1,14 +1,12 @@
 .m-cover {
+  display: flex;
+  align-items: center;
   position: relative;
   width: 100%;
-  height: 200px;
+  min-height: 200px;
+  margin-top: 59px;
 
-  @media (min-width: $br-mobile){
-    height: 325px;
-  }
-
-
-  > .cover-background {
+  .cover-background {
     position: absolute;
     top: 0;
     left: 0;
@@ -17,5 +15,48 @@
     background: url($baseurl + '/assets/images/home-slider/home-slider-1.png');
     background-size: cover;
     background-repeat: no-repeat;
+    z-index: 1;
+  }
+
+  .m-cover__text {
+    position: relative;
+    padding: 40px 15px 15px 15px;
+    color: $white;
+    z-index: 2;
+  }
+
+  .m-cover__title {
+    font-size: 30px;
+    line-height: 1.33;
+  }
+
+  .m-cover__paragraph {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 3px;
+
+    a {
+      color: $primary-color;
+    }
+  }
+
+  @media (min-width: $br-mobile){
+    min-height: 300px;
+    margin-top: 0;
+
+    .m-cover__text {
+      padding: 26px 0 15px 0;
+    }
+
+    .m-cover__title {
+      font-size: 59px;
+      line-height: 1.02;
+    }
+
+    .m-cover__paragraph {
+      font-size: 18px;
+      line-height: 1.67;
+      width: 74%;
+    }
   }
 }
