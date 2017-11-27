@@ -1,7 +1,10 @@
 .m-filters {
 	background: #F7F7F7;
-	padding: 40px;
-	margin: 0 0 40px;
+	padding: 15px;
+	
+	@media (min-width: $br-mobile){
+		margin-bottom: 30px;
+	}	
 	
 	> ul {
 		display: flex;
@@ -11,10 +14,14 @@
 		li {
 			padding: 10px 20px;
 			color: $dark;
-			margin: 5px 20px 5px 0;
+			margin: 5px 10px 5px 0;
 			border-radius: 30px;
 			font-size: 16px;
 			cursor: pointer;
+
+			@media (min-width: $br-mobile){
+				margin: 5px 20px 5px 0;
+			}	
 
 			&:hover {
 				background: lighten(#D8D8D8, 5%);		
