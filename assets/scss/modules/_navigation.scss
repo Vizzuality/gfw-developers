@@ -2,6 +2,10 @@
   height: 56px;
   background-color: #f7f7f7;
 
+  .l-inner {
+    padding: 0;
+  }
+
   * {
     height: 100%;
     width: 100%;
@@ -18,8 +22,23 @@
       max-width: 183px;
       border-right: 1px solid #d6d6d9;
 
-      &:first-child {
-        border-left: 1px solid #d6d6d9;
+      &:last-child {
+        border-right: 0;
+      }
+      
+      @media (min-width: $br-mobile){
+        &:last-child {
+          border-right: 1px solid #d6d6d9;
+        }
+      
+        &:first-child {
+          border-left: 1px solid #d6d6d9;
+        }
+      }
+
+      &.-selected,
+      &:hover {
+        background-color: $white;
       }
 
       a {
@@ -27,11 +46,6 @@
         align-items: center;
         justify-content: center;
         color: $dark;
-
-        &.-selected,
-        &:hover {
-          background-color: $white;
-        }
       }
     }
   }

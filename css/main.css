@@ -52,17 +52,16 @@ button {
   padding: 0px;
   max-width: 1600px;
   width: 100%; }
+  .l-wrapper #headerGfw {
+    min-height: 58px; }
   .l-wrapper .l-inner {
     margin: 0 auto;
-    position: relative; }
-    @media (min-width: 850px) {
+    position: relative;
+    padding: 0 15px; }
+    @media (min-width: 1080px) {
       .l-wrapper .l-inner {
-        max-width: 1024px;
-        width: 95%; } }
-    @media (min-width: 1400px) {
-      .l-wrapper .l-inner {
-        max-width: 1200px;
-        width: 75%; } }
+        max-width: 1080px;
+        padding: 0; } }
 
 .l-logo {
   position: absolute;
@@ -130,7 +129,8 @@ button {
 .l-content {
   width: 100%;
   background: #FFF;
-  padding: 0; }
+  padding: 0;
+  border-bottom: solid 1px #E5E5DF; }
 
 .btn {
   -webkit-appearance: none;
@@ -208,7 +208,7 @@ button {
   position: relative;
   background: #97bd3d;
   min-height: 200px;
-  margin: 60px 0 0;
+  margin: 30px 0 0;
   display: block; }
   .btn-submit .-center {
     position: absolute;
@@ -686,8 +686,10 @@ h3 {
 
 .m-filters {
   background: #F7F7F7;
-  padding: 40px;
-  margin: 0 0 40px; }
+  padding: 15px; }
+  @media (min-width: 850px) {
+    .m-filters {
+      margin-bottom: 30px; } }
   .m-filters > ul {
     display: -ms-flexbox;
     display: flex;
@@ -698,10 +700,13 @@ h3 {
     .m-filters > ul li {
       padding: 10px 20px;
       color: #555;
-      margin: 5px 20px 5px 0;
+      margin: 5px 10px 5px 0;
       border-radius: 30px;
       font-size: 16px;
       cursor: pointer; }
+      @media (min-width: 850px) {
+        .m-filters > ul li {
+          margin: 5px 20px 5px 0; } }
       .m-filters > ul li:hover {
         background: #e5e5e5; }
       .m-filters > ul li.-active {
@@ -717,7 +722,7 @@ h3 {
   position: relative;
   width: 100%;
   min-height: 200px;
-  margin-top: 59px; }
+  margin-top: 58px; }
   .m-cover .cover-background {
     position: absolute;
     top: 0;
@@ -730,7 +735,7 @@ h3 {
     z-index: 1; }
   .m-cover .m-cover__text {
     position: relative;
-    padding: 40px 15px 15px 15px;
+    padding: 40px 0;
     color: #FFF;
     z-index: 2; }
   .m-cover .m-cover__title {
@@ -759,6 +764,8 @@ h3 {
 .m-navigation {
   height: 56px;
   background-color: #f7f7f7; }
+  .m-navigation .l-inner {
+    padding: 0; }
   .m-navigation * {
     height: 100%;
     width: 100%; }
@@ -774,8 +781,15 @@ h3 {
       width: 100%;
       max-width: 183px;
       border-right: 1px solid #d6d6d9; }
-      .m-navigation ul li:first-child {
-        border-left: 1px solid #d6d6d9; }
+      .m-navigation ul li:last-child {
+        border-right: 0; }
+      @media (min-width: 850px) {
+        .m-navigation ul li:last-child {
+          border-right: 1px solid #d6d6d9; }
+        .m-navigation ul li:first-child {
+          border-left: 1px solid #d6d6d9; } }
+      .m-navigation ul li.-selected, .m-navigation ul li:hover {
+        background-color: #FFF; }
       .m-navigation ul li a {
         display: -ms-flexbox;
         display: flex;
@@ -784,8 +798,6 @@ h3 {
         -ms-flex-pack: center;
             justify-content: center;
         color: #555; }
-        .m-navigation ul li a.-selected, .m-navigation ul li a:hover {
-          background-color: #FFF; }
 
 .m-lory-slider {
   padding: 25px 0 0;
@@ -1118,13 +1130,13 @@ h3 {
           margin: 35px; } }
 
 .m-section.-padding {
-  padding: 40px 15px; }
+  padding: 30px 0; }
   @media (min-width: 850px) {
     .m-section.-padding {
-      padding: 70px 0px; } }
+      padding: 60px 0; } }
 
 .m-section.-padding-bottom {
-  padding: 0 15px 40px; }
+  padding: 0 0 40px; }
   @media (min-width: 850px) {
     .m-section.-padding-bottom {
       padding: 0 0 70px; } }
@@ -1152,6 +1164,18 @@ h3 {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5); }
+
+.m-section .description {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: #555; }
+  @media (min-width: 850px) {
+    .m-section .description {
+      font-size: 19px; } }
+  .m-section .description a {
+    color: #97bd3d;
+    font-weight: 500px; }
 
 .m-section header h2 {
   padding: 0 0 20px; }
@@ -1199,10 +1223,8 @@ h3 {
       flex-wrap: wrap;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  padding: 0; }
-  @media (min-width: 850px) {
-    .m-grid {
-      padding: 50px 0; } }
+  padding-top: 40px;
+  padding-bottom: 10px; }
   .m-grid.-no-padding {
     padding: 0; }
   .m-grid.-margin {
