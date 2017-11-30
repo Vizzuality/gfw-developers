@@ -1,0 +1,73 @@
+---
+layout: default
+title: "Map Builder"
+subtitle: "Want to create your own version of Global Forest Watch, featuring a specific location or type of data? Map Builder is an easy tool to help you build your own mapping portal, complete with powerful analytical tools."
+---
+<section class="m-cover">
+	<div class="l-inner">
+		<div class="m-cover__text">
+			<div class="m-cover__title">Developer’s Corner</div>
+			<div class="m-cover__paragraph">Using GFW's public Application Programming Interface (API) and open source code, anyone can build on GFW data and technology to create customized web-based or mobile applications. This section contains the tools and information you need to develop applications that harness Global Forest Watch data and technology.</div>
+		</div>
+	</div>
+	
+	<div class="cover-background"></div>
+</section>
+
+<div class="m-navigation">
+	<div class="l-inner">
+		<ul>
+			<li>
+				<a href="/">Gallery</a>
+			</li>
+			<li class="-selected">
+				<a href="/map-builder">Map builder</a>
+			</li>
+			<li>
+				<a href="/developer-tools">Developer tools</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<section class="m-section -padding">
+	<div class="l-inner">
+		<p class="description">
+			{{page.subtitle}}
+		</p>
+		<ul class="m-grid">
+			<li class="m-card -default">
+				<svg><use xlink:href="#icon-compellingdata"></use></svg>
+				<h3 class="-primary">Compelling data</h3>
+				<p>Choose from dozens of data layers curated by Global Forest Watch – or upload your own.</p>
+			</li>
+			<li class="m-card -default">
+				<svg><use xlink:href="#icon-powerfulanalysis"></use></svg>
+				<h3 class="-primary">Powerful analysis</h3>
+				<p>Add tools for statistical and geospatial analyses that run right in your browser.</p>
+			</li>
+			<li class="m-card -default">
+				<svg><use xlink:href="#icon-provenplatform"></use></svg>
+				<h3 class="-primary">Proven platform</h3>
+				<p>My Forest Atlas is built on ESRI’s easy-to-use ArcGIS Online mapping platform.</p>
+			</li>
+			<li class="m-card -default">
+				<svg><use xlink:href="#icon-broadreach"></use></svg>
+				<h3 class="-primary">Broad reach</h3>
+				<p>Share your maps with integrated social media tools, or add them to the map gallery.</p>
+			</li>
+		</ul>
+	</div>
+</section>
+
+<section class="m-section -padding -own-atlas">
+	{% include steps-slider.html %}
+</section>
+
+<section class="m-section -padding">
+	{% include atlas-slider.html %}
+</section>
+
+<section class="m-section -padding -border">
+	{% include tutorial-slider.html %}
+</section>

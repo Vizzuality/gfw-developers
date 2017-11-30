@@ -30,9 +30,8 @@
     },
 
     setListeners: function() {
-      this.listenTo(this.router, 'route:home', this.homePage);
+      this.listenTo(this.router, 'route:home', this.galleryPage);
       this.listenTo(this.router, 'route:map-builder', this.mapBuilderPage);
-      this.listenTo(this.router, 'route:gallery', this.galleryPage);
       this.listenTo(this.router, 'route:develop', this.developPage);      
     },
 
