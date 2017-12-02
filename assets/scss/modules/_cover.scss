@@ -4,7 +4,6 @@
   position: relative;
   width: 100%;
   min-height: 200px;
-  margin-top: 58px;
 
   .cover-background {
     position: absolute;
@@ -42,7 +41,6 @@
 
   @media (min-width: $br-mobile){
     min-height: 300px;
-    margin-top: 0;
 
     .m-cover__text {
       padding: 26px 0 15px 0;

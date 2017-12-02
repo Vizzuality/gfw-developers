@@ -721,8 +721,7 @@ h3 {
       align-items: center;
   position: relative;
   width: 100%;
-  min-height: 200px;
-  margin-top: 58px; }
+  min-height: 200px; }
   .m-cover .cover-background {
     position: absolute;
     top: 0;
@@ -749,8 +748,7 @@ h3 {
       color: #97bd3d; }
   @media (min-width: 850px) {
     .m-cover {
-      min-height: 300px;
-      margin-top: 0; }
+      min-height: 300px; }
       .m-cover .m-cover__text {
         padding: 26px 0 15px 0; }
       .m-cover .m-cover__title {
