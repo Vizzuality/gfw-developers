@@ -1,4 +1,4 @@
-name: Developer's Corner
+name: Developer Tools
 permalink: none
 
 baseurl: "" # the subpath of your site, e.g. /blog/
@@ -24,7 +24,7 @@ jekyll-archives:
     # day: '/:year/:month/:day/'
     category: '/apps/:name/'
     tag: '/themes/:name/'
-    
+
 
 # CATEGORIES
 categories_info:
