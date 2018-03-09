@@ -4,7 +4,7 @@ layout: default
 
 <header class="m-header">
   {% include breadcrumbs.html %}
-  {% assign slug = (page.title | downcase | replace:' ','_')%}
+  {% assign slug = page.title | downcase | replace:' ','_'%}
   {% assign tag = site.tags_info[slug] %}
   <h2>
     {{tag.title}}

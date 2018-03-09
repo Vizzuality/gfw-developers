@@ -5,7 +5,7 @@ layout: default
 <header class="m-header">
   {% include breadcrumbs.html %}
 
-  {% assign slug = (page.title | downcase )%}
+  {% assign slug = page.title | downcase %}
   {% assign category = site.categories_info[slug] %}
   <h2>{{category.title}}</h2>
   <h3>{{category.description}}</h3>

@@ -4,9 +4,9 @@ permalink: none
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://vizzuality.github.io/" # the base hostname & protocol for your site
 
-
-gems:
+plugins:
   - jekyll-archives
+  - jekyll-redirect-from
 
 exclude: ["node_modules", "gulpfile.js", "package.json"]
 
