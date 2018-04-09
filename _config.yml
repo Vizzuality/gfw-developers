@@ -2,7 +2,7 @@ name: Developer Tools
 permalink: none
 
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://vizzuality.github.io/" # the base hostname & protocol for your site
+url: "https://developers.globalforestwatch.org/" # the base hostname & protocol for your site
 
 plugins:
   - jekyll-archives
