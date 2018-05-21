@@ -31,7 +31,8 @@
       "open-foris",
       "forest-watcher-mobile",
       "logging-roads",
-      "protecting-forest"
+      "protecting-forest",
+      "gfw-pro"
     ],
 
     filters: {
