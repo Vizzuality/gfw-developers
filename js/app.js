@@ -234,7 +234,8 @@ Handlebars.registerHelper('deslugify', function (component, options) {
       "open-foris",
       "forest-watcher-mobile",
       "logging-roads",
-      "protecting-forest"
+      "protecting-forest",
+      "gfw-pro"
     ],
 
     filters: {
