@@ -249,7 +249,7 @@ Handlebars.registerHelper('deslugify', function (component, options) {
       "global-forest-watch" : "Global Forest Watch",
       "latin-america" : "Latin America",
       "logging" : "Logging",
-      "map-builder" : "Map builder",
+      "map-builder" : "Map Builder",
       "maps" : "Maps",
       "mining" : "Mining",
       "mobile" : "Mobile",
@@ -275,16 +275,6 @@ Handlebars.registerHelper('deslugify', function (component, options) {
 
     getFilters: function() {
       return this.filters;
-      // var filters = _.pluck(this.toJSON(),'filters');
-      // // Get all the filters, trim white spaces, get the uniq values and sort them alphabetically
-      // var filter_slugs = _.sortBy(_.uniq(_.flatten(_.map(filters, function(el){
-      //   var arr = el.split(',');
-      //   return _.compact(_.map(arr,function(v) {
-      //     return $.trim(v);
-      //   }))
-      // }))));
-
-      // return filter_slugs;
     },
 
     filter: function(filter) {

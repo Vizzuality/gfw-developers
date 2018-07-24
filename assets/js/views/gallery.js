@@ -46,7 +46,7 @@
       "global-forest-watch" : "Global Forest Watch",
       "latin-america" : "Latin America",
       "logging" : "Logging",
-      "map-builder" : "Map builder",
+      "map-builder" : "Map Builder",
       "maps" : "Maps",
       "mining" : "Mining",
       "mobile" : "Mobile",
