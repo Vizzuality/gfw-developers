@@ -306,6 +306,7 @@ Handlebars.registerHelper('deslugify', function (component, options) {
     },
 
     initialize: function() {
+      this.setParams();
       this.setListeners();
 
       // Fetch collection
@@ -313,6 +314,13 @@ Handlebars.registerHelper('deslugify', function (component, options) {
       this.collection.fetch().done(function(){
         this.render(false);
       }.bind(this));
+    },
+
+    setParams: function() {
+      var filterParam = location.search.split('filter=')[1];
+      if (filterParam) {
+        this.model.set('filter', filterParam);
+      }
     },
 
     setListeners: function() {
@@ -375,7 +383,12 @@ Handlebars.registerHelper('deslugify', function (component, options) {
     changeFilter: function(e) {
       this.model.set('currentPage', 0, { silent:true });
       this.model.set('filter', $(e.currentTarget).data('value'));
+      this.setUrl();
       ga('send', 'event', 'Gallery', 'Tag Click', $(e.currentTarget).data('value'));
+    },
+
+    setUrl: function() {
+      window.history.pushState({}, '', '?filter=' + this.model.get('filter'));
     }
 
   });
