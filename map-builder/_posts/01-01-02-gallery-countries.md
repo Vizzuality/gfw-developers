@@ -1,10 +1,10 @@
 ---
-title: 'GFW Countries'
-slug: 'countries'
+title: 'GFW Dashboards'
+slug: 'dashboards'
 thumbnail: '/assets/images/gallery/'
 published: true
 categories: [gallery]
-description: 'View country-specific data, analyze forest change within a country or subnational jurisdiction, or view country rankings based on forest statistics.'
+description: 'View global, country, and subnational forest statistics and information.'
 href: 'http://www.globalforestwatch.org/countries'
 href_text: 'View countries'
 href_class: 'btn green medium'

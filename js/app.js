@@ -215,7 +215,7 @@ Handlebars.registerHelper('deslugify', function (component, options) {
     // you need to set the order here
     order: [
       "gfw-interactive-map",
-      "countries",
+      "dashboards",
       "forest-watcher-mobile",
       "climate",
       "commodities",
