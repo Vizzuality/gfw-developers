@@ -5,7 +5,7 @@ thumbnail: '/assets/images/gallery/'
 published: true
 categories: [gallery]
 description: 'Access the dynamic forest monitoring and alert systems of Global Forest Watch (GFW) on your mobile device, even offline. Navigate to alerts, collect field data, and work with teams to manage areas.'
-href: 'http://fw.globalforestwatch.org/'
+href: 'http://forestwatcher.globalforestwatch.org/'
 href_target: '_blank'
 href_text: 'Contact us to become a beta tester'
 href_class: 'btn green medium mobile-friendly'
