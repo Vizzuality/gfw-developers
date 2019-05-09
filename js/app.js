@@ -221,7 +221,6 @@ Handlebars.registerHelper('deslugify', function (component, options) {
       "commodities",
       "fires",
       "gfw-pro",
-      "water",
       "open-data-portal",
       "cameroon-forest-atlas",
       "central-african-republic-forest-atlas",
