@@ -10,5 +10,5 @@ href_target: '_blank'
 href_text: 'Launch App'
 href_class: 'btn green medium mobile-friendly'
 source: 'Greenpeace'
-filters: 'asia, commodities, palm-oil, mining, fires, maps'
+filters: 'asia, palm-oil, mining, fires, maps'
 ---

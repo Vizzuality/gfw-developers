@@ -10,6 +10,6 @@ href_target: '_blank'
 href_text: 'Launch App'
 href_class: 'btn green medium mobile-friendly'
 source: 'Tropical Forest Alliance 2020'
-filters: 'map-builder, maps, commodities'
+filters: 'map-builder, maps'
 ---
 
