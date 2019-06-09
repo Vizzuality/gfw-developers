@@ -10,7 +10,6 @@ tags_order: 2
 <p>GFW aims to radically improve the availability, quality, and accessibility of forest data for everyone:</p>
 <ul>
   <li>Governments can use GFW to detect illegal forest clearing and target forest law enforcement efforts.</li>
-  <li>Companies can monitor the impacts of commodity supply chains on forests and demonstrate compliance with sustainability commitments and certifications. Learn more at GFW Commodities.</li>
   <li>NGOs & civil society can identify deforestation hotspots and bolster their investigations, advocacy, and campaigns.</li>
   <li>Indigenous communities can monitor their territories and raise an alarm when their customary forests are threatened.</li>
   <li>Media can gather evidence, data, and graphics for reporting.</li>

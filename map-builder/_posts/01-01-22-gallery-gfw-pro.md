@@ -8,5 +8,5 @@ href: 'http://pro.globalforestwatch.org/'
 href_target: '_blank'
 description: 'An application to securely manage deforestation risks in commodity supply chains.'
 source: 'World Resources Institute'
-filters: 'commodities, palm-oil, data'
+filters: 'palm-oil, data'
 ---

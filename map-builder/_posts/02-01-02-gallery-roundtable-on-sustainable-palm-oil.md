@@ -10,5 +10,5 @@ href_target: '_blank'
 href_text: 'Launch App'
 href_class: 'btn green medium mobile-friendly'
 source: 'RSPO (http://www.RSPO.org)'
-filters: 'palm-oil, commodities, maps'
+filters: 'palm-oil, maps'
 ---
