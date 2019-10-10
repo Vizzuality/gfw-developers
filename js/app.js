@@ -24,7 +24,7 @@ Handlebars.registerHelper('slugify', function (component, options) {
 Handlebars.registerHelper('deslugify', function (component, options) {
   if (!!component) {
     var slug = component.replace(/-/g, " ");;
-    return slug.toLowerCase();
+    return slug.toLowerCase();    
   }
   return component;
 
@@ -431,7 +431,7 @@ Handlebars.registerHelper('deslugify', function (component, options) {
     },
 
     setSelectedMenu: function() {
-      if (!!this.options.page) {
+      if (!!this.options.page) {      
         _.each(this.$links, function(link){
           if (~this.options.page.indexOf(link.dataset.page)) {
             $(link).addClass('-selected');
@@ -555,7 +555,7 @@ Handlebars.registerHelper('deslugify', function (component, options) {
       this._initVars();
       this._youtubeApi();
       this.setListeners();
-
+      
       this.$body.append(this.el);
     },
 
@@ -621,7 +621,7 @@ Handlebars.registerHelper('deslugify', function (component, options) {
 
   });
 
-})(this);
+})(this); 
 (function(root) {
 
   'use strict';
@@ -936,7 +936,7 @@ Handlebars.registerHelper('deslugify', function (component, options) {
         }.bind(this)
       });
 
-
+      
       this.collection.fetch({
         url: baseurl + '/json/'+this.options.page+'.json'
       }).done(function() {
@@ -953,7 +953,7 @@ Handlebars.registerHelper('deslugify', function (component, options) {
       this.model.on('change:tab change:tag', this.updateRouter.bind(this));
 
       if (!this.mobile) {
-        $(document).on('scroll',_.bind(this.scrollDocument,this));
+        $(document).on('scroll',_.bind(this.scrollDocument,this)); 
       }
     },
 
@@ -962,7 +962,7 @@ Handlebars.registerHelper('deslugify', function (component, options) {
       this.$document = $(document);
 
       this.$content = this.$el.find('.js-static-content');
-      this.$aside = this.$el.find('.js-static-aside');
+      this.$aside = this.$el.find('.js-static-aside'); 
 
       this.$tabs = this.$el.find('.js-static-tab');
       this.$tags = this.$el.find('.js-static-tag');
@@ -1009,7 +1009,7 @@ Handlebars.registerHelper('deslugify', function (component, options) {
     clickCloseCount: function(e) {
       e && e.preventDefault();
       this.model.set('tag', null);
-      this.model.set('tab', null);
+      this.model.set('tab', null);            
     },
 
     toggleContent: function() {
@@ -1160,7 +1160,7 @@ Handlebars.registerHelper('deslugify', function (component, options) {
     routes: {
       // HOME
       '': 'home',
-      // MAP BUILDER
+      // MAP BUILDER      
       'map-builder(/)': 'map-builder',
       // GALLERY
       'gallery(/)': 'gallery',
@@ -1279,7 +1279,7 @@ Handlebars.registerHelper('deslugify', function (component, options) {
       if (!!this.params) {
         var str = [];
         var obj = this.params.attributes;
-        for(var p in obj) {
+        for(var p in obj) {          
           if (obj.hasOwnProperty(p) && !!obj[p]) {
             str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
           }
@@ -1326,7 +1326,7 @@ Handlebars.registerHelper('deslugify', function (component, options) {
     setListeners: function() {
       this.listenTo(this.router, 'route:home', this.galleryPage);
       this.listenTo(this.router, 'route:map-builder', this.mapBuilderPage);
-      this.listenTo(this.router, 'route:develop', this.developPage);
+      this.listenTo(this.router, 'route:develop', this.developPage);      
     },
 
     start: function() {
@@ -1352,7 +1352,7 @@ Handlebars.registerHelper('deslugify', function (component, options) {
           defaultSlider: {
             infinite: false,
             navigation: false
-          }
+          }            
         }
       });
       this.featuredForestSliderView = new root.app.View.SliderView({
