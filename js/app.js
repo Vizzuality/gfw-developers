@@ -260,7 +260,7 @@ Handlebars.registerHelper('deslugify', function (component, options) {
       "global-forest-watch" : "Global Forest Watch",
       "latin-america" : "Latin America",
       "logging" : "Logging",
-      "map-builder" : "Map Builder",
+      "map-builder" : "MapBuilder",
       "maps" : "Maps",
       "mining" : "Mining",
       "mobile" : "Mobile",
@@ -848,11 +848,11 @@ Handlebars.registerHelper('deslugify', function (component, options) {
         switch (direction) {
           case 'left':
             this.slider.prev();
-            ga('send', 'event', 'Map Builder', this.el.id, 'Click Left');
+            ga('send', 'event', 'MapBuilder', this.el.id, 'Click Left');
           break;
           case 'right':
             this.slider.next();
-            ga('send', 'event', 'Map Builder', this.el.id, 'Click Right');
+            ga('send', 'event', 'MapBuilder', this.el.id, 'Click Right');
           break;
         }
       }

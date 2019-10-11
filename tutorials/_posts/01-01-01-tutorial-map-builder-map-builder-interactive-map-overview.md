@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Map Builder Interactive Map Overview
+title: MapBuilder Interactive Map Overview
 published: True
 description: ""
 thumbnail: "video"

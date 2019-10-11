@@ -101,11 +101,11 @@
         switch (direction) {
           case 'left':
             this.slider.prev();
-            ga('send', 'event', 'Map Builder', this.el.id, 'Click Left');
+            ga('send', 'event', 'MapBuilder', this.el.id, 'Click Left');
           break;
           case 'right':
             this.slider.next();
-            ga('send', 'event', 'Map Builder', this.el.id, 'Click Right');
+            ga('send', 'event', 'MapBuilder', this.el.id, 'Click Right');
           break;
         }
       }
