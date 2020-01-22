@@ -14,7 +14,6 @@
       "gfw-interactive-map",
       "dashboards",
       "forest-watcher-mobile",
-      "climate",
       "fires",
       "gfw-pro",
       "open-data-portal",
