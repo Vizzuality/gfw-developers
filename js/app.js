@@ -217,7 +217,6 @@ Handlebars.registerHelper('deslugify', function (component, options) {
       "gfw-interactive-map",
       "dashboards",
       "forest-watcher-mobile",
-      "climate",
       "fires",
       "gfw-pro",
       "open-data-portal",
