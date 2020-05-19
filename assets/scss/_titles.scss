@@ -6,7 +6,7 @@ h2 {
   @media (min-width: $br-mobile){
   	font-size: 35px;
   }
-  
+
   a {
   	color: $dark;
   }
@@ -19,7 +19,6 @@ h2 {
 h3 {
 	font-size: 19px;
   line-height: 1.25;
-	text-transform: uppercase;
 
   &.-primary {
     color: $primary-color;
