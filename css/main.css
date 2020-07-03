@@ -249,8 +249,7 @@ h2 {
 
 h3 {
   font-size: 19px;
-  line-height: 1.25;
-  text-transform: uppercase; }
+  line-height: 1.25; }
   h3.-primary {
     color: #97bd3d; }
   @media (min-width: 850px) {
