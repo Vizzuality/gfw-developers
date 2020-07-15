@@ -9,5 +9,5 @@ href: 'http://www.globalforestwatch.org/map'
 href_text: 'Open map'
 href_class: 'btn green medium'
 source: 'World Resources Institute'
-filters: 'data, fires, global-forest-watch, maps, mining, mobile, palm-oil, satellite-imagery'
+filters: 'data, global-forest-watch, maps, mining, mobile, palm-oil, satellite-imagery'
 ---

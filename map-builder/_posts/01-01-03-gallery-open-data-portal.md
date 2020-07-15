@@ -9,5 +9,5 @@ href: 'http://data.globalforestwatch.org'
 href_text: 'Browse data'
 href_class: 'btn green medium mobile-friendly'
 source: 'World Resources Institute'
-filters: 'data, fires, global-forest-watch, maps, mining, palm-oil, satellite-imagery'
+filters: 'data, global-forest-watch, maps, mining, palm-oil, satellite-imagery'
 ---
